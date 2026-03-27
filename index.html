@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AlansCinematics — Cinematic Photography · Arizona</title>
+<meta content="Cinematic portrait, couples, and family photography based in Arizona. Moody, honest, and visually driven sessions that feel like you — just elevated." name="description"/>
+<meta content="Arizona photographer, Arizona portrait photographer, Arizona couples photographer, Arizona family photographer, Phoenix photographer, cinematic photographer Arizona, grad photos Arizona, headshots Phoenix" name="keywords"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="texture-overlay"></div>
+<div class="cur" id="curDot"><div class="cur-dot"></div></div>
+<div class="cur" id="curRing"><div class="cur-ring"></div></div>
+<!-- ── NAV ──────────────────────────────────────────────────── -->
+<nav id="nav">
+<a class="nav-logo" href="#hero">Alans<span>Cinematics</span></a>
+<ul class="nav-links">
+<li><a href="#portfolio">Work</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a class="nav-cta" href="#contact">Book Now</a></li>
+</ul>
+<button aria-label="Menu" class="nav-mobile-btn" id="menuBtn">
+<span></span><span></span><span></span>
+</button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+<a class="mm-link" href="#portfolio">Work</a>
+<a class="mm-link" href="#services">Services</a>
+<a class="mm-link" href="#about">About</a>
+<a class="mm-link" href="#faq">FAQ</a>
+<a class="mm-link" href="#contact">Book Now</a>
+</div>
+<!-- ── HERO ─────────────────────────────────────────────────── -->
+<section id="hero">
+<div class="hero-left">
+<p class="hero-tag">Cinematic Photography · Arizona</p>
+<h1 class="hero-h1">
+        Your story,<br/>
+<em>honestly told.</em>
+</h1>
+<div class="hero-btns">
+<a class="btn-dark" href="#contact">Book a Session</a>
+<a class="btn-line" href="#portfolio">View the Work</a>
+</div>
+</div>
+<div class="hero-right">
+<div class="hero-carousel" id="heroCarousel">
+<div class="hc-track" id="hcTrack">
+<div class="hc-slide" data-index="0">
+<div class="hc-bg">
+<img alt="Golden Hour" class="hc-img" src="images/hero-golden-hour.jpg" style="display:block;width:100%;height:100%;object-fit:cover"/>
+</div>
+<div class="hc-label"><span class="hc-title">Golden Hour</span><span class="hc-cat">Couples</span></div>
+</div>
+<div class="hc-slide" data-index="1">
+<div class="hc-bg">
+<img alt="Cap &amp; Gown" class="hc-img" src="images/hero-cap-and-gown.jpg" style="display:block;width:100%;height:100%;object-fit:cover"/>
+</div>
+<div class="hc-label"><span class="hc-title">Cap &amp; Gown</span><span class="hc-cat">Grad Portraits</span></div>
+</div>
+<div class="hc-slide" data-index="2">
+<div class="hc-bg">
+<img alt="Sunday Morning" class="hc-img" src="images/hero-sunday-morning.jpg" style="display:block;width:100%;height:100%;object-fit:cover"/>
+</div>
+<div class="hc-label"><span class="hc-title">Sunday Morning</span><span class="hc-cat">Families</span></div>
+</div>
+<div class="hc-slide" data-index="3">
+<div class="hc-bg">
+<img alt="Desert Dusk" class="hc-img" src="images/hero-desert-dusk.jpg" style="display:block;width:100%;height:100%;object-fit:cover"/>
+</div>
+<div class="hc-label"><span class="hc-title">Desert Dusk</span><span class="hc-cat">Couples</span></div>
+</div>
+<div class="hc-slide" data-index="4">
+<div class="hc-bg">
+<img alt="Senior Season" class="hc-img" src="images/hero-senior-season.jpg" style="display:block;width:100%;height:100%;object-fit:cover"/>
+</div>
+<div class="hc-label"><span class="hc-title">Senior Season</span><span class="hc-cat">Grad Portraits</span></div>
+</div>
+<div class="hc-slide" data-index="5">
+<div class="hc-bg">
+<img alt="Together" class="hc-img" src="images/hero-together.jpg" style="display:block;width:100%;height:100%;object-fit:cover"/>
+</div>
+<div class="hc-label"><span class="hc-title">Together</span><span class="hc-cat">Families</span></div>
+</div>
+</div>
+<!-- nav arrows -->
+<button aria-label="Previous" class="hc-arrow hc-prev" id="hcPrev">‹</button>
+<button aria-label="Next" class="hc-arrow hc-next" id="hcNext">›</button>
+<!-- dots -->
+<div class="hc-dots" id="hcDots">
+<span class="hc-dot active"></span>
+<span class="hc-dot"></span>
+<span class="hc-dot"></span>
+<span class="hc-dot"></span>
+<span class="hc-dot"></span>
+<span class="hc-dot"></span>
+</div>
+</div>
+</div>
+<div class="hero-scroll">
+<div class="scroll-bar"></div>
+<span>Scroll</span>
+</div>
+</section>
+<!-- ── INTRO STRIP ───────────────────────────────────────────── -->
+<div id="intro">
+<div class="intro-line"></div>
+<p class="intro-text">
+      Images that feel like <strong>movement, mood, and meaning</strong> —
+      not just a pose against a wall.
+    </p>
+<span class="intro-right">Phoenix, AZ</span>
+</div>
+<!-- ── PORTFOLIO ─────────────────────────────────────────────── -->
+<section id="portfolio">
+<div class="portfolio-head reveal">
+<h2 class="section-title">The <em>reel</em></h2>
+<div class="port-tabs">
+<button class="tab active" data-cat="all">All</button>
+<button class="tab" data-cat="couples">Couples</button>
+<button class="tab" data-cat="portraits">Portraits / Grads</button>
+<button class="tab" data-cat="families">Families</button>
+</div>
+</div>
+<div class="port-carousel-wrap">
+<button class="carousel-arrow arrow-left" id="carArrowL">‹</button>
+<button class="carousel-arrow arrow-right" id="carArrowR">›</button>
+<div class="port-carousel" id="portCarousel">
+<div class="pc-item" data-cat="couples">
+<div class="pc-bg"><img alt="" class="pc-img" src="images/portfolio-desert-dusk.jpg" style="display:block"/></div>
+<div class="pc-info"><div class="pc-title">Desert Dusk</div><div class="pc-cat">Couples · Scottsdale</div></div>
+</div>
+<div class="pc-item" data-cat="portraits">
+<div class="pc-bg"><img alt="" class="pc-img" src="images/portfolio-cap-and-gown.jpg" style="display:block"/></div>
+<div class="pc-info"><div class="pc-title">Cap &amp; Gown</div><div class="pc-cat">Grad Portraits · Phoenix</div></div>
+</div>
+<div class="pc-item" data-cat="families">
+<div class="pc-bg"><img alt="" class="pc-img" src="images/portfolio-the-ramirez-family.jpg" style="display:block"/></div>
+<div class="pc-info"><div class="pc-title">The Ramírez Family</div><div class="pc-cat">Families · Tempe</div></div>
+</div>
+<div class="pc-item" data-cat="couples">
+<div class="pc-bg"><img alt="" class="pc-img" src="images/portfolio-golden-hour.jpg" style="display:block"/></div>
+<div class="pc-info"><div class="pc-title">Golden Hour</div><div class="pc-cat">Couples · Mesa</div></div>
+</div>
+<div class="pc-item" data-cat="portraits">
+<div class="pc-bg"><img alt="" class="pc-img" src="images/portfolio-senior-season.jpg" style="display:block"/></div>
+<div class="pc-info"><div class="pc-title">Senior Season</div><div class="pc-cat">Grad Portraits · Chandler</div></div>
+</div>
+<div class="pc-item" data-cat="families">
+<div class="pc-bg"><img alt="" class="pc-img" src="images/portfolio-the-ramirez-family.jpg" style="display:block"/></div>
+<div class="pc-info"><div class="pc-title">Sunday Afternoon</div><div class="pc-cat">Families · Gilbert</div></div>
+</div>
+<div class="pc-item" data-cat="couples">
+<div class="pc-bg"><img alt="" class="pc-img" src="images/portfolio-film-still.jpg" style="display:block"/></div>
+<div class="pc-info"><div class="pc-title">Film Still</div><div class="pc-cat">Couples · Sedona</div></div>
+</div>
+<div class="pc-item" data-cat="portraits">
+<div class="pc-bg"><img alt="" class="pc-img" src="images/portfolio-desert-dusk.jpg" style="display:block"/></div>
+<div class="pc-info"><div class="pc-title">Street Portrait</div><div class="pc-cat">Portraits · Downtown PHX</div></div>
+</div>
+<div class="pc-item" data-cat="portraits">
+<div class="pc-bg"><img alt="" class="pc-img" src="images/portfolio-golden-hour.jpg" style="display:block"/></div>
+<div class="pc-info"><div class="pc-title">Brand Session</div><div class="pc-cat">Portraits · Phoenix</div></div>
+</div>
+</div>
+</div>
+<div class="gallery-view" id="galleryView">
+<div class="gallery-header">
+<button class="gallery-back" id="galleryBack">← Back</button>
+<h3 class="gallery-title" id="galleryTitle"></h3>
+</div>
+<div class="gallery-grid" id="galleryGrid"></div>
+</div>
+</section>
+<!-- ── SERVICES ──────────────────────────────────────────────── -->
+<section id="services">
+<div class="services-intro reveal">
+<div>
+<p class="section-eyebrow">What I Offer</p>
+<h2 class="section-title">Straightforward <em>sessions,</em><br/>intentional results.</h2>
+</div>
+<p>Every package is built around quality over quantity. I don't overload you with hundreds of images — I give you the ones that actually hit. Each session includes a minimum image count, and I'll often exceed it when the moments are there.</p>
+</div>
+<div class="services-grid">
+<!-- Portraits / Grads -->
+<div class="svc-card reveal">
+<div class="svc-img-wrap">
+<img alt="Portraits session" id="svc-img-1" src="images/portfolio-golden-hour.jpg" style="display:block"/>
+</div>
+<div class="svc-body">
+<div class="svc-name">Portraits / Grads</div>
+<div class="svc-price">Starting at $250</div>
+<p class="svc-desc">From cap-and-gown to LinkedIn, this is a polished, no-pressure portrait shoot. I set the pace, help with posing, and focus on authentic moments that look like you — just sharper.</p>
+<div class="svc-includes">
+<div class="svc-includes-label">What's included</div>
+<ul>
+<li>Up to 60 minutes</li>
+<li>One Arizona location</li>
+<li>Minimum 15 edited images</li>
+<li>Private online gallery</li>
+<li>7–10 day turnaround</li>
+</ul>
+</div>
+<a class="svc-btn" href="#contact">Book this session</a>
+</div>
+</div>
+<!-- Couples -->
+<div class="svc-card reveal">
+<div class="svc-img-wrap">
+<img alt="Couples session" id="svc-img-2" src="images/portfolio-the-ramirez-family.jpg" style="display:block"/>
+</div>
+<div class="svc-body">
+<div class="svc-name">Couples</div>
+<div class="svc-price">Starting at $300</div>
+<p class="svc-desc">A session centered on real connection, natural movement, and the moments in between. Nothing stiff — just polished, intentional imagery that feels like you.</p>
+<div class="svc-includes">
+<div class="svc-includes-label">What's included</div>
+<ul>
+<li>Up to 60–90 minutes</li>
+<li>One Arizona location</li>
+<li>Minimum 20 edited images</li>
+<li>Private online gallery</li>
+<li>7–10 day turnaround</li>
+</ul>
+</div>
+<a class="svc-btn" href="#contact">Book this session</a>
+</div>
+</div>
+<!-- Families -->
+<div class="svc-card reveal" style="grid-column: 1 / -1; max-width: 640px; margin: 0 auto; width: 100%;">
+<div class="svc-img-wrap">
+<img alt="Families session" id="svc-img-3" src="images/portfolio-senior-season.jpg" style="display:block"/>
+</div>
+<div class="svc-body">
+<div class="svc-name">Families</div>
+<div class="svc-price">Starting at $375</div>
+<p class="svc-desc">A relaxed family session with a balance of guided portraits and candid moments. The result is a gallery that feels clean, connected, and true to your family — with an elevated cinematic touch.</p>
+<div class="svc-includes">
+<div class="svc-includes-label">What's included</div>
+<ul>
+<li>Up to 60–75 minutes</li>
+<li>One Arizona location</li>
+<li>Minimum 25 edited images</li>
+<li>Private online gallery</li>
+<li>7–10 day turnaround</li>
+</ul>
+</div>
+<a class="svc-btn" href="#contact">Book this session</a>
+<p class="svc-note">Larger family groups? Reach out directly — I'll put together something that works.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ── WHY ───────────────────────────────────────────────────── -->
+<section id="why">
+<div class="why-left reveal">
+<p class="section-eyebrow">Why AlansCinematics</p>
+<div class="section-rule"></div>
+<h2 class="section-title">Cinematic, <em>candid,</em><br/>and always intentional.</h2>
+<div class="section-rule"></div>
+<p>I'm not a one-size-fits-all photographer. I pay attention to light, to movement, to the moment just before someone looks at the camera. <strong>That's where the real images live.</strong></p>
+<p>You'll never get stiff, over-directed photos from me. The goal is always to make you feel like yourself, just elevated. If the images feel like stills from a film you'd actually watch, I've done my job.</p>
+</div>
+<div class="why-pillars reveal">
+<div class="pillar">
+<div class="pillar-num"><em>one</em></div>
+<div class="pillar-title">Cinematic editing</div>
+<div class="pillar-desc">Moody, intentional color work. Not over-filtered — just elevated.</div>
+</div>
+<div class="pillar">
+<div class="pillar-num"><em>two</em></div>
+<div class="pillar-title">Candid-first approach</div>
+<div class="pillar-desc">I guide, not direct. Real moments over manufactured poses.</div>
+</div>
+<div class="pillar">
+<div class="pillar-num"><em>three</em></div>
+<div class="pillar-title">Quality over quantity</div>
+<div class="pillar-desc">Every delivered image is one you'll actually use.</div>
+</div>
+<div class="pillar">
+<div class="pillar-num"><em>four</em></div>
+<div class="pillar-title">Arizona, everywhere</div>
+<div class="pillar-desc">Based in Phoenix. Available across the state.</div>
+</div>
+</div>
+</section>
+<!-- ── PROCESS ───────────────────────────────────────────────── -->
+<section id="process">
+<div class="process-intro reveal">
+<p class="section-eyebrow">How It Works</p>
+<h2 class="section-title">Simple from <em>start to finish.</em></h2>
+<p>Booking a session shouldn't feel like a project. Here's what working together actually looks like.</p>
+</div>
+<div class="process-steps">
+<div class="process-step reveal">
+<div class="step-circle">01</div>
+<div class="step-title">Inquiry</div>
+<p class="step-desc">Fill out the contact form with your session type, date, and a little about what you're going for. I'll respond within 48 hours.</p>
+</div>
+<div class="process-step reveal">
+<div class="step-circle">02</div>
+<div class="step-title">Planning</div>
+<p class="step-desc">We'll lock in your date, location, and any details — outfits, vibe, timing. I'll help if you need location ideas in Arizona.</p>
+</div>
+<div class="process-step reveal">
+<div class="step-circle">03</div>
+<div class="step-title">The Session</div>
+<p class="step-desc">Show up as yourself. I handle the rest — direction, movement, light. If you feel awkward in front of cameras, I've got you.</p>
+</div>
+<div class="process-step reveal">
+<div class="step-circle">04</div>
+<div class="step-title">Gallery Delivery</div>
+<p class="step-desc">Your edited gallery is delivered via private online link within 7–10 days. Download, share, and use them however you'd like.</p>
+</div>
+</div>
+</section>
+<!-- ── ABOUT ─────────────────────────────────────────────────── -->
+<section id="about">
+<div class="about-img-wrap reveal">
+<img alt="Family session" src="images/portfolio-cap-and-gown.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"/>
+</div>
+<div class="about-content reveal">
+<p class="section-eyebrow">About Alan</p>
+<div class="section-rule"></div>
+<h2 class="section-title">Honest images.<br/><em>Real moments.</em></h2>
+<div class="about-pull">
+        "I started AlansCinematics because I wanted to create images that feel like something, not just document that a moment happened."
+      </div>
+<p>I'm Alan, a self taught photographer based in <strong>Phoenix, Arizona</strong>, originally from Queens, New York. I started AlansCinematics because I wanted to create images that feel like something, not just document that a moment happened.</p>
+<p>My style is cinematic, candid, and intentional. I'll guide you when needed and give direction for posed shots, but the experience never feels stiff or forced. The goal is to make the session feel effortless, so the photos still feel natural and true to you.</p>
+<p>Whether you're booking a grad session, a couples shoot, or family portraits, the approach is always the same: <strong>you look like yourself, just elevated.</strong></p>
+<a class="btn-dark" href="#contact" style="margin-top:1.5rem; display:inline-block">Let's work together</a>
+</div>
+</section>
+<!-- ── FAQ ───────────────────────────────────────────────────── -->
+<section id="faq">
+<div class="reveal">
+<p class="section-eyebrow">FAQ</p>
+<h2 class="section-title">Questions, <em>answered.</em></h2>
+</div>
+<div class="faq-grid">
+<div>
+<div class="faq-item reveal">
+<div class="faq-q">Where are you based?<span class="faq-icon">+</span></div>
+<div class="faq-a">I'm based in Phoenix, Arizona, and available for sessions across the state — including Scottsdale, Tempe, Chandler, Mesa, Gilbert, Sedona, and beyond.</div>
+</div>
+<div class="faq-item reveal">
+<div class="faq-q">Do you travel outside Phoenix?<span class="faq-icon">+</span></div>
+<div class="faq-a">Yes. I'm always up for traveling within Arizona for the right session. For destinations outside the state, reach out and we'll figure out what makes sense.</div>
+</div>
+<div class="faq-item reveal">
+<div class="faq-q">How long until I receive my photos?<span class="faq-icon">+</span></div>
+<div class="faq-a">Most galleries are delivered within 7–10 days of your session. During busy seasons it may be slightly longer, but I'll always keep you updated.</div>
+</div>
+<div class="faq-item reveal">
+<div class="faq-q">How many photos will I receive?<span class="faq-icon">+</span></div>
+<div class="faq-a">Each package has a guaranteed minimum. I focus on delivering images that are actually worth keeping — and I often exceed the minimum when the session calls for it. Every image in your gallery will be worth downloading.</div>
+</div>
+</div>
+<div>
+<div class="faq-item reveal">
+<div class="faq-q">What should we wear?<span class="faq-icon">+</span></div>
+<div class="faq-a">Wear something that feels like you, just a little more elevated. Neutral tones, earthy colors, and simple textures tend to photograph beautifully. Most importantly, wear something you feel confident and comfortable in so the session feels natural.</div>
+</div>
+<div class="faq-item reveal">
+<div class="faq-q">Do you help with location ideas?<span class="faq-icon">+</span></div>
+<div class="faq-a">Yes — I know Arizona well and have go-to spots for different vibes. If you have a location in mind, great. If not, I'll suggest a few based on your session type and the look you're going for.</div>
+</div>
+<div class="faq-item reveal">
+<div class="faq-q">What if I feel awkward in front of the camera?<span class="faq-icon">+</span></div>
+<div class="faq-a">That's my most common starting point. I don't expect you to know how to pose — that's my job. I'll guide you through movement, conversation, and direction until it feels natural. Most people loosen up within the first 15 minutes.</div>
+</div>
+<div class="faq-item reveal">
+<div class="faq-q">How do I book?<span class="faq-icon">+</span></div>
+<div class="faq-a">Fill out the inquiry form below with your session type, preferred date, and a bit about what you have in mind. I'll follow up within 48 hours to confirm availability and get things locked in.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ── CONTACT ────────────────────────────────────────────────── -->
+<section id="contact">
+<div class="contact-left reveal">
+<p class="section-eyebrow">Book a Session</p>
+<div class="section-rule"></div>
+<h2 class="section-title">Let's make<br/><em>something real.</em></h2>
+<div class="section-rule"></div>
+<p>No pressure, no hard sell. Tell me what you have in mind and I'll get back to you within 48 hours. If you're not sure which package fits, just tell me what you're going for and we'll figure it out together.</p>
+<div class="contact-meta">
+<div class="c-row">
+<span class="c-label">Email</span>
+<span class="c-val"><a href="mailto:alanscinematics@gmail.com">alanscinematics@gmail.com</a></span>
+</div>
+<div class="c-row">
+<span class="c-label">Location</span>
+<span class="c-val">Phoenix, AZ · Available statewide</span>
+</div>
+<div class="c-row">
+<span class="c-label">Instagram</span>
+<span class="c-val"><a href="https://instagram.com/alanscinematics" target="_blank">@alanscinematics</a></span>
+</div>
+<div class="c-row">
+<span class="c-label">Phone</span>
+<span class="c-val"><a href="tel:6026007904">602-600-7904</a></span>
+</div>
+<div class="c-row">
+<span class="c-label">Response</span>
+<span class="c-val">Within 48 hours</span>
+</div>
+</div>
+</div>
+<div class="contact-form reveal">
+<div>
+<label class="f-label">First Name</label>
+<input class="f-input" placeholder="Jane" type="text"/>
+</div>
+<div>
+<label class="f-label">Email Address</label>
+<input class="f-input" placeholder="jane@example.com" type="email"/>
+</div>
+<div>
+<label class="f-label">Session Type</label>
+<select class="f-select">
+<option value="">Select a session...</option>
+<option>Couples — from $300</option>
+<option>Portraits / Grads — from $250</option>
+<option>Families — from $375</option>
+<option>Not sure yet — let's talk</option>
+</select>
+</div>
+<div class="f-row">
+<div>
+<label class="f-label">Preferred Date</label>
+<input class="f-input" placeholder="Month / timeframe" type="text"/>
+</div>
+<div>
+<label class="f-label">Location (if you have one)</label>
+<input class="f-input" placeholder="Phoenix, Scottsdale, etc." type="text"/>
+</div>
+</div>
+<div>
+<label class="f-label">Tell me about your session</label>
+<textarea class="f-textarea" placeholder="What are you going for? Any vibe, ideas, or details you want me to know?"></textarea>
+</div>
+<button class="f-submit">Send Inquiry</button>
+</div>
+</section>
+<!-- ── FOOTER ─────────────────────────────────────────────────── -->
+<footer>
+<a class="foot-logo" href="#hero">Alans<span>Cinematics</span></a>
+<span class="foot-copy">© 2025 AlansCinematics · Phoenix, AZ</span>
+<div class="foot-links">
+<a href="https://instagram.com/alanscinematics" target="_blank">Instagram</a>
+<a href="mailto:alanscinematics@gmail.com">Email</a>
+<a href="#portfolio">Work</a>
+</div>
+</footer>
+<script defer src="script.js"></script>
+</body>
+</html>
