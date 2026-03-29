@@ -175,15 +175,29 @@
 
     var galleryData = {
       couples: [
-        { opt: 'couples-evelina', widths: [400, 800, 1200], ratio: 0.72 },
-        { opt: 'portfolio-golden-hour', widths: [400, 800, 913], ratio: 0.71 },
-        { opt: 'portfolio-film-still', widths: [400, 800, 1019], ratio: 0.90 }
+        { opt: 'couples-sunset-baby-bump-embrace-portrait', widths: [400, 800, 1200, 1920], ratio: 0.96, alt: 'Close portrait of couple holding baby bump at sunset' },
+        { opt: 'couples-sunset-follow-me-portrait', widths: [400, 800, 1200, 1498], ratio: 0.73, alt: 'Woman holding partner hand during sunset couples session' },
+        { opt: 'couples-in-home-baby-bottle-feeding-mirror-portrait', widths: [400, 800, 1200, 1549], ratio: 0.76, alt: 'Intimate at-home couple moment while bottle feeding baby reflected in mirror' },
+        { opt: 'couples-proposal-neon-sign-embrace-wide', widths: [400, 800, 1200, 1920], ratio: 2.12, alt: 'Couple embracing in front of will you marry me neon sign' },
+        { opt: 'couples-lakeside-evening-portrait', widths: [400, 800, 1200, 1478], ratio: 0.72, alt: 'Couple portrait by lakeside railing at dusk' }
       ],
       portraits: [
-        { opt: 'grad-coer', widths: [400, 800, 1200, 1920], ratio: 0.79 },
-        { opt: 'portfolio-senior-season', widths: [400, 800, 1013], ratio: 0.89 },
-        { opt: 'portfolio-desert-dusk', widths: [400, 800, 888], ratio: 0.68 },
-        { opt: 'portfolio-golden-hour', widths: [400, 800, 913], ratio: 0.71 }
+        { opt: 'asu-first-generation-graduation-palm-walkway-portrait', widths: [400, 800, 1200, 1535], ratio: 0.75, alt: 'Male graduate on palm-lined walkway with hands raised' },
+        { opt: 'asu-first-generation-graduation-steps-cap-raised-portrait', widths: [400, 800, 1200, 1670], ratio: 0.82, alt: 'Male graduate seated on steps raising cap' },
+        { opt: 'asu-first-generation-graduation-steps-seated-smile', widths: [400, 800, 1200, 1535], ratio: 0.75, alt: 'Male graduate seated on steps smiling at camera' },
+        { opt: 'asu-first-generation-graduation-library-bookshelf-portrait', widths: [400, 800, 1200, 1920], ratio: 2.33, alt: 'Male graduate in library reaching toward bookshelf' },
+        { opt: 'asu-first-generation-graduation-steps-standing-portrait', widths: [400, 800, 1200, 1920], ratio: 2.21, alt: 'Male graduate standing on steps portrait' },
+        { opt: 'asu-first-generation-graduation-steps-hand-sign', widths: [400, 800, 1200, 1920], ratio: 2.83, alt: 'Male graduate on steps making hand sign' },
+        { opt: 'asu-graduation-palm-walkway-cap-raised', widths: [400, 800, 1200, 1464], ratio: 0.71, alt: 'Female graduate on palm-lined walkway raising cap' },
+        { opt: 'asu-graduation-ring-closeup', widths: [400, 800, 1200, 1486], ratio: 0.73, alt: 'Closeup of graduate ring and hand gesture' },
+        { opt: 'asu-graduation-back-view-cap-raised', widths: [400, 800, 1200, 1571], ratio: 0.77, alt: 'Female graduate back view raising cap' },
+        { opt: 'asu-graduation-library-books-stack-laughing', widths: [400, 800, 1200, 1920], ratio: 1.45, alt: 'Female graduate laughing with stack of library books' },
+        { opt: 'asu-graduation-library-books-stack-looking-up', widths: [400, 800, 1200, 1728], ratio: 0.84, alt: 'Female graduate looking up with stack of library books' },
+        { opt: 'asu-graduation-library-books-stack-seated-portrait', widths: [400, 800, 1200, 1588], ratio: 0.78, alt: 'Female graduate seated with stack of library books portrait' },
+        { opt: 'asu-graduation-library-book-reach-seated', widths: [400, 800, 1200, 1612], ratio: 0.79, alt: 'Female graduate seated in library reaching for book' },
+        { opt: 'asu-graduation-library-reading-profile', widths: [400, 800, 1200, 1920], ratio: 2.10, alt: 'Female graduate reading book in library profile view' },
+        { opt: 'asu-graduation-open-book-overhead-detail', widths: [400, 800, 1200, 1920], ratio: 1.50, alt: 'Overhead detail of graduate reading open book' },
+        { opt: 'asu-graduation-bookshelf-hand-motion-detail', widths: [400, 800, 1200, 1920], ratio: 2.32, alt: 'Motion detail of graduate hand brushing bookshelf' }
       ],
       families: [
         { opt: 'family-airplane', widths: [400, 800, 1013], ratio: 0.89 },
@@ -430,13 +444,13 @@
 
       function openGallery(cat) {
         var imageData = (galleryData[cat] || []).map(function(d) {
-          return { opt: d.opt, widths: d.widths, ratio: d.ratio, isLandscape: d.ratio > 1.2 };
+          return { opt: d.opt, widths: d.widths, ratio: d.ratio, alt: d.alt, isLandscape: d.ratio > 1.2 };
         });
         if (cat === 'all') {
           imageData = [];
           Object.keys(galleryData).forEach(function(k) {
             galleryData[k].forEach(function(d) {
-              imageData.push({ opt: d.opt, widths: d.widths, ratio: d.ratio, isLandscape: d.ratio > 1.2 });
+              imageData.push({ opt: d.opt, widths: d.widths, ratio: d.ratio, alt: d.alt, isLandscape: d.ratio > 1.2 });
             });
           });
         }
@@ -456,77 +470,59 @@
 
           if (imageData.length === 0) return;
 
-          // Build masonry layout: 2-col sections + full-width landscapes
-          var portraitBuffer = [];
+          // Build true masonry layout — pack every image into shortest column
+          var numCols = window.innerWidth <= 600 ? 2
+                      : window.innerWidth <= 1024 ? 3
+                      : 4;
 
-          function flushPortraits() {
-            if (portraitBuffer.length === 0) return;
-            var colsDiv = document.createElement('div');
-            colsDiv.className = 'gallery-cols';
-            var col1 = document.createElement('div');
-            col1.className = 'gallery-col';
-            var col2 = document.createElement('div');
-            col2.className = 'gallery-col';
-
-            var h1 = 0, h2 = 0;
-            portraitBuffer.forEach(function(data) {
-              var div = document.createElement('div');
-              div.className = 'g-item';
-              div.style.aspectRatio = String(data.ratio);
-              var newImg = document.createElement('img');
-              newImg.src = optSrc(data.opt, data.widths);
-              newImg.srcset = optSrcset(data.opt, data.widths);
-              newImg.sizes = '(max-width: 768px) 46vw, (max-width: 1200px) 40vw, 600px';
-              newImg.alt = '';
-              newImg.loading = 'lazy';
-              div.appendChild(newImg);
-
-              if (h1 <= h2) {
-                col1.appendChild(div);
-                h1 += 1 / data.ratio;
-              } else {
-                col2.appendChild(div);
-                h2 += 1 / data.ratio;
-              }
-            });
-
-            colsDiv.appendChild(col1);
-            colsDiv.appendChild(col2);
-            galleryGrid.appendChild(colsDiv);
-            portraitBuffer = [];
+          var colsDiv = document.createElement('div');
+          colsDiv.className = 'gallery-cols';
+          var cols = [];
+          var colHeights = [];
+          for (var ci = 0; ci < numCols; ci++) {
+            var col = document.createElement('div');
+            col.className = 'gallery-col';
+            colsDiv.appendChild(col);
+            cols.push(col);
+            colHeights.push(0);
           }
 
-          imageData.forEach(function(data) {
-            if (data.isLandscape) {
-              flushPortraits();
-              var div = document.createElement('div');
-              div.className = 'g-item g-landscape';
-              div.style.aspectRatio = String(data.ratio);
-              var newImg = document.createElement('img');
-              newImg.src = optSrc(data.opt, data.widths);
-              newImg.srcset = optSrcset(data.opt, data.widths);
-              newImg.sizes = '(max-width: 768px) 94vw, (max-width: 1200px) 80vw, 1200px';
-              newImg.alt = '';
-              newImg.loading = 'lazy';
-              div.appendChild(newImg);
-              galleryGrid.appendChild(div);
-            } else {
-              portraitBuffer.push(data);
+          imageData.forEach(function(data, idx) {
+            // Find shortest column
+            var minIdx = 0;
+            for (var j = 1; j < colHeights.length; j++) {
+              if (colHeights[j] < colHeights[minIdx]) minIdx = j;
             }
+
+            var div = document.createElement('div');
+            div.className = 'g-item';
+            div.style.aspectRatio = String(data.ratio);
+            div.dataset.lbIdx = idx;
+            var newImg = document.createElement('img');
+            newImg.src = optSrc(data.opt, data.widths);
+            newImg.srcset = optSrcset(data.opt, data.widths);
+            newImg.sizes = '(max-width: 600px) 46vw, (max-width: 1024px) 30vw, 24vw';
+            newImg.alt = data.alt || '';
+            newImg.loading = 'lazy';
+            div.appendChild(newImg);
+            cols[minIdx].appendChild(div);
+            colHeights[minIdx] += 1 / data.ratio;
           });
-          flushPortraits();
+
+          galleryGrid.appendChild(colsDiv);
 
           // Wire up lightbox click + keyboard handlers
           lbSrcs = imageData.map(function(d) { return optMax(d.opt, d.widths); });
           var gItems = galleryGrid.querySelectorAll('.g-item');
-          gItems.forEach(function(item, i) {
+          gItems.forEach(function(item) {
+            var lbIdx = parseInt(item.dataset.lbIdx, 10);
             item.style.cursor = 'pointer';
             item.setAttribute('tabindex', '0');
             item.setAttribute('role', 'button');
-            item.setAttribute('aria-label', 'View image ' + (i + 1));
-            item.addEventListener('click', function() { openLightbox(i); });
+            item.setAttribute('aria-label', 'View image ' + (lbIdx + 1));
+            item.addEventListener('click', function() { openLightbox(lbIdx); });
             item.addEventListener('keydown', function(e) {
-              if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(i); }
+              if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(lbIdx); }
             });
           });
 
@@ -541,24 +537,19 @@
             galleryGrid.getBoundingClientRect(); // force layout
 
             // Calculate cutoff so a partial image peeks out
-            var sections = galleryGrid.children;
-            var itemCount = 0;
+            var allItems = galleryGrid.querySelectorAll('.g-item');
             var cutHeight = 0;
 
-            for (var si = 0; si < sections.length; si++) {
-              var section = sections[si];
-              if (section.classList.contains('gallery-cols')) {
-                itemCount += section.querySelectorAll('.g-item').length;
-              } else if (section.classList.contains('g-item')) {
-                itemCount += 1;
-              }
-
-              if (itemCount >= GALLERY_SHOW_LIMIT) {
-                cutHeight = section.offsetTop + section.offsetHeight;
-                if (si + 1 < sections.length) {
-                  cutHeight += 8 + sections[si + 1].offsetHeight * 0.35;
-                }
-                break;
+            if (allItems.length > GALLERY_SHOW_LIMIT) {
+              var gridTop = galleryGrid.getBoundingClientRect().top;
+              var bottoms = [];
+              allItems.forEach(function(item) {
+                bottoms.push(item.getBoundingClientRect().bottom - gridTop);
+              });
+              bottoms.sort(function(a, b) { return a - b; });
+              cutHeight = bottoms[GALLERY_SHOW_LIMIT - 1];
+              if (bottoms.length > GALLERY_SHOW_LIMIT) {
+                cutHeight += 8 + (bottoms[GALLERY_SHOW_LIMIT] - bottoms[GALLERY_SHOW_LIMIT - 1]) * 0.35;
               }
             }
 
