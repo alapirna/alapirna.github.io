@@ -351,6 +351,10 @@
             activateTab(target.dataset.cat);
           }
         }
+        // Snap to nearest card
+        var IW = itemW();
+        cOffset = Math.round(cOffset / IW) * IW;
+        carousel.style.transform = 'translateX(-' + cOffset + 'px)';
         checkLoop();
       });
 
@@ -379,6 +383,10 @@
             activateTab(item.dataset.cat);
           }
         }
+        // Snap to nearest card
+        var IW = itemW();
+        cOffset = Math.round(cOffset / IW) * IW;
+        carousel.style.transform = 'translateX(-' + cOffset + 'px)';
         checkLoop();
       });
 
