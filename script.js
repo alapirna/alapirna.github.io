@@ -351,9 +351,16 @@
             activateTab(target.dataset.cat);
           }
         }
-        // Snap to nearest card
+        // Snap in swipe direction — any movement commits to next card
         var IW = itemW();
-        cOffset = Math.round(cOffset / IW) * IW;
+        var delta = cOffset - dragStartOffset;
+        if (dragDistance >= 8 && delta > 0) {
+          cOffset = Math.ceil(cOffset / IW) * IW;
+        } else if (dragDistance >= 8 && delta < 0) {
+          cOffset = Math.floor(cOffset / IW) * IW;
+        } else {
+          cOffset = Math.round(cOffset / IW) * IW;
+        }
         carousel.style.transform = 'translateX(-' + cOffset + 'px)';
         checkLoop();
       });
@@ -383,9 +390,16 @@
             activateTab(item.dataset.cat);
           }
         }
-        // Snap to nearest card
+        // Snap in swipe direction — any movement commits to next card
         var IW = itemW();
-        cOffset = Math.round(cOffset / IW) * IW;
+        var delta = cOffset - touchOffsetStart;
+        if (touchDist >= 12 && delta > 0) {
+          cOffset = Math.ceil(cOffset / IW) * IW;
+        } else if (touchDist >= 12 && delta < 0) {
+          cOffset = Math.floor(cOffset / IW) * IW;
+        } else {
+          cOffset = Math.round(cOffset / IW) * IW;
+        }
         carousel.style.transform = 'translateX(-' + cOffset + 'px)';
         checkLoop();
       });
