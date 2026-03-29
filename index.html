@@ -1,4 +1,4 @@
-+-*</8!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -8,6 +8,7 @@
 <meta content="Phoenix photographer specializing in cinematic portraits, couples, and family photography across Arizona. Moody, honest, and visually driven sessions that feel like you — just elevated." name="description"/>
 <meta content="Arizona photographer, Arizona portrait photographer, Arizona couples photographer, Arizona family photographer, Phoenix photographer, cinematic photographer Arizona, grad photos Arizona, headshots Phoenix" name="keywords"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
 <link href="style.css" rel="stylesheet"/>
 </head>
@@ -25,11 +26,11 @@
 <li><a href="#faq">FAQ</a></li>
 <li><a class="nav-cta" href="#contact">Book Now</a></li>
 </ul>
-<button aria-label="Menu" class="nav-mobile-btn" id="menuBtn">
+<button aria-label="Menu" class="nav-mobile-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">
 <span></span><span></span><span></span>
 </button>
 </nav>
-<div class="mobile-menu" id="mobileMenu">
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile menu" hidden>
 <a class="mm-link" href="#portfolio">Work</a>
 <a class="mm-link" href="#services">Services</a>
 <a class="mm-link" href="#about">About</a>
@@ -54,32 +55,32 @@
 <div class="hc-track" id="hcTrack">
 <div class="hc-slide" data-index="0">
 <div class="hc-bg">
-<img alt="Cinematic portrait session in Phoenix, Arizona" class="hc-img" src="images/hero tyler.jpg" style="display:block;width:100%;height:100%;object-fit:cover"/>
+<img alt="Cinematic portrait session in Phoenix, Arizona" class="hc-img" src="images/opt/hero-tyler-800w.jpg" srcset="images/opt/hero-tyler-400w.jpg 400w, images/opt/hero-tyler-800w.jpg 800w, images/opt/hero-tyler-1019w.jpg 1019w" sizes="100vw" width="1019" height="1132" fetchpriority="high" decoding="async"/>
 </div>
 </div>
 <div class="hc-slide" data-index="1">
 <div class="hc-bg">
-<img alt="Graduation photo session at Arizona library" class="hc-img" src="images/hero grad pic library.jpg" style="display:block;width:100%;height:100%;object-fit:cover"/>
+<img alt="Graduation photo session at Arizona library" class="hc-img" src="images/opt/hero-grad-pic-library-800w.jpg" srcset="images/opt/hero-grad-pic-library-400w.jpg 400w, images/opt/hero-grad-pic-library-800w.jpg 800w, images/opt/hero-grad-pic-library-874w.jpg 874w" sizes="100vw" width="874" height="1311" loading="lazy" fetchpriority="low" decoding="async"/>
 </div>
 </div>
 <div class="hc-slide" data-index="2">
 <div class="hc-bg">
-<img alt="Couples photography session in Arizona" class="hc-img" src="images/hero-together.jpg" style="display:block;width:100%;height:100%;object-fit:cover"/>
+<img alt="Couples photography session in Arizona" class="hc-img" src="images/opt/hero-together-800w.jpg" srcset="images/opt/hero-together-400w.jpg 400w, images/opt/hero-together-800w.jpg 800w, images/opt/hero-together-1200w.jpg 1200w" sizes="100vw" width="1200" height="1489" loading="lazy" fetchpriority="low" decoding="async"/>
 </div>
 </div>
 <div class="hc-slide" data-index="3">
 <div class="hc-bg">
-<img alt="Senior graduation portrait in Phoenix" class="hc-img" src="images/hero grad pic.png" style="display:block;width:100%;height:100%;object-fit:cover"/>
+<img alt="Senior graduation portrait in Phoenix" class="hc-img" src="images/opt/hero-grad-pic-800w.jpg" srcset="images/opt/hero-grad-pic-400w.jpg 400w, images/opt/hero-grad-pic-800w.jpg 800w, images/opt/hero-grad-pic-1200w.jpg 1200w, images/opt/hero-grad-pic-1920w.jpg 1920w" sizes="100vw" width="1920" height="2502" loading="lazy" fetchpriority="low" decoding="async"/>
 </div>
 </div>
 <div class="hc-slide" data-index="4">
 <div class="hc-bg">
-<img alt="Family portrait session in Phoenix, Arizona" class="hc-img" src="images/hero brothers.png" style="display:block;width:100%;height:100%;object-fit:cover"/>
+<img alt="Family portrait session in Phoenix, Arizona" class="hc-img" src="images/opt/hero-brothers-800w.jpg" srcset="images/opt/hero-brothers-400w.jpg 400w, images/opt/hero-brothers-800w.jpg 800w, images/opt/hero-brothers-1200w.jpg 1200w, images/opt/hero-brothers-1670w.jpg 1670w" sizes="100vw" width="1670" height="2047" loading="lazy" fetchpriority="low" decoding="async"/>
 </div>
 </div>
 <div class="hc-slide" data-index="5">
 <div class="hc-bg">
-<img alt="Portrait photography by Phoenix photographer" class="hc-img" src="images/hero alex.png" style="display:block;width:100%;height:100%;object-fit:cover"/>
+<img alt="Portrait photography by Phoenix photographer" class="hc-img" src="images/opt/hero-alex-800w.jpg" srcset="images/opt/hero-alex-400w.jpg 400w, images/opt/hero-alex-800w.jpg 800w, images/opt/hero-alex-1200w.jpg 1200w, images/opt/hero-alex-1549w.jpg 1549w" sizes="100vw" width="1549" height="2048" loading="lazy" fetchpriority="low" decoding="async"/>
 </div>
 </div>
 </div>
@@ -88,12 +89,12 @@
 <button aria-label="Next" class="hc-arrow hc-next" id="hcNext">›</button>
 <!-- dots -->
 <div class="hc-dots" id="hcDots">
-<span class="hc-dot active"></span>
-<span class="hc-dot"></span>
-<span class="hc-dot"></span>
-<span class="hc-dot"></span>
-<span class="hc-dot"></span>
-<span class="hc-dot"></span>
+<button type="button" class="hc-dot active" aria-label="Go to slide 1"></button>
+<button type="button" class="hc-dot" aria-label="Go to slide 2"></button>
+<button type="button" class="hc-dot" aria-label="Go to slide 3"></button>
+<button type="button" class="hc-dot" aria-label="Go to slide 4"></button>
+<button type="button" class="hc-dot" aria-label="Go to slide 5"></button>
+<button type="button" class="hc-dot" aria-label="Go to slide 6"></button>
 </div>
 </div>
 </div>
@@ -127,144 +128,16 @@
 <button class="carousel-arrow arrow-right" id="carArrowR">›</button>
 <div class="port-carousel" id="portCarousel">
 <div class="pc-item" data-cat="couples">
-<div class="pc-bg"><img alt="Couples photo session at desert dusk in Scottsdale, Arizona" class="pc-img" src="images/couples evelina.jpg" style="display:block"/></div>
+<div class="pc-bg"><img alt="Couples photo session at desert dusk in Scottsdale, Arizona" class="pc-img" src="images/opt/couples-evelina-800w.jpg" srcset="images/opt/couples-evelina-400w.jpg 400w, images/opt/couples-evelina-800w.jpg 800w, images/opt/couples-evelina-1200w.jpg 1200w" sizes="(max-width: 1024px) 80vw, 38vw" width="1200" height="1662" loading="lazy" decoding="async"/></div>
 <div class="pc-info"><div class="pc-title">Desert Dusk</div><div class="pc-cat">Couples · Scottsdale</div></div>
 </div>
 <div class="pc-item" data-cat="portraits">
-<div class="pc-bg"><img alt="Graduation portrait session in Phoenix" class="pc-img" src="images/grad coer.png" style="display:block"/></div>
+<div class="pc-bg"><img alt="Graduation portrait session in Phoenix" class="pc-img" src="images/opt/grad-coer-800w.jpg" srcset="images/opt/grad-coer-400w.jpg 400w, images/opt/grad-coer-800w.jpg 800w, images/opt/grad-coer-1200w.jpg 1200w, images/opt/grad-coer-1920w.jpg 1920w" sizes="(max-width: 1024px) 80vw, 38vw" width="1920" height="2438" loading="lazy" decoding="async"/></div>
 <div class="pc-info"><div class="pc-title">Cap &amp; Gown</div><div class="pc-cat">Grad Portraits · Phoenix</div></div>
 </div>
 <div class="pc-item" data-cat="families">
-<div class="pc-bg"><img alt="Family photography session in Tempe, Arizona" class="pc-img" src="images/family airplane.jpg" style="display:block"/></div>
+<div class="pc-bg"><img alt="Family photography session in Tempe, Arizona" class="pc-img" src="images/opt/family-airplane-800w.jpg" srcset="images/opt/family-airplane-400w.jpg 400w, images/opt/family-airplane-800w.jpg 800w, images/opt/family-airplane-1013w.jpg 1013w" sizes="(max-width: 1024px) 80vw, 38vw" width="1013" height="1143" loading="lazy" decoding="async"/></div>
 <div class="pc-info"><div class="pc-title">The Ramírez Family</div><div class="pc-cat">Families · Tempe</div></div>
-</div>
-<div class="pc-item" data-cat="couples">
-<div class="pc-bg"><img alt="Golden hour couples photography in Mesa, Arizona" class="pc-img" src="images/portfolio-golden-hour.jpg" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Golden Hour</div><div class="pc-cat">Couples · Mesa</div></div>
-</div>
-<div class="pc-item" data-cat="portraits">
-<div class="pc-bg"><img alt="Senior portrait session in Chandler, Arizona" class="pc-img" src="images/portfolio-senior-season.jpg" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Senior Season</div><div class="pc-cat">Grad Portraits · Chandler</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.80">
-<div class="pc-bg"><img alt="Family portrait session in Phoenix, Arizona" class="pc-img" src="images/Family Portraits 1.JPG" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.79">
-<div class="pc-bg"><img alt="Family portrait photography in Arizona" class="pc-img" src="images/Family Portraits 2.JPG" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="2.65">
-<div class="pc-bg"><img alt="Family outdoor session in Arizona" class="pc-img" src="images/Family Portraits 7.png" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.76">
-<div class="pc-bg"><img alt="Family portrait in Phoenix" class="pc-img" src="images/Family Portraits 3.JPG" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.80">
-<div class="pc-bg"><img alt="Family photography session in Arizona" class="pc-img" src="images/Family Portraits 10.png" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="2.54">
-<div class="pc-bg"><img alt="Cinematic family portrait in Arizona" class="pc-img" src="images/Family Portraits 11.png" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.72">
-<div class="pc-bg"><img alt="Family portrait session in Tempe, Arizona" class="pc-img" src="images/Family Portraits 4.png" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.78">
-<div class="pc-bg"><img alt="Family photography in Phoenix, Arizona" class="pc-img" src="images/Family Portraits 5.png" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="1.63">
-<div class="pc-bg"><img alt="Family outdoor photography in Arizona" class="pc-img" src="images/Family Portraits 15.png" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.76">
-<div class="pc-bg"><img alt="Family portrait photography in Scottsdale" class="pc-img" src="images/Family Portraits 9.png" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.98">
-<div class="pc-bg"><img alt="Family portrait in Arizona" class="pc-img" src="images/Family Portraits 12.jpg" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="2.33">
-<div class="pc-bg"><img alt="Panoramic family session in Arizona" class="pc-img" src="images/Family Portraits 8.png" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.76">
-<div class="pc-bg"><img alt="Family photo session in Phoenix" class="pc-img" src="images/Family Portraits 6.png" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.89">
-<div class="pc-bg"><img alt="Family photography in Mesa, Arizona" class="pc-img" src="images/Family Portraits 13.jpg" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="2.04">
-<div class="pc-bg"><img alt="Family outdoor portrait in Arizona" class="pc-img" src="images/Family Portraits 18.jpg" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.89">
-<div class="pc-bg"><img alt="Family portrait session in Gilbert" class="pc-img" src="images/Family Portraits 14.jpg" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.81">
-<div class="pc-bg"><img alt="Family photography in Chandler, Arizona" class="pc-img" src="images/Family Portraits 16.jpg" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="1.62">
-<div class="pc-bg"><img alt="Family portrait photography in Arizona" class="pc-img" src="images/Family Portraits 19.jpg" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.90">
-<div class="pc-bg"><img alt="Family session in Phoenix, Arizona" class="pc-img" src="images/Family Portraits 17.jpg" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.85">
-<div class="pc-bg"><img alt="Family photography session in Arizona" class="pc-img" src="images/Family Portraits 21.png" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="1.64">
-<div class="pc-bg"><img alt="Family outdoor photography in Phoenix" class="pc-img" src="images/Family Portraits 20.jpg" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.85">
-<div class="pc-bg"><img alt="Family portrait in Mesa, Arizona" class="pc-img" src="images/Family Portraits 23.png" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.82">
-<div class="pc-bg"><img alt="Family photography in Tempe" class="pc-img" src="images/Family Portraits 25.png" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="2.25">
-<div class="pc-bg"><img alt="Panoramic family portrait in Arizona" class="pc-img" src="images/Family Portraits 22.jpg" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="2.11">
-<div class="pc-bg"><img alt="Family outdoor portrait in Phoenix" class="pc-img" src="images/Family Portraits 24.png" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.78">
-<div class="pc-bg"><img alt="Family portrait session in Arizona" class="pc-img" src="images/Family Portraits 26.png" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="families" data-ratio="0.84">
-<div class="pc-bg"><img alt="Family photography portrait in Phoenix" class="pc-img" src="images/Family Portraits 27.png" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Family Portraits</div><div class="pc-cat">Families</div></div>
-</div>
-<div class="pc-item" data-cat="couples">
-<div class="pc-bg"><img alt="Cinematic couples session in Sedona, Arizona" class="pc-img" src="images/portfolio-film-still.jpg" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Film Still</div><div class="pc-cat">Couples · Sedona</div></div>
-</div>
-<div class="pc-item" data-cat="portraits">
-<div class="pc-bg"><img alt="Street portrait photography in downtown Phoenix" class="pc-img" src="images/portfolio-desert-dusk.jpg" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Street Portrait</div><div class="pc-cat">Portraits · Downtown PHX</div></div>
-</div>
-<div class="pc-item" data-cat="portraits">
-<div class="pc-bg"><img alt="Brand portrait session by Phoenix photographer" class="pc-img" src="images/portfolio-golden-hour.jpg" style="display:block"/></div>
-<div class="pc-info"><div class="pc-title">Brand Session</div><div class="pc-cat">Portraits · Phoenix</div></div>
 </div>
 </div>
 </div>
@@ -289,7 +162,7 @@
 <!-- Portraits / Grads -->
 <div class="svc-card reveal">
 <div class="svc-img-wrap">
-<img alt="Portrait and graduation photography in Phoenix" id="svc-img-1" src="images/portfolio-golden-hour.jpg" style="display:block"/>
+<img alt="Portrait and graduation photography in Phoenix" id="svc-img-1" src="images/opt/portfolio-golden-hour-800w.jpg" srcset="images/opt/portfolio-golden-hour-400w.jpg 400w, images/opt/portfolio-golden-hour-800w.jpg 800w, images/opt/portfolio-golden-hour-913w.jpg 913w" sizes="(max-width: 1024px) 100vw, 50vw" width="913" height="1278" loading="lazy" decoding="async"/>
 </div>
 <div class="svc-body">
 <div class="svc-name">Portraits / Grads</div>
@@ -311,7 +184,7 @@
 <!-- Couples -->
 <div class="svc-card reveal">
 <div class="svc-img-wrap">
-<img alt="Couples photographer session in Arizona" id="svc-img-2" src="images/tyler couple photo.png" style="display:block"/>
+<img alt="Couples photographer session in Arizona" id="svc-img-2" src="images/opt/tyler-couple-photo-800w.jpg" srcset="images/opt/tyler-couple-photo-400w.jpg 400w, images/opt/tyler-couple-photo-800w.jpg 800w, images/opt/tyler-couple-photo-1200w.jpg 1200w, images/opt/tyler-couple-photo-1920w.jpg 1920w" sizes="(max-width: 1024px) 100vw, 50vw" width="1920" height="2077" loading="lazy" decoding="async"/>
 </div>
 <div class="svc-body">
 <div class="svc-name">Couples</div>
@@ -331,9 +204,9 @@
 </div>
 </div>
 <!-- Families -->
-<div class="svc-card reveal" style="grid-column: 1 / -1; max-width: 640px; margin: 0 auto; width: 100%;">
+<div class="svc-card svc-card-full reveal">
 <div class="svc-img-wrap">
-<img alt="Family photographer session in Phoenix, Arizona" id="svc-img-3" src="images/family-blanket-overhead.png" style="display:block"/>
+<img alt="Family photographer session in Phoenix, Arizona" id="svc-img-3" src="images/opt/family-blanket-overhead-800w.jpg" srcset="images/opt/family-blanket-overhead-400w.jpg 400w, images/opt/family-blanket-overhead-800w.jpg 800w, images/opt/family-blanket-overhead-1200w.jpg 1200w, images/opt/family-blanket-overhead-1920w.jpg 1920w" sizes="(max-width: 1024px) 100vw, min(640px, 50vw)" width="1920" height="1173" loading="lazy" decoding="async"/>
 </div>
 <div class="svc-body">
 <div class="svc-name">Families</div>
@@ -364,38 +237,38 @@
 </div>
 <div class="process-flow">
 <div class="flow-line"></div>
-<div class="process-step reveal" data-step="0">
+<button type="button" class="process-step reveal" aria-expanded="false" data-step="0">
 <div class="step-circle">01</div>
 <div class="step-label">Inquiry</div>
 <div class="step-expand">
 <div class="step-title">Inquiry</div>
 <p class="step-desc">Fill out the contact form with your session type, date, and a little about what you're going for. I'll respond within 48 hours.</p>
 </div>
-</div>
-<div class="process-step reveal" data-step="1">
+</button>
+<button type="button" class="process-step reveal" aria-expanded="false" data-step="1">
 <div class="step-circle">02</div>
 <div class="step-label">Planning</div>
 <div class="step-expand">
 <div class="step-title">Planning</div>
 <p class="step-desc">We'll lock in your date, location, and any details — outfits, vibe, timing. I'll help if you need location ideas in Arizona.</p>
 </div>
-</div>
-<div class="process-step reveal" data-step="2">
+</button>
+<button type="button" class="process-step reveal" aria-expanded="false" data-step="2">
 <div class="step-circle">03</div>
 <div class="step-label">The Session</div>
 <div class="step-expand">
 <div class="step-title">The Session</div>
 <p class="step-desc">Show up as yourself. I handle the rest — direction, movement, light. If you feel awkward in front of cameras, I've got you.</p>
 </div>
-</div>
-<div class="process-step reveal" data-step="3">
+</button>
+<button type="button" class="process-step reveal" aria-expanded="false" data-step="3">
 <div class="step-circle">04</div>
 <div class="step-label">Gallery Delivery</div>
 <div class="step-expand">
 <div class="step-title">Gallery Delivery</div>
 <p class="step-desc">Your edited gallery is delivered via private online link within 7–10 days. Download, share, and use them however you'd like.</p>
 </div>
-</div>
+</button>
 </div>
 </section>
 <!-- ── WHY ───────────────────────────────────────────────────── -->
@@ -434,7 +307,7 @@
 <!-- ── ABOUT ─────────────────────────────────────────────────── -->
 <section id="about">
 <div class="about-img-wrap reveal">
-<img alt="Alan — cinematic photographer based in Phoenix, Arizona" src="images/alan.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"/>
+<img alt="Alan — cinematic photographer based in Phoenix, Arizona" class="about-photo" src="images/opt/alan-800w.jpg" srcset="images/opt/alan-400w.jpg 400w, images/opt/alan-800w.jpg 800w, images/opt/alan-1200w.jpg 1200w, images/opt/alan-1920w.jpg 1920w" sizes="(max-width: 1024px) 100vw, 50vw" width="1920" height="1075" loading="lazy" decoding="async"/>
 </div>
 <div class="about-content reveal">
 <p class="section-eyebrow">About Alan</p>
@@ -446,7 +319,7 @@
 <p>I'm Alan, a self-taught cinematic photographer in <strong>Phoenix, Arizona</strong>, originally from Queens, New York. I started AlansCinematics because I wanted to create images that feel like something, not just document that a moment happened.</p>
 <p>My style is cinematic, candid, and intentional. I'll guide you when needed and give direction for posed shots, but the experience never feels stiff or forced. The goal is to make the session feel effortless, so the photos still feel natural and true to you.</p>
 <p>Whether you're booking a grad session, a couples shoot, or family portraits, the approach is always the same: <strong>you look like yourself, just elevated.</strong></p>
-<a class="btn-dark" href="#contact" style="margin-top:1.5rem; display:inline-block">Let's work together</a>
+<a class="btn-dark about-cta" href="#contact">Let's work together</a>
 </div>
 </section>
 <!-- ── CONTACT ────────────────────────────────────────────────── -->
@@ -468,11 +341,11 @@
 </div>
 <div class="c-row">
 <span class="c-label">Instagram</span>
-<span class="c-val"><a href="https://instagram.com/alanscinematics" target="_blank">@alanscinematics</a></span>
+<span class="c-val"><a href="https://instagram.com/alanscinematics" target="_blank" rel="noopener noreferrer">@alanscinematics</a></span>
 </div>
 <div class="c-row">
 <span class="c-label">Phone</span>
-<span class="c-val"><a href="tel:6026007904" style="color:var(--warm)">602-600-7904</a></span>
+<span class="c-val"><a href="tel:6026007904" class="link-warm">602-600-7904</a></span>
 </div>
 <div class="c-row">
 <span class="c-label">Response</span>
@@ -480,41 +353,45 @@
 </div>
 </div>
 </div>
-<div class="contact-form reveal">
+<form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/alanscinematics@gmail.com" method="POST" novalidate>
+<input type="hidden" name="_subject" value="New Session Inquiry — AlansCinematics"/>
+<input type="hidden" name="_captcha" value="false"/>
+<input type="hidden" name="_next" value=""/>
 <div>
-<label class="f-label">First Name</label>
-<input class="f-input" placeholder="Jane" type="text"/>
+<label class="f-label" for="cf-name">First Name</label>
+<input class="f-input" id="cf-name" name="name" placeholder="Jane" type="text" required autocomplete="given-name"/>
 </div>
 <div>
-<label class="f-label">Email Address</label>
-<input class="f-input" placeholder="jane@example.com" type="email"/>
+<label class="f-label" for="cf-email">Email Address</label>
+<input class="f-input" id="cf-email" name="email" placeholder="jane@example.com" type="email" required autocomplete="email"/>
 </div>
 <div>
-<label class="f-label">Session Type</label>
-<select class="f-select">
+<label class="f-label" for="cf-session">Session Type</label>
+<select class="f-select" id="cf-session" name="session" required>
 <option value="">Select a session...</option>
-<option>Couples — from $300</option>
-<option>Portraits / Grads — from $250</option>
-<option>Families — from $375</option>
-<option>Not sure yet — let's talk</option>
+<option value="couples">Couples — from $300</option>
+<option value="portraits">Portraits / Grads — from $250</option>
+<option value="families">Families — from $375</option>
+<option value="unsure">Not sure yet — let's talk</option>
 </select>
 </div>
 <div class="f-row">
 <div>
-<label class="f-label">Preferred Date</label>
-<input class="f-input" placeholder="Month / timeframe" type="text"/>
+<label class="f-label" for="cf-date">Preferred Date</label>
+<input class="f-input" id="cf-date" name="date" placeholder="Month / timeframe" type="text" autocomplete="off"/>
 </div>
 <div>
-<label class="f-label">Location (if you have one)</label>
-<input class="f-input" placeholder="Phoenix, Scottsdale, etc." type="text"/>
+<label class="f-label" for="cf-location">Location (if you have one)</label>
+<input class="f-input" id="cf-location" name="location" placeholder="Phoenix, Scottsdale, etc." type="text" autocomplete="off"/>
 </div>
 </div>
 <div>
-<label class="f-label">Tell me about your session</label>
-<textarea class="f-textarea" placeholder="What are you going for? Any vibe, ideas, or details you want me to know?"></textarea>
+<label class="f-label" for="cf-message">Tell me about your session</label>
+<textarea class="f-textarea" id="cf-message" name="message" placeholder="What are you going for? Any vibe, ideas, or details you want me to know?"></textarea>
 </div>
-<button class="f-submit">Send Inquiry</button>
-</div>
+<button class="f-submit" type="submit">Send Inquiry</button>
+<div class="f-status" id="formStatus" aria-live="polite"></div>
+</form>
 </section>
 <!-- ── FAQ ───────────────────────────────────────────────────── -->
 <section id="faq">
@@ -525,38 +402,38 @@
 <div class="faq-grid">
 <div>
 <div class="faq-item reveal">
-<div class="faq-q">Where are you based?<span class="faq-icon">+</span></div>
+<button type="button" class="faq-q" aria-expanded="false">Where are you based?<span class="faq-icon">+</span></button>
 <div class="faq-a">I'm based in Phoenix, Arizona, and available for sessions across the state — including Scottsdale, Tempe, Chandler, Mesa, Gilbert, Sedona, and beyond.</div>
 </div>
 <div class="faq-item reveal">
-<div class="faq-q">Do you travel outside Phoenix?<span class="faq-icon">+</span></div>
+<button type="button" class="faq-q" aria-expanded="false">Do you travel outside Phoenix?<span class="faq-icon">+</span></button>
 <div class="faq-a">Yes. I'm always up for traveling within Arizona for the right session. For destinations outside the state, reach out and we'll figure out what makes sense.</div>
 </div>
 <div class="faq-item reveal">
-<div class="faq-q">How long until I receive my photos?<span class="faq-icon">+</span></div>
+<button type="button" class="faq-q" aria-expanded="false">How long until I receive my photos?<span class="faq-icon">+</span></button>
 <div class="faq-a">Most galleries are delivered within 7–10 days of your session. During busy seasons it may be slightly longer, but I'll always keep you updated.</div>
 </div>
 <div class="faq-item reveal">
-<div class="faq-q">How many photos will I receive?<span class="faq-icon">+</span></div>
+<button type="button" class="faq-q" aria-expanded="false">How many photos will I receive?<span class="faq-icon">+</span></button>
 <div class="faq-a">Each package has a guaranteed minimum. I focus on delivering images that are actually worth keeping — and I often exceed the minimum when the session calls for it. Every image in your gallery will be worth downloading.</div>
 </div>
 </div>
 <div>
 <div class="faq-item reveal">
-<div class="faq-q">What should we wear?<span class="faq-icon">+</span></div>
+<button type="button" class="faq-q" aria-expanded="false">What should we wear?<span class="faq-icon">+</span></button>
 <div class="faq-a">Wear something that feels like you, just a little more elevated. Neutral tones, earthy colors, and simple textures tend to photograph beautifully. Most importantly, wear something you feel confident and comfortable in so the session feels natural.</div>
 </div>
 <div class="faq-item reveal">
-<div class="faq-q">Do you help with location ideas?<span class="faq-icon">+</span></div>
+<button type="button" class="faq-q" aria-expanded="false">Do you help with location ideas?<span class="faq-icon">+</span></button>
 <div class="faq-a">Yes — I know Arizona well and have go-to spots for different vibes. If you have a location in mind, great. If not, I'll suggest a few based on your session type and the look you're going for.</div>
 </div>
 <div class="faq-item reveal">
-<div class="faq-q">What if I feel awkward in front of the camera?<span class="faq-icon">+</span></div>
+<button type="button" class="faq-q" aria-expanded="false">What if I feel awkward in front of the camera?<span class="faq-icon">+</span></button>
 <div class="faq-a">That's my most common starting point. I don't expect you to know how to pose — that's my job. I'll guide you through movement, conversation, and direction until it feels natural. Most people loosen up within the first 15 minutes.</div>
 </div>
 <div class="faq-item reveal">
-<div class="faq-q">How do I book?<span class="faq-icon">+</span></div>
-<div class="faq-a">Fill out the inquiry form below with your session type, preferred date, and a bit about what you have in mind. You can also DM me on <a href="https://instagram.com/alanscinematics" target="_blank" style="color:var(--warm)">Instagram @alanscinematics</a>. I'll follow up within 48 hours to confirm availability and get things locked in.</div>
+<button type="button" class="faq-q" aria-expanded="false">How do I book?<span class="faq-icon">+</span></button>
+<div class="faq-a">Fill out the inquiry form below with your session type, preferred date, and a bit about what you have in mind. You can also DM me on <a href="https://instagram.com/alanscinematics" target="_blank" rel="noopener noreferrer" class="link-warm">Instagram @alanscinematics</a>. I'll follow up within 48 hours to confirm availability and get things locked in.</div>
 </div>
 </div>
 </div>
@@ -566,7 +443,7 @@
 <a class="foot-logo" href="#hero">Alans<span>Cinematics</span></a>
 <span class="foot-copy">© 2025 AlansCinematics · Phoenix, AZ</span>
 <div class="foot-links">
-<a href="https://instagram.com/alanscinematics" target="_blank">Instagram</a>
+<a href="https://instagram.com/alanscinematics" target="_blank" rel="noopener noreferrer">Instagram</a>
 <a href="mailto:alanscinematics@gmail.com">Email</a>
 <a href="#portfolio">Work</a>
 </div>
