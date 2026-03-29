@@ -785,6 +785,138 @@
     updateFlowLine();
     window.addEventListener('resize', updateFlowLine);
 
+    /* ── BOOKING CALENDAR ─────────────────────────────── */
+    (function() {
+      var calDays = document.getElementById('calDays');
+      var calMonth = document.getElementById('calMonth');
+      var calPrev = document.getElementById('calPrev');
+      var calNext = document.getElementById('calNext');
+      var cfDate = document.getElementById('cf-date');
+      if (!calDays || !calMonth) return;
+
+      var MONTHS = ['January','February','March','April','May','June',
+                    'July','August','September','October','November','December'];
+
+      // Availability overrides: 'booked' | 'limited' | 'open'
+      // Edit these to reflect your actual schedule
+      var overrides = {
+        // April weekdays booked (2 random Mon-Thu per week)
+        '2026-04-01': 'booked',  // Wed
+        '2026-04-02': 'booked',  // Thu
+        '2026-04-07': 'booked',  // Tue
+        '2026-04-09': 'booked',  // Thu
+        '2026-04-13': 'booked',  // Mon
+        '2026-04-15': 'booked',  // Wed
+        '2026-04-21': 'booked',  // Tue
+        '2026-04-23': 'booked',  // Thu
+        '2026-04-27': 'booked',  // Mon
+        '2026-04-29': 'booked',  // Wed
+        // April weekends — mix of limited and open
+        '2026-04-04': 'limited', // Sat
+        '2026-04-05': 'open',    // Sun
+        '2026-04-11': 'limited', // Sat
+        '2026-04-12': 'limited', // Sun
+        '2026-04-18': 'open',    // Sat
+        '2026-04-19': 'limited', // Sun
+        '2026-04-25': 'limited', // Sat
+        '2026-04-26': 'open',    // Sun
+        // May weekdays booked (2 random Mon-Thu per week)
+        '2026-05-04': 'booked',  // Mon
+        '2026-05-06': 'booked',  // Wed
+        '2026-05-11': 'booked',  // Mon
+        '2026-05-14': 'booked',  // Thu
+        '2026-05-18': 'booked',  // Mon
+        '2026-05-20': 'booked',  // Wed
+        '2026-05-26': 'booked',  // Tue
+        '2026-05-28': 'booked',  // Thu
+        // May weekends — mix of limited and open
+        '2026-05-02': 'limited', // Sat
+        '2026-05-03': 'limited', // Sun
+        '2026-05-09': 'open',    // Sat
+        '2026-05-10': 'limited', // Sun
+        '2026-05-16': 'limited', // Sat
+        '2026-05-17': 'open',    // Sun
+        '2026-05-23': 'open',    // Sat
+        '2026-05-24': 'limited'  // Sun
+      };
+
+      function getStatus(year, month, day) {
+        var mm = String(month + 1).padStart(2, '0');
+        var dd = String(day).padStart(2, '0');
+        var key = year + '-' + mm + '-' + dd;
+        if (overrides[key]) return overrides[key];
+        var d = new Date(year, month, day);
+        var dow = d.getDay();
+        if (dow === 0 || dow === 6) return 'limited';
+        return 'open';
+      }
+
+      var today = new Date();
+      var viewYear = today.getFullYear();
+      var viewMonth = today.getMonth();
+      var selectedDate = null;
+
+      function render() {
+        calMonth.textContent = MONTHS[viewMonth] + ' ' + viewYear;
+        calDays.innerHTML = '';
+
+        var first = new Date(viewYear, viewMonth, 1);
+        var startDay = first.getDay();
+        var daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+
+        for (var e = 0; e < startDay; e++) {
+          var empty = document.createElement('div');
+          empty.className = 'cal-day cal-empty';
+          calDays.appendChild(empty);
+        }
+
+        for (var d = 1; d <= daysInMonth; d++) {
+          var cell = document.createElement('div');
+          cell.className = 'cal-day';
+          cell.textContent = d;
+
+          var cellDate = new Date(viewYear, viewMonth, d);
+          var isPast = cellDate < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+
+          if (isPast) {
+            cell.classList.add('cal-past');
+          } else {
+            var st = getStatus(viewYear, viewMonth, d);
+            cell.classList.add('cal-day--' + st);
+            if (st === 'booked') cell.classList.add('cal-booked');
+          }
+
+          if (selectedDate && cellDate.getTime() === selectedDate.getTime()) {
+            cell.classList.add('cal-selected');
+          }
+
+          (function(day, isPastDay, isBooked) {
+            cell.addEventListener('click', function() {
+              if (isPastDay || isBooked) return;
+              selectedDate = new Date(viewYear, viewMonth, day);
+              cfDate.value = MONTHS[viewMonth] + ' ' + day + ', ' + viewYear;
+              render();
+            });
+          })(d, isPast, cell.classList.contains('cal-booked'));
+
+          calDays.appendChild(cell);
+        }
+      }
+
+      calPrev.addEventListener('click', function() {
+        viewMonth--;
+        if (viewMonth < 0) { viewMonth = 11; viewYear--; }
+        render();
+      });
+      calNext.addEventListener('click', function() {
+        viewMonth++;
+        if (viewMonth > 11) { viewMonth = 0; viewYear++; }
+        render();
+      });
+
+      render();
+    })();
+
     /* ── CONTACT FORM ──────────────────────────────── */
     (function() {
       var form = document.getElementById('contactForm');

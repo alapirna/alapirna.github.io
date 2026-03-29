@@ -13,6 +13,10 @@
 <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
+<div class="grad-banner" id="gradBanner">
+<span>🎓 Grad season books fast — golden hour &amp; weekend dates go first. <a href="#contact">Lock in your session →</a></span>
+<button class="grad-banner-close" aria-label="Dismiss banner" onclick="this.parentElement.remove()">✕</button>
+</div>
 <div class="texture-overlay"></div>
 <div class="cur" id="curDot"><div class="cur-dot"></div></div>
 <div class="cur" id="curRing"><div class="cur-ring"></div></div>
@@ -167,6 +171,7 @@
 <div class="svc-body">
 <div class="svc-name">Portraits / Grads</div>
 <div class="svc-price">Starting at $250</div>
+<div class="svc-availability">Limited April &amp; May availability</div>
 <p class="svc-desc">From cap-and-gown to LinkedIn, this is a polished, no-pressure portrait session in Phoenix. I set the pace, help with posing, and focus on authentic moments that look like you — just sharper.</p>
 <div class="svc-includes">
 <div class="svc-includes-label">What's included</div>
@@ -375,15 +380,27 @@
 <option value="unsure">Not sure yet — let's talk</option>
 </select>
 </div>
-<div class="f-row">
 <div>
-<label class="f-label" for="cf-date">Preferred Date</label>
-<input class="f-input" id="cf-date" name="date" placeholder="Month / timeframe" type="text" autocomplete="off"/>
+<label class="f-label">Preferred Date</label>
+<div class="cal-wrap" id="calWrap">
+<div class="cal-header">
+<button type="button" class="cal-nav" id="calPrev">‹</button>
+<span class="cal-month" id="calMonth"></span>
+<button type="button" class="cal-nav" id="calNext">›</button>
+</div>
+<div class="cal-weekdays"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
+<div class="cal-days" id="calDays"></div>
+<div class="cal-legend">
+<span class="cal-legend-item"><span class="cal-dot cal-dot--booked"></span>Fully booked</span>
+<span class="cal-legend-item"><span class="cal-dot cal-dot--limited"></span>Limited</span>
+<span class="cal-legend-item"><span class="cal-dot cal-dot--open"></span>Open</span>
+</div>
+</div>
+<input type="hidden" id="cf-date" name="date"/>
 </div>
 <div>
 <label class="f-label" for="cf-location">Location (if you have one)</label>
 <input class="f-input" id="cf-location" name="location" placeholder="Phoenix, Scottsdale, etc." type="text" autocomplete="off"/>
-</div>
 </div>
 <div>
 <label class="f-label" for="cf-message">Tell me about your session</label>
