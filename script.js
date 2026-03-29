@@ -345,7 +345,7 @@
         if (!dragging) return;
         dragging = false;
         carousel.style.transition = 'transform .55s cubic-bezier(0.16, 1, 0.3, 1)';
-        if (dragDistance < 8) {
+        if (dragDistance < 4) {
           var target = e.target.closest('.pc-item');
           if (target && target.dataset.cat) {
             activateTab(target.dataset.cat);
@@ -354,9 +354,9 @@
         // Snap in swipe direction — any movement commits to next card
         var IW = itemW();
         var delta = cOffset - dragStartOffset;
-        if (dragDistance >= 8 && delta > 0) {
+        if (dragDistance >= 4 && delta > 0) {
           cOffset = Math.ceil(cOffset / IW) * IW;
-        } else if (dragDistance >= 8 && delta < 0) {
+        } else if (dragDistance >= 4 && delta < 0) {
           cOffset = Math.floor(cOffset / IW) * IW;
         } else {
           cOffset = Math.round(cOffset / IW) * IW;
@@ -380,7 +380,7 @@
       }, {passive: true});
       carousel.addEventListener('touchend', function(e) {
         carousel.style.transition = 'transform .55s cubic-bezier(0.16, 1, 0.3, 1)';
-        if (touchDist < 12) {
+        if (touchDist < 5) {
           var el = document.elementFromPoint(
             e.changedTouches[0].clientX,
             e.changedTouches[0].clientY
@@ -393,9 +393,9 @@
         // Snap in swipe direction — any movement commits to next card
         var IW = itemW();
         var delta = cOffset - touchOffsetStart;
-        if (touchDist >= 12 && delta > 0) {
+        if (touchDist >= 5 && delta > 0) {
           cOffset = Math.ceil(cOffset / IW) * IW;
-        } else if (touchDist >= 12 && delta < 0) {
+        } else if (touchDist >= 5 && delta < 0) {
           cOffset = Math.floor(cOffset / IW) * IW;
         } else {
           cOffset = Math.round(cOffset / IW) * IW;
