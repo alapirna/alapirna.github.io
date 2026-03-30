@@ -1437,9 +1437,10 @@
       justify-content: space-between;
     }
     .testimonial-quote {
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 1.05rem;
+      font-family: var(--sans);
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.02rem;
       color: var(--ink);
       line-height: 1.7;
       margin-bottom: 1.5rem;
