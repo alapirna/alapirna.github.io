@@ -960,7 +960,7 @@
           headers: { 'Accept': 'application/json' }
         }).then(function(res) {
           if (res.ok) {
-            status.textContent = 'Thank you! I\'ll be in touch within 48 hours.';
+            status.innerHTML = 'Thank you — your inquiry is in! I\'ll get back to you within 48 hours. In the meantime, check out recent work on <a href="https://instagram.com/alanscinematics" target="_blank" rel="noopener noreferrer" style="color:#6abf6a;text-decoration:underline;">Instagram @alanscinematics</a>.';
             status.className = 'f-status f-success';
             form.reset();
           } else {
@@ -974,4 +974,30 @@
           submitBtn.textContent = 'Send Inquiry';
         });
       });
+    })();
+
+    /* ── STICKY MOBILE CTA ─────────────────────────────── */
+    (function() {
+      var stickyCta = document.getElementById('stickyCta');
+      var contactSection = document.getElementById('contact');
+      if (!stickyCta || !contactSection) return;
+
+      var isVisible = false;
+
+      function checkSticky() {
+        var scrollY = window.scrollY || window.pageYOffset;
+        var contactTop = contactSection.getBoundingClientRect().top;
+        var show = scrollY > 400 && contactTop > window.innerHeight;
+
+        if (show && !isVisible) {
+          isVisible = true;
+          stickyCta.classList.add('visible');
+        } else if (!show && isVisible) {
+          isVisible = false;
+          stickyCta.classList.remove('visible');
+        }
+      }
+
+      window.addEventListener('scroll', checkSticky, { passive: true });
+      checkSticky();
     })();
