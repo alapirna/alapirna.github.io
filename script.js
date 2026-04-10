@@ -809,44 +809,22 @@
       // Availability overrides: 'booked' | 'limited' | 'open'
       // Edit these to reflect your actual schedule
       var overrides = {
-        // April weekdays booked (2 random Mon-Thu per week)
-        '2026-04-01': 'booked',  // Wed
-        '2026-04-02': 'booked',  // Thu
-        '2026-04-07': 'booked',  // Tue
-        '2026-04-09': 'booked',  // Thu
-        '2026-04-13': 'booked',  // Mon
-        '2026-04-15': 'booked',  // Wed
-        '2026-04-21': 'booked',  // Tue
-        '2026-04-23': 'booked',  // Thu
-        '2026-04-27': 'booked',  // Mon
-        '2026-04-29': 'booked',  // Wed
-        // April weekends — mix of limited and open
-        '2026-04-04': 'limited', // Sat
-        '2026-04-05': 'open',    // Sun
+        // April — a few limited weekdays/weekends, rest open
         '2026-04-11': 'limited', // Sat
         '2026-04-12': 'limited', // Sun
-        '2026-04-18': 'open',    // Sat
-        '2026-04-19': 'limited', // Sun
+        '2026-04-15': 'limited', // Wed
+        '2026-04-18': 'limited', // Sat
+        '2026-04-22': 'limited', // Wed
         '2026-04-25': 'limited', // Sat
-        '2026-04-26': 'open',    // Sun
-        // May weekdays booked (2 random Mon-Thu per week)
-        '2026-05-04': 'booked',  // Mon
-        '2026-05-06': 'booked',  // Wed
-        '2026-05-11': 'booked',  // Mon
-        '2026-05-14': 'booked',  // Thu
-        '2026-05-18': 'booked',  // Mon
-        '2026-05-20': 'booked',  // Wed
-        '2026-05-26': 'booked',  // Tue
-        '2026-05-28': 'booked',  // Thu
-        // May weekends — mix of limited and open
+        // May — mostly open, limited dates toward the beginning
+        '2026-05-01': 'limited', // Fri
         '2026-05-02': 'limited', // Sat
         '2026-05-03': 'limited', // Sun
-        '2026-05-09': 'open',    // Sat
-        '2026-05-10': 'limited', // Sun
-        '2026-05-16': 'limited', // Sat
-        '2026-05-17': 'open',    // Sun
-        '2026-05-23': 'open',    // Sat
-        '2026-05-24': 'limited'  // Sun
+        '2026-05-08': 'limited', // Fri
+        '2026-05-09': 'limited', // Sat
+        // June — wide open, just a couple limited
+        '2026-06-06': 'limited', // Sat
+        '2026-06-13': 'limited'  // Sat
       };
 
       function getStatus(year, month, day) {
@@ -854,9 +832,6 @@
         var dd = String(day).padStart(2, '0');
         var key = year + '-' + mm + '-' + dd;
         if (overrides[key]) return overrides[key];
-        var d = new Date(year, month, day);
-        var dow = d.getDay();
-        if (dow === 0 || dow === 6) return 'limited';
         return 'open';
       }
 
@@ -892,21 +867,20 @@
           } else {
             var st = getStatus(viewYear, viewMonth, d);
             cell.classList.add('cal-day--' + st);
-            if (st === 'booked') cell.classList.add('cal-booked');
           }
 
           if (selectedDate && cellDate.getTime() === selectedDate.getTime()) {
             cell.classList.add('cal-selected');
           }
 
-          (function(day, isPastDay, isBooked) {
+          (function(day, isPastDay) {
             cell.addEventListener('click', function() {
-              if (isPastDay || isBooked) return;
+              if (isPastDay) return;
               selectedDate = new Date(viewYear, viewMonth, day);
               cfDate.value = MONTHS[viewMonth] + ' ' + day + ', ' + viewYear;
               render();
             });
-          })(d, isPast, cell.classList.contains('cal-booked'));
+          })(d, isPast);
 
           calDays.appendChild(cell);
         }
