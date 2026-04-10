@@ -336,6 +336,7 @@
       color: var(--ink);
     }
     h2.section-title em { font-style: italic; color: var(--warm); }
+
     .section-rule { width: 36px; height: 1px; background: var(--warm); margin: 1.4rem 0; }
 
     /* ─── PORTFOLIO ──────────────────────────────────────────── */
