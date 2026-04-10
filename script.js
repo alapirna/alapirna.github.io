@@ -197,7 +197,12 @@
         { opt: 'asu-graduation-library-book-reach-seated', widths: [400, 800, 1200, 1612], ratio: 0.79, alt: 'Female graduate seated in library reaching for book' },
         { opt: 'asu-graduation-library-reading-profile', widths: [400, 800, 1200, 1920], ratio: 2.10, alt: 'Female graduate reading book in library profile view' },
         { opt: 'asu-graduation-open-book-overhead-detail', widths: [400, 800, 1200, 1920], ratio: 1.50, alt: 'Overhead detail of graduate reading open book' },
-        { opt: 'asu-graduation-bookshelf-hand-motion-detail', widths: [400, 800, 1200, 1920], ratio: 2.32, alt: 'Motion detail of graduate hand brushing bookshelf' }
+        { opt: 'asu-graduation-bookshelf-hand-motion-detail', widths: [400, 800, 1200, 1920], ratio: 2.32, alt: 'Motion detail of graduate hand brushing bookshelf' },
+        { src: 'images/highschool grad photo 1.png', ratio: 0.79, alt: 'High school graduation portrait 1' },
+        { src: 'images/highschool grad photo 2.png', ratio: 0.74, alt: 'High school graduation portrait 2' },
+        { src: 'images/highschool grad photo 3.png', ratio: 0.76, alt: 'High school graduation portrait 3' },
+        { src: 'images/highschool grad photo 4.png', ratio: 0.67, alt: 'High school graduation portrait 4' },
+        { src: 'images/highschool grad photo 5.png', ratio: 0.80, alt: 'High school graduation portrait 5' }
       ],
       families: [
         { opt: 'family-airplane', widths: [400, 800, 1013], ratio: 0.89 },
@@ -444,13 +449,13 @@
 
       function openGallery(cat) {
         var imageData = (galleryData[cat] || []).map(function(d) {
-          return { opt: d.opt, widths: d.widths, ratio: d.ratio, alt: d.alt, isLandscape: d.ratio > 1.2 };
+          return { opt: d.opt, widths: d.widths, src: d.src, ratio: d.ratio, alt: d.alt, isLandscape: d.ratio > 1.2 };
         });
         if (cat === 'all') {
           imageData = [];
           Object.keys(galleryData).forEach(function(k) {
             galleryData[k].forEach(function(d) {
-              imageData.push({ opt: d.opt, widths: d.widths, ratio: d.ratio, alt: d.alt, isLandscape: d.ratio > 1.2 });
+              imageData.push({ opt: d.opt, widths: d.widths, src: d.src, ratio: d.ratio, alt: d.alt, isLandscape: d.ratio > 1.2 });
             });
           });
         }
@@ -499,9 +504,13 @@
             div.style.aspectRatio = String(data.ratio);
             div.dataset.lbIdx = idx;
             var newImg = document.createElement('img');
-            newImg.src = optSrc(data.opt, data.widths);
-            newImg.srcset = optSrcset(data.opt, data.widths);
-            newImg.sizes = '(max-width: 600px) 46vw, (max-width: 1024px) 30vw, 24vw';
+            if (data.src) {
+              newImg.src = data.src;
+            } else {
+              newImg.src = optSrc(data.opt, data.widths);
+              newImg.srcset = optSrcset(data.opt, data.widths);
+              newImg.sizes = '(max-width: 600px) 46vw, (max-width: 1024px) 30vw, 24vw';
+            }
             newImg.alt = data.alt || '';
             newImg.loading = 'lazy';
             div.appendChild(newImg);
@@ -512,7 +521,7 @@
           galleryGrid.appendChild(colsDiv);
 
           // Wire up lightbox click + keyboard handlers
-          lbSrcs = imageData.map(function(d) { return optMax(d.opt, d.widths); });
+          lbSrcs = imageData.map(function(d) { return d.src ? d.src : optMax(d.opt, d.widths); });
           var gItems = galleryGrid.querySelectorAll('.g-item');
           gItems.forEach(function(item) {
             var lbIdx = parseInt(item.dataset.lbIdx, 10);

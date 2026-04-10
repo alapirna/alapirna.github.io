@@ -1267,6 +1267,7 @@
     }
     .lightbox-close {
       position: absolute; top: 1.2rem; right: 1.5rem;
+      z-index: 2;
       background: none; border: none;
       color: rgba(255,255,255,.8); font-size: 1.8rem;
       cursor: pointer; line-height: 1;
@@ -1277,6 +1278,7 @@
     .lightbox-close:hover { color: #fff; }
     .lightbox-nav {
       position: absolute; top: 50%; transform: translateY(-50%);
+      z-index: 2;
       background: none; border: none;
       color: rgba(255,255,255,.7); font-size: 2rem;
       cursor: pointer; padding: 1rem;
@@ -1288,6 +1290,7 @@
     .lightbox-counter {
       position: absolute; bottom: 1.2rem; left: 50%;
       transform: translateX(-50%);
+      z-index: 2;
       color: rgba(255,255,255,.5);
       font-family: var(--sans); font-size: .65rem;
       letter-spacing: .15em;
