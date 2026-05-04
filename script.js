@@ -250,7 +250,7 @@
 
       var categoryLabels = {
         'couples': 'Couples',
-        'portraits': 'Portraits & Grads',
+        'portraits': 'Portraits',
         'families': 'Family Portraits'
       };
 

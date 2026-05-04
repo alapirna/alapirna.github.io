@@ -18,63 +18,6 @@
       --slow: cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* ─── GRAD BANNER ────────────────────────────────────────── */
-    .grad-banner {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 10000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      padding: 0.6rem 1.5rem;
-      background: var(--ink);
-      color: #f0f0f4;
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      font-weight: 400;
-      letter-spacing: 0.02em;
-      text-align: center;
-      line-height: 1.4;
-    }
-    .grad-banner a {
-      color: #fff;
-      text-decoration: underline;
-      text-underline-offset: 2px;
-      font-weight: 500;
-      white-space: nowrap;
-    }
-    .grad-banner a:hover { opacity: 0.8; }
-    .grad-banner-close {
-      background: none;
-      border: none;
-      color: #f0f0f4;
-      font-size: 1rem;
-      cursor: pointer;
-      padding: 0 0.25rem;
-      opacity: 0.6;
-      flex-shrink: 0;
-    }
-    .grad-banner-close:hover { opacity: 1; }
-
-    /* push nav down when banner is present */
-    .grad-banner ~ #nav { top: 36px; }
-
-    @media (max-width: 600px) {
-      .grad-banner { font-size: 0.78rem; padding: 0.5rem 1rem; }
-    }
-
-    /* ─── SVC AVAILABILITY NOTE ──────────────────────────────── */
-    .svc-availability {
-      font-family: var(--sans);
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: #8b5e3c;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-top: 0.25rem;
-    }
-
     /* ─── RESET ──────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
@@ -1338,15 +1281,6 @@
 
     .port-tabs { margin-top: 1rem; justify-content: center; }
 
-    /* ─── HERO URGENCY LINE ──────────────────────────────────── */
-    .hero-urgency {
-      margin-top: 1.2rem;
-      font-size: .78rem;
-      color: rgba(255,255,255,.5);
-      font-style: italic;
-      letter-spacing: 0.02em;
-      opacity: 0; animation: up .9s 1s var(--slow) forwards;
-    }
 
     /* ─── REASSURANCE STRIP ──────────────────────────────────── */
     .reassurance-strip {
@@ -1485,31 +1419,6 @@
       font-style: italic;
     }
 
-    /* ─── URGENCY STRIP ──────────────────────────────────────── */
-    .urgency-strip {
-      background: var(--surface);
-      padding: 3.5rem 5rem;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-    }
-    .urgency-strip p {
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: clamp(1.1rem, 2vw, 1.5rem);
-      color: var(--ink-mid);
-      line-height: 1.6;
-      max-width: 560px;
-    }
-    .urgency-strip p strong {
-      color: var(--ink);
-      font-weight: 400;
-    }
-    @media (max-width: 1024px) {
-      .urgency-strip { padding: 3rem 2.5rem; }
-    }
 
     /* ─── STICKY MOBILE CTA ──────────────────────────────────── */
     .sticky-cta {
