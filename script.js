@@ -198,11 +198,11 @@
         { opt: 'asu-graduation-library-reading-profile', widths: [400, 800, 1200, 1920], ratio: 2.10, alt: 'Female graduate reading book in library profile view' },
         { opt: 'asu-graduation-open-book-overhead-detail', widths: [400, 800, 1200, 1920], ratio: 1.50, alt: 'Overhead detail of graduate reading open book' },
         { opt: 'asu-graduation-bookshelf-hand-motion-detail', widths: [400, 800, 1200, 1920], ratio: 2.32, alt: 'Motion detail of graduate hand brushing bookshelf' },
-        { src: 'images/highschool grad photo 1.png', ratio: 0.79, alt: 'High school graduation portrait 1' },
-        { src: 'images/highschool grad photo 2.png', ratio: 0.74, alt: 'High school graduation portrait 2' },
-        { src: 'images/highschool grad photo 3.png', ratio: 0.76, alt: 'High school graduation portrait 3' },
-        { src: 'images/highschool grad photo 4.png', ratio: 0.67, alt: 'High school graduation portrait 4' },
-        { src: 'images/highschool grad photo 5.png', ratio: 0.80, alt: 'High school graduation portrait 5' }
+        { opt: 'highschool-grad-photo-1', widths: [400, 800, 1200, 1920], ratio: 0.79, alt: 'High school graduation portrait 1' },
+        { opt: 'highschool-grad-photo-2', widths: [400, 800, 1200, 1920], ratio: 0.74, alt: 'High school graduation portrait 2' },
+        { opt: 'highschool-grad-photo-3', widths: [400, 800, 1200, 1920], ratio: 0.76, alt: 'High school graduation portrait 3' },
+        { opt: 'highschool-grad-photo-4', widths: [400, 800, 1200, 1920], ratio: 0.67, alt: 'High school graduation portrait 4' },
+        { opt: 'highschool-grad-photo-5', widths: [400, 800, 1200, 1920], ratio: 0.80, alt: 'High school graduation portrait 5' }
       ],
       families: [
         { opt: 'family-airplane', widths: [400, 800, 1013], ratio: 0.89 },
