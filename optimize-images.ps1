@@ -7,7 +7,7 @@ Add-Type -AssemblyName System.Drawing
 $srcDir = Join-Path $PSScriptRoot "images"
 $outDir = Join-Path $srcDir "opt"
 $sizes = @(400, 800, 1200, 1920)
-$jpegQuality = 82
+$jpegQuality = 90
 
 if (-not (Test-Path $outDir)) {
     New-Item -ItemType Directory -Path $outDir | Out-Null

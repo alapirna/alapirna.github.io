@@ -182,6 +182,15 @@
         { opt: 'couples-lakeside-evening-portrait', widths: [400, 800, 1200, 1478], ratio: 0.72, alt: 'Couple portrait by lakeside railing at dusk' }
       ],
       portraits: [
+        { opt: 'senior-grad-photo-tempe', widths: [400, 800, 1200, 1920], ratio: 0.80, alt: 'Senior graduation portrait session in Tempe, Arizona' },
+        { opt: 'senior-photo-hero-downtown', widths: [400, 800, 1200, 1920], ratio: 0.67, alt: 'Senior graduation portrait session in downtown Phoenix' },
+        { opt: 'senior-photo-downtown', widths: [400, 800, 1200, 1920], ratio: 0.67, alt: 'Senior portrait session in downtown Phoenix' },
+        { opt: 'senior-grad-tassel', widths: [400, 800, 1200, 1920], ratio: 0.67, alt: 'Senior graduation portrait detail with cap tassel' },
+        { opt: 'senior-close-up-cap-and-tassel', widths: [400, 800, 1200, 1920], ratio: 0.80, alt: 'Senior graduation close up portrait with cap and tassel' },
+        { opt: 'senior-grad-black-and-white', widths: [400, 800, 1200, 1920], ratio: 0.80, alt: 'Black and white senior graduation portrait' },
+        { opt: 'senior-grad-city-tempe', widths: [400, 800, 1200, 1920], ratio: 0.80, alt: 'Senior graduation portrait with Tempe city backdrop' },
+        { opt: 'senior-grad-sunset', widths: [400, 800, 1200, 1920], ratio: 0.78, alt: 'Senior graduation sunset portrait in Arizona' },
+        { opt: 'senior-grad-shoes', widths: [400, 800, 1200, 1920], ratio: 0.80, alt: 'Senior graduation portrait shoe detail' },
         { opt: 'asu-first-generation-graduation-palm-walkway-portrait', widths: [400, 800, 1200, 1535], ratio: 0.75, alt: 'Male graduate on palm-lined walkway with hands raised' },
         { opt: 'asu-first-generation-graduation-steps-cap-raised-portrait', widths: [400, 800, 1200, 1670], ratio: 0.82, alt: 'Male graduate seated on steps raising cap' },
         { opt: 'asu-first-generation-graduation-steps-seated-smile', widths: [400, 800, 1200, 1535], ratio: 0.75, alt: 'Male graduate seated on steps smiling at camera' },
