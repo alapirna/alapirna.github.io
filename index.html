@@ -1,564 +1,1128 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Cinematic Photographer in Phoenix, AZ — AlansCinematics</title>
-<meta content="Cinematic photography in Phoenix, Arizona. Relaxed, guided sessions with real direction, polished editing, and photos you'll actually want to post, frame, and keep." name="description"/>
-<meta content="cinematic photographer Phoenix, photographer Phoenix AZ, portrait photographer Phoenix, couples photographer Arizona, family photographer Arizona, Phoenix photographer" name="keywords"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Cinematic Photographer in Phoenix, AZ | AlansCinematics</title>
+<meta name="description" content="Cinematic graduation, couples, and family photography across Phoenix, Tempe, Scottsdale, and all of Arizona. Guided sessions, cinematic color, galleries in 7 to 10 days. From $250."/>
+<link rel="canonical" href="https://alanscinematics.com/"/>
+<meta name="theme-color" content="#0c0a08"/>
+<meta name="color-scheme" content="dark"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="AlansCinematics"/>
+<meta property="og:title" content="Cinematic Photographer in Phoenix, AZ | AlansCinematics"/>
+<meta property="og:description" content="Graduation, couples, and family sessions shot like film. Phoenix based, serving all of Arizona."/>
+<meta property="og:url" content="https://alanscinematics.com/"/>
+<meta property="og:image" content="https://alanscinematics.com/og.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Cinematic Photographer in Phoenix, AZ | AlansCinematics"/>
+<meta name="twitter:description" content="Graduation, couples, and family sessions shot like film. Phoenix based, serving all of Arizona."/>
+<meta name="twitter:image" content="https://alanscinematics.com/og.jpg"/>
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+<link rel="manifest" href="site.webmanifest"/>
+
+<link rel="preload" href="assets/fonts/fraunces-roman.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="assets/fonts/fraunces-italic.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" as="image" type="image/avif" imagesrcset="assets/img/hero-sunset-tall-640.avif 640w, assets/img/hero-sunset-tall-960.avif 960w, assets/img/hero-sunset-tall-1280.avif 1280w" imagesizes="100vw" media="(max-width: 767px)"/>
+<link rel="preload" as="image" type="image/avif" imagesrcset="assets/img/hero-sunset-wide-1280.avif 1280w, assets/img/hero-sunset-wide-1920.avif 1920w, assets/img/hero-sunset-wide-2560.avif 2560w" imagesizes="100vw" media="(min-width: 768px)"/>
+<link rel="stylesheet" href="style.css"/>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": [
+  "LocalBusiness",
+  "ProfessionalService"
+ ],
+ "@id": "https://alanscinematics.com/#business",
+ "name": "AlansCinematics",
+ "description": "Cinematic graduation, couples, and family photography in Phoenix, Arizona. Guided sessions, cinematic color, private online galleries.",
+ "url": "https://alanscinematics.com/",
+ "telephone": "+1-602-600-7904",
+ "email": "alanscinematics@gmail.com",
+ "image": "https://alanscinematics.com/og.jpg",
+ "priceRange": "$250-$375+",
+ "address": {
+  "@type": "PostalAddress",
+  "addressLocality": "Phoenix",
+  "addressRegion": "AZ",
+  "addressCountry": "US"
+ },
+ "areaServed": [
+  "Phoenix",
+  "Tempe",
+  "Scottsdale",
+  "Chandler",
+  "Mesa",
+  "Gilbert",
+  "Sedona",
+  "Arizona"
+ ],
+ "sameAs": [
+  "https://instagram.com/alanscinematics"
+ ],
+ "founder": {
+  "@type": "Person",
+  "name": "Alan Pirnazarov"
+ },
+ "makesOffer": [
+  {
+   "@type": "Offer",
+   "name": "Portrait & Graduation Session",
+   "price": "250",
+   "priceCurrency": "USD",
+   "description": "Up to 60 minutes, one Arizona location, 15+ edited images, private online gallery."
+  },
+  {
+   "@type": "Offer",
+   "name": "Couples Session",
+   "price": "300",
+   "priceCurrency": "USD",
+   "description": "60 to 90 minutes, one Arizona location, 20+ edited images, private online gallery."
+  },
+  {
+   "@type": "Offer",
+   "name": "Family Session",
+   "price": "375",
+   "priceCurrency": "USD",
+   "description": "60 to 75 minutes, one Arizona location, 25+ edited images, private online gallery."
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Where are you based?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Phoenix, Arizona, and available for sessions across the state: Scottsdale, Tempe, Chandler, Mesa, Gilbert, Sedona, and beyond."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you travel outside Phoenix?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. I travel within Arizona for the right session. For destinations outside the state, reach out and we will figure out what makes sense."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How long until I receive my photos?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Most galleries are delivered within 7 to 10 days of your session. During busy seasons it may run slightly longer."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How many photos will I receive?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Each session has a guaranteed minimum: 15+ for portraits, 20+ for couples, 25+ for families. I usually deliver more when the session calls for it."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What should we wear?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Something that feels like you, just a little elevated. Neutral tones, earthy colors, and simple textures photograph beautifully."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you help with location ideas?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. I know Arizona well and keep go-to spots for different looks, and I will suggest options based on your session type."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What if I feel awkward in front of the camera?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "That is the most common starting point. You do not need to know how to pose. I direct movement and conversation until it feels natural, and most people loosen up in the first fifteen minutes."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I bring someone with me to the session?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Of course. A friend, partner, or family member is welcome, and it often makes for great candid moments."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you shoot on campus?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes: ASU, GCU, U of A, and other Arizona campuses. I know the best photo spots at each."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What happens if I need to reschedule?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Reach out as early as you can and we will find a new date that works. Full details are in the booking policy."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I book?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Fill out the inquiry form on alanscinematics.com with your session type and preferred date, or DM @alanscinematics on Instagram. Replies within 48 hours."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
-<div class="texture-overlay"></div>
-<div class="cur" id="curDot"><div class="cur-dot"></div></div>
-<div class="cur" id="curRing"><div class="cur-ring"></div></div>
-<!-- ── NAV ──────────────────────────────────────────────────── -->
-<nav id="nav">
-<a class="nav-logo" href="#hero">Alans<span>Cinematics</span></a>
-<ul class="nav-links">
-<li><a href="#portfolio">Work</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a class="nav-cta" href="#contact">Book Session</a></li>
-</ul>
-<button aria-label="Menu" class="nav-mobile-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">
-<span></span><span></span><span></span>
-</button>
-</nav>
-<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile menu" hidden>
-<a class="mm-link" href="#portfolio">Work</a>
-<a class="mm-link" href="#services">Services</a>
-<a class="mm-link" href="#about">About</a>
-<a class="mm-link" href="#faq">FAQ</a>
-<a class="mm-link" href="#contact">Book Now</a>
+
+<!-- film grain lives on body::after -->
+
+<!-- ── INTRO SLATE ─────────────────────────────────────────── -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-bar intro-bar-top"></div>
+  <div class="intro-bar intro-bar-bot"></div>
+  <div class="intro-word">
+    <span class="intro-brand">ALANSCINEMATICS</span>
+    <span class="intro-sub">A PHOENIX STORY</span>
+  </div>
 </div>
-<!-- ── HERO ─────────────────────────────────────────────────── -->
-<section id="hero">
-<div class="hero-left">
-<p class="hero-tag">Cinematic Photographer · Phoenix, Arizona</p>
-<h1 class="hero-h1">
-        Photos that feel like you,<br/>
-<em>just elevated.</em>
-</h1>
-<div class="hero-btns">
-<a class="btn-dark" href="#contact">Book Your Session</a>
-<a class="btn-line" href="#portfolio">See the Work</a>
+
+<!-- ── PLAYHEAD ────────────────────────────────────────────── -->
+<div class="playhead" id="playhead" aria-hidden="true"></div>
+
+<!-- ── CURSOR ──────────────────────────────────────────────── -->
+<div class="cur" id="cur" aria-hidden="true"><span class="cur-label" id="curLabel"></span></div>
+
+<!-- ── NAV ─────────────────────────────────────────────────── -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="AlansCinematics, back to top">
+    <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M14 24 V18 a4 4 0 0 1 4 -4 H24"/><path d="M40 14 H46 a4 4 0 0 1 4 4 V24"/><path d="M50 40 V46 a4 4 0 0 1 -4 4 H40"/><path d="M24 50 H18 a4 4 0 0 1 -4 -4 V40"/></g><circle cx="32" cy="32" r="7" fill="currentColor"/></svg>
+    <span class="brand-word">Alans<em>Cinematics</em></span>
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#sessions">Sessions</a>
+    <a href="#director">About</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="nav-right">
+    <span class="tc" id="tc" aria-hidden="true">PHX 00:00:00:00</span>
+    <a class="btn btn-amber nav-book" href="#book">Book a session</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mmenu" id="mobileMenu" hidden>
+  <nav class="mmenu-links" aria-label="Mobile">
+    <a href="#work"><small>01</small>Work</a>
+    <a href="#experience"><small>02</small>Experience</a>
+    <a href="#sessions"><small>03</small>Sessions</a>
+    <a href="#reviews"><small>04</small>Reviews</a>
+    <a href="#director"><small>05</small>About</a>
+    <a href="#faq"><small>06</small>FAQ</a>
+    <a href="#book" class="mmenu-book"><small>07</small>Book a session</a>
+  </nav>
+  <div class="mmenu-meta">
+    <a href="https://instagram.com/alanscinematics" target="_blank" rel="noopener noreferrer">@alanscinematics</a>
+    <a href="mailto:alanscinematics@gmail.com">alanscinematics@gmail.com</a>
+  </div>
 </div>
-</div>
-<div class="hero-right">
-<div class="hero-carousel" id="heroCarousel">
-<div class="hc-track" id="hcTrack">
-<div class="hc-slide" data-index="0">
-<div class="hc-bg">
-<img alt="Cinematic portrait session in Phoenix, Arizona" class="hc-img" src="images/opt/hero-grad-pic-library-800w.jpg" srcset="images/opt/hero-grad-pic-library-400w.jpg 400w, images/opt/hero-grad-pic-library-800w.jpg 800w, images/opt/hero-grad-pic-library-1200w.jpg 1200w, images/opt/hero-grad-pic-library-1920w.jpg 1920w" sizes="100vw" width="1920" height="2880" fetchpriority="high" decoding="async"/>
-</div>
-</div>
-<div class="hc-slide" data-index="1">
-<div class="hc-bg">
-<img alt="Senior graduation portrait session in Tempe, Arizona" class="hc-img" src="images/opt/senior-grad-photo-tempe-800w.jpg" srcset="images/opt/senior-grad-photo-tempe-400w.jpg 400w, images/opt/senior-grad-photo-tempe-800w.jpg 800w, images/opt/senior-grad-photo-tempe-1200w.jpg 1200w, images/opt/senior-grad-photo-tempe-1920w.jpg 1920w" sizes="100vw" width="1920" height="2400" loading="lazy" fetchpriority="low" decoding="async"/>
-</div>
-</div>
-<div class="hc-slide" data-index="2">
-<div class="hc-bg">
-<img alt="Senior graduation portrait session in downtown Phoenix" class="hc-img" src="images/opt/senior-photo-hero-downtown-800w.jpg" srcset="images/opt/senior-photo-hero-downtown-400w.jpg 400w, images/opt/senior-photo-hero-downtown-800w.jpg 800w, images/opt/senior-photo-hero-downtown-1200w.jpg 1200w, images/opt/senior-photo-hero-downtown-1920w.jpg 1920w" sizes="100vw" width="1920" height="2880" loading="lazy" fetchpriority="low" decoding="async"/>
-</div>
-</div>
-<div class="hc-slide" data-index="3">
-<div class="hc-bg">
-<img alt="Golden hour portrait session in Phoenix" class="hc-img" src="images/opt/hero-golden-hour-800w.jpg" srcset="images/opt/hero-golden-hour-400w.jpg 400w, images/opt/hero-golden-hour-800w.jpg 800w, images/opt/hero-golden-hour-1200w.jpg 1200w" sizes="100vw" width="1200" height="1200" loading="lazy" fetchpriority="low" decoding="async"/>
-</div>
-</div>
-<div class="hc-slide" data-index="4">
-<div class="hc-bg">
-<img alt="Family portrait session in Arizona" class="hc-img" src="images/opt/family-portraits-17-800w.jpg" srcset="images/opt/family-portraits-17-400w.jpg 400w, images/opt/family-portraits-17-800w.jpg 800w, images/opt/family-portraits-17-1200w.jpg 1200w, images/opt/family-portraits-17-1903w.jpg 1903w" sizes="100vw" width="1903" height="1903" loading="lazy" fetchpriority="low" decoding="async"/>
-</div>
-</div>
-<div class="hc-slide" data-index="5">
-<div class="hc-bg">
-<img alt="Family photography in Phoenix, Arizona" class="hc-img" src="images/opt/family-portraits-16-800w.jpg" srcset="images/opt/family-portraits-16-400w.jpg 400w, images/opt/family-portraits-16-800w.jpg 800w, images/opt/family-portraits-16-1200w.jpg 1200w, images/opt/family-portraits-16-1920w.jpg 1920w" sizes="100vw" width="1920" height="1920" loading="lazy" fetchpriority="low" decoding="async"/>
-</div>
-</div>
-<div class="hc-slide" data-index="6">
-<div class="hc-bg">
-<img alt="Cinematic family portraits in Arizona" class="hc-img" src="images/opt/family-portraits-25-800w.jpg" srcset="images/opt/family-portraits-25-400w.jpg 400w, images/opt/family-portraits-25-800w.jpg 800w, images/opt/family-portraits-25-1200w.jpg 1200w, images/opt/family-portraits-25-1920w.jpg 1920w" sizes="100vw" width="1920" height="1920" loading="lazy" fetchpriority="low" decoding="async"/>
-</div>
-</div>
-<div class="hc-slide" data-index="7">
-<div class="hc-bg">
-<img alt="Family session in Phoenix, Arizona" class="hc-img" src="images/opt/hero-evelina-family-800w.jpg" srcset="images/opt/hero-evelina-family-400w.jpg 400w, images/opt/hero-evelina-family-800w.jpg 800w, images/opt/hero-evelina-family-888w.jpg 888w" sizes="100vw" width="888" height="888" loading="lazy" fetchpriority="low" decoding="async"/>
-</div>
-</div>
-</div>
-<!-- nav arrows -->
-<button aria-label="Previous" class="hc-arrow hc-prev" id="hcPrev">‹</button>
-<button aria-label="Next" class="hc-arrow hc-next" id="hcNext">›</button>
-<!-- dots -->
-<div class="hc-dots" id="hcDots">
-<button type="button" class="hc-dot active" aria-label="Go to slide 1"></button>
-<button type="button" class="hc-dot" aria-label="Go to slide 2"></button>
-<button type="button" class="hc-dot" aria-label="Go to slide 3"></button>
-<button type="button" class="hc-dot" aria-label="Go to slide 4"></button>
-<button type="button" class="hc-dot" aria-label="Go to slide 5"></button>
-<button type="button" class="hc-dot" aria-label="Go to slide 6"></button>
-<button type="button" class="hc-dot" aria-label="Go to slide 7"></button>
-<button type="button" class="hc-dot" aria-label="Go to slide 8"></button>
-</div>
-</div>
-</div>
-<div class="hero-scroll">
-<div class="scroll-bar"></div>
-<span>Scroll</span>
-</div>
+
+<main id="top">
+
+<!-- ── HERO ────────────────────────────────────────────────── -->
+<section class="hero" id="hero" aria-label="Introduction">
+  <div class="hero-media" data-plx="0.12">
+    <picture>
+      <source media="(max-width: 767px)" type="image/avif" srcset="assets/img/hero-sunset-tall-640.avif 640w, assets/img/hero-sunset-tall-960.avif 960w, assets/img/hero-sunset-tall-1280.avif 1280w" sizes="100vw"/>
+      <source media="(max-width: 767px)" type="image/webp" srcset="assets/img/hero-sunset-tall-640.webp 640w, assets/img/hero-sunset-tall-960.webp 960w, assets/img/hero-sunset-tall-1280.webp 1280w" sizes="100vw"/>
+      <source type="image/avif" srcset="assets/img/hero-sunset-wide-1280.avif 1280w, assets/img/hero-sunset-wide-1920.avif 1920w, assets/img/hero-sunset-wide-2560.avif 2560w" sizes="100vw"/>
+      <source type="image/webp" srcset="assets/img/hero-sunset-wide-1280.webp 1280w, assets/img/hero-sunset-wide-1920.webp 1920w, assets/img/hero-sunset-wide-2560.webp 2560w" sizes="100vw"/>
+      <img src="assets/img/hero-sunset-wide-1920.jpg" alt="High school graduate in gown and red tie at dusk under string lights, Phoenix, Arizona" width="4289" height="2413" fetchpriority="high" decoding="async"/>
+    </picture>
+  </div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-bar hero-bar-top" aria-hidden="true"></div>
+  <div class="hero-bar hero-bar-bot" aria-hidden="true"></div>
+
+  <div class="hero-card">
+    <p class="eyebrow rv">Cinematic photographer · Phoenix, Arizona</p>
+    <h1 class="hero-h1">
+      <span class="hh-line rv">Your life,</span>
+      <span class="hh-line rv"><em>shot like a film.</em></span>
+    </h1>
+    <p class="hero-sub rv">Graduation, couples, and family sessions across Phoenix and all of Arizona. Directed from the first frame to the final gallery. No posing experience required.</p>
+    <div class="hero-btns rv">
+      <a class="btn btn-amber" href="#book">Book your session</a>
+      <a class="btn btn-ghost" href="#work" data-cursor="view">See the work</a>
+    </div>
+  </div>
+
+  <div class="hero-meta" aria-hidden="true">
+    <span class="hm-item">33.4484° N · 112.0740° W</span>
+    <span class="hm-item">EST. QUEENS, NY → PHX, AZ</span>
+  </div>
+  <a class="hero-scroll" href="#work" aria-label="Scroll to the work">
+    <span class="hs-line"></span><span>Scroll</span>
+  </a>
 </section>
-<!-- ── INTRO STRIP ───────────────────────────────────────────── -->
-<div id="intro">
-<div class="intro-line"></div>
-<p class="intro-text">
-      Images that feel like <strong>movement, mood, and meaning</strong> —
-      not just a pose against a wall.
-    </p>
-<span class="intro-right">Phoenix, AZ</span>
+
+<!-- ── TICKER ──────────────────────────────────────────────── -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Graduation</span><i>✦</i><span>Couples</span><i>✦</i><span>Families</span><i>✦</i><span>Portraits</span><i>✦</i><span>Phoenix</span><i>✦</i><span>Tempe</span><i>✦</i><span>Scottsdale</span><i>✦</i><span>Golden hour</span><i>✦</i>
+    <span>Graduation</span><i>✦</i><span>Couples</span><i>✦</i><span>Families</span><i>✦</i><span>Portraits</span><i>✦</i><span>Phoenix</span><i>✦</i><span>Tempe</span><i>✦</i><span>Scottsdale</span><i>✦</i><span>Golden hour</span><i>✦</i>
+  </div>
 </div>
-<!-- ── REASSURANCE STRIP ─────────────────────────────────────── -->
-<div class="reassurance-strip">
-<div class="reassurance-item">
-<span class="reassurance-icon">&#9201;</span>
-<span class="reassurance-text">60-minute sessions</span>
-</div>
-<div class="reassurance-item">
-<span class="reassurance-icon">&#9733;</span>
-<span class="reassurance-text">15+ edited images</span>
-</div>
-<div class="reassurance-item">
-<span class="reassurance-icon">&#10003;</span>
-<span class="reassurance-text">Guided posing, no awkwardness required</span>
-</div>
-</div>
-<!-- ── PORTFOLIO ─────────────────────────────────────────────── -->
-<section id="portfolio">
-<div class="portfolio-head reveal">
-<h2 class="section-title">The <em>reel</em></h2>
-<div class="port-tabs">
-<button class="tab active" data-cat="all">All</button>
-<button class="tab" data-cat="couples">Couples</button>
-<button class="tab" data-cat="portraits">Portraits</button>
-<button class="tab" data-cat="families">Families</button>
-</div>
-</div>
-<div class="port-carousel-wrap">
-<button class="carousel-arrow arrow-left" id="carArrowL">‹</button>
-<button class="carousel-arrow arrow-right" id="carArrowR">›</button>
-<div class="port-carousel" id="portCarousel">
-<div class="pc-item" data-cat="portraits">
-<div class="pc-bg"><img alt="Female graduate back view raising cap at ASU" class="pc-img" src="images/opt/asu-graduation-back-view-cap-raised-800w.jpg" srcset="images/opt/asu-graduation-back-view-cap-raised-400w.jpg 400w, images/opt/asu-graduation-back-view-cap-raised-800w.jpg 800w, images/opt/asu-graduation-back-view-cap-raised-1200w.jpg 1200w, images/opt/asu-graduation-back-view-cap-raised-1571w.jpg 1571w" sizes="(max-width: 1024px) 80vw, 38vw" width="1571" height="2047" loading="lazy" decoding="async"/></div>
-<div class="pc-info"><div class="pc-title">Portraits</div><div class="pc-cat">Portrait Sessions</div></div>
-</div>
-<div class="pc-item" data-cat="couples">
-<div class="pc-bg"><img alt="Couple portrait by lakeside railing at dusk" class="pc-img" src="images/opt/couples-lakeside-evening-portrait-800w.jpg" srcset="images/opt/couples-lakeside-evening-portrait-400w.jpg 400w, images/opt/couples-lakeside-evening-portrait-800w.jpg 800w, images/opt/couples-lakeside-evening-portrait-1200w.jpg 1200w, images/opt/couples-lakeside-evening-portrait-1478w.jpg 1478w" sizes="(max-width: 1024px) 80vw, 38vw" width="1478" height="2048" loading="lazy" decoding="async"/></div>
-<div class="pc-info"><div class="pc-title">Lakeside Evening</div><div class="pc-cat">Couples</div></div>
-</div>
-<div class="pc-item" data-cat="families">
-<div class="pc-bg"><img alt="Family photography session in Tempe, Arizona" class="pc-img" src="images/opt/family-airplane-800w.jpg" srcset="images/opt/family-airplane-400w.jpg 400w, images/opt/family-airplane-800w.jpg 800w, images/opt/family-airplane-1013w.jpg 1013w" sizes="(max-width: 1024px) 80vw, 38vw" width="1013" height="1143" loading="lazy" decoding="async"/></div>
-<div class="pc-info"><div class="pc-title">The Ramírez Family</div><div class="pc-cat">Families · Tempe</div></div>
-</div>
-</div>
-</div>
-<div class="gallery-view" id="galleryView">
-<div class="gallery-header">
-<button class="gallery-back" id="galleryBack">← Back</button>
-<h3 class="gallery-title" id="galleryTitle"></h3>
-</div>
-<div class="gallery-grid" id="galleryGrid"></div>
-</div>
+
+<!-- ── SCENE 01 · THE WORK ─────────────────────────────────── -->
+<section class="scene" id="work" aria-labelledby="work-title">
+  <span class="ghost-num" data-plx="-0.06" aria-hidden="true">01</span>
+  <div class="scene-head">
+    <p class="slate rv"><span class="slate-scene">Scene 01</span><span class="slate-loc">EXT. Arizona · Golden hour</span></p>
+    <h2 class="scene-title rv" id="work-title">The work speaks <em>first.</em></h2>
+    <p class="scene-lede rv">Every gallery is graded like a film still. Intentional light, honest color, frames you will want printed. Pick a chapter, or watch it all.</p>
+  </div>
+
+  <div class="tabs rv" role="group" aria-label="Filter portfolio">
+    <button class="tab" aria-pressed="true" data-cat="all">All frames</button>
+    <button class="tab" aria-pressed="false" data-cat="grads">Graduation</button>
+    <button class="tab" aria-pressed="false" data-cat="couples">Couples</button>
+    <button class="tab" aria-pressed="false" data-cat="families">Families</button>
+  </div>
+
+  <ul class="gallery" id="gallery">
+    <li class="cell" data-cat="grads">
+  <button class="frame" type="button" data-cursor="view" data-idx="0"
+    data-title="Cap Raised, Palm Walk" data-loc="ASU Tempe" data-cat-label="Graduation"
+    data-lb-avif="assets/img/grad-palm-cap-1200.avif 1200w, assets/img/grad-palm-cap-1464.avif 1464w" data-lb-webp="assets/img/grad-palm-cap-1200.webp 1200w, assets/img/grad-palm-cap-1464.webp 1464w" data-lb-jpg="assets/img/grad-palm-cap-800.jpg"
+    data-w="1464" data-h="2048" data-alt="ASU graduate in white dress and gold stole raising her cap on Palm Walk at golden hour, Tempe"
+    aria-label="Open image: Cap Raised, Palm Walk, ASU Tempe">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABQBQCdASocACcAPwVurk+rpqQqNVgIAXAgiWIAuzPWAAU7Se9pOFyx1SChm/2rXdvp6UAA+Sfri6PVwjg5EkALluLodwrTWHHwsy3sy7IZVpzG00ojP8grZxR60e38JAwdN+xFiIJWQ1n7MJ2LncDTvOxYtrz+HEe+BoTi1PPLX1p0tm7f8GrWsbnke48vqh8etAGywAA=')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/grad-palm-cap-480.avif 480w, assets/img/grad-palm-cap-800.avif 800w, assets/img/grad-palm-cap-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/grad-palm-cap-480.webp 480w, assets/img/grad-palm-cap-800.webp 800w, assets/img/grad-palm-cap-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/grad-palm-cap-800.jpg" alt="ASU graduate in white dress and gold stole raising her cap on Palm Walk at golden hour, Tempe" width="1464" height="2048" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Cap Raised, Palm Walk</span>
+      <span class="sc-meta">ASU Tempe · STILL 01</span>
+    </span>
+  </button>
+</li>
+<li class="cell cell-wide" data-cat="couples">
+  <button class="frame" type="button" data-cursor="view" data-idx="1"
+    data-title="She Said Yes" data-loc="Phoenix" data-cat-label="Couples"
+    data-lb-avif="assets/img/couple-neon-1200.avif 1200w, assets/img/couple-neon-2048.avif 2048w" data-lb-webp="assets/img/couple-neon-1200.webp 1200w, assets/img/couple-neon-2048.webp 2048w" data-lb-jpg="assets/img/couple-neon-800.jpg"
+    data-w="2048" data-h="965" data-alt="Couple embracing in front of a glowing Will You Marry Me neon sign surrounded by red roses, Phoenix proposal"
+    aria-label="Open image: She Said Yes, Phoenix">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQBACdASocAA0APwlur0+rpiQiMAgBcCEJbACdMoAC/CrAJWoMY1wq4AD+6/6MI96tfsHh8eDpOI1YKXElk/kgvD+6t5V7t8z24x3XVKI7SsLmiIo3TbryqAA=')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/couple-neon-480.avif 480w, assets/img/couple-neon-800.avif 800w, assets/img/couple-neon-1200.avif 1200w, assets/img/couple-neon-2048.avif 2048w" sizes="(max-width: 1024px) 100vw, 66vw"/>
+        <source type="image/webp" srcset="assets/img/couple-neon-480.webp 480w, assets/img/couple-neon-800.webp 800w, assets/img/couple-neon-1200.webp 1200w, assets/img/couple-neon-2048.webp 2048w" sizes="(max-width: 1024px) 100vw, 66vw"/>
+        <img src="assets/img/couple-neon-800.jpg" alt="Couple embracing in front of a glowing Will You Marry Me neon sign surrounded by red roses, Phoenix proposal" width="2048" height="965" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">She Said Yes</span>
+      <span class="sc-meta">Phoenix · STILL 02</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="grads">
+  <button class="frame" type="button" data-cursor="view" data-idx="2"
+    data-title="Portrait in Silver" data-loc="Phoenix" data-cat-label="Graduation"
+    data-lb-avif="assets/img/grad-bw-1200.avif 1200w, assets/img/grad-bw-1600.avif 1600w, assets/img/grad-bw-2200.avif 2200w" data-lb-webp="assets/img/grad-bw-1200.webp 1200w, assets/img/grad-bw-1600.webp 1600w, assets/img/grad-bw-2200.webp 2200w" data-lb-jpg="assets/img/grad-bw-1600.jpg"
+    data-w="4649" data-h="5811" data-alt="Black and white senior graduation portrait with dramatic side light, Phoenix, Arizona"
+    aria-label="Open image: Portrait in Silver, Phoenix">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADQBQCdASocACMAPwFsrE+rJiQiNVv4AWAgCWkAAFvsxsUmVYf+ZjHwsdp6lke1MK5jwi86V0gYAP7vwud/ESnAlTWboAZOdfB7vNiryh7k76d/97t7+V9s+8kpzfJGo07o0RolENoXy6x863imMPj3K9Grib0HrQ55WSXFOjYAAAAA')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/grad-bw-480.avif 480w, assets/img/grad-bw-800.avif 800w, assets/img/grad-bw-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/grad-bw-480.webp 480w, assets/img/grad-bw-800.webp 800w, assets/img/grad-bw-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/grad-bw-1600.jpg" alt="Black and white senior graduation portrait with dramatic side light, Phoenix, Arizona" width="4649" height="5811" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Portrait in Silver</span>
+      <span class="sc-meta">Phoenix · STILL 03</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="families">
+  <button class="frame" type="button" data-cursor="view" data-idx="3"
+    data-title="Brothers at Dusk" data-loc="Phoenix" data-cat-label="Families"
+    data-lb-avif="assets/img/family-boys-hill-1200.avif 1200w, assets/img/family-boys-hill-1600.avif 1600w, assets/img/family-boys-hill-2200.avif 2200w" data-lb-webp="assets/img/family-boys-hill-1200.webp 1200w, assets/img/family-boys-hill-1600.webp 1600w, assets/img/family-boys-hill-2200.webp 2200w" data-lb-jpg="assets/img/family-boys-hill-1600.jpg"
+    data-w="3250" data-h="3985" data-alt="Two young brothers holding hands on a hill at dusk, family session in Phoenix, Arizona"
+    aria-label="Open image: Brothers at Dusk, Phoenix">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBQCdASocACIAPwFwq0+rJqOmtVgIAWAgCWMAyFwWZHNA2aJLl13MPclqir3GE/wAAP6LVWQFOxKohutc97neDKEtLDyN70Gt14uu+OfAQiT0prlVfcCjoG2/ry0X39hAaNAh80VV5AAA')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/family-boys-hill-480.avif 480w, assets/img/family-boys-hill-800.avif 800w, assets/img/family-boys-hill-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/family-boys-hill-480.webp 480w, assets/img/family-boys-hill-800.webp 800w, assets/img/family-boys-hill-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/family-boys-hill-1600.jpg" alt="Two young brothers holding hands on a hill at dusk, family session in Phoenix, Arizona" width="3250" height="3985" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Brothers at Dusk</span>
+      <span class="sc-meta">Phoenix · STILL 04</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="grads">
+  <button class="frame" type="button" data-cursor="view" data-idx="4"
+    data-title="After Hours, Hayden Library" data-loc="ASU Tempe" data-cat-label="Graduation"
+    data-lb-avif="assets/img/grad-library-books-1200.avif 1200w, assets/img/grad-library-books-1600.avif 1600w, assets/img/grad-library-books-2200.avif 2200w" data-lb-webp="assets/img/grad-library-books-1200.webp 1200w, assets/img/grad-library-books-1600.webp 1600w, assets/img/grad-library-books-2200.webp 2200w" data-lb-jpg="assets/img/grad-library-books-1600.jpg"
+    data-w="4672" data-h="7008" data-alt="ASU graduate in yellow dress seated on a stack of books in a library aisle, Tempe, Arizona"
+    aria-label="Open image: After Hours, Hayden Library, ASU Tempe">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAACQBgCdASocACoAPvVspk+qpqOiNVv8AVAeiWNg61VslZYAcqorhfidRVqOjk/vJdbpCW65aBh7PIZVwJQAAP7pneq1sryvaIlkDmJYcBE+SFH3d666S8bWXyZM2Up1ok1aDN6PTN1WWC1PkaO899VLqUHXOqBEnTgd2FwTrTIcMjjePOPLbDz4KCsTQps5HlVhzKTMwGWYUR6uGtxumhk3vmFbGLoRmeU2c7Y9dgA=')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/grad-library-books-480.avif 480w, assets/img/grad-library-books-800.avif 800w, assets/img/grad-library-books-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/grad-library-books-480.webp 480w, assets/img/grad-library-books-800.webp 800w, assets/img/grad-library-books-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/grad-library-books-1600.jpg" alt="ASU graduate in yellow dress seated on a stack of books in a library aisle, Tempe, Arizona" width="4672" height="7008" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">After Hours, Hayden Library</span>
+      <span class="sc-meta">ASU Tempe · STILL 05</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="couples">
+  <button class="frame" type="button" data-cursor="view" data-idx="5"
+    data-title="Last Light Between Us" data-loc="Phoenix" data-cat-label="Couples"
+    data-lb-avif="assets/img/couple-sunstar-1200.avif 1200w, assets/img/couple-sunstar-1600.avif 1600w, assets/img/couple-sunstar-2200.avif 2200w" data-lb-webp="assets/img/couple-sunstar-1200.webp 1200w, assets/img/couple-sunstar-1600.webp 1600w, assets/img/couple-sunstar-2200.webp 2200w" data-lb-jpg="assets/img/couple-sunstar-1600.jpg"
+    data-w="4672" data-h="5055" data-alt="Couple forehead to forehead with a sun star between them at golden hour, Phoenix, Arizona"
+    aria-label="Open image: Last Light Between Us, Phoenix">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQBACdASocAB4APwl4slErp6SisBgIAXAhCWUAwZALcbfsiyf0249rI4Xrap0iQAD90kS9KbZGq1fDTSrSvZQM6O1k4PNH0ilsGyv9IrQl6uLKxoabTeqRpgepscGd4pqEQS+9lAA=')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/couple-sunstar-480.avif 480w, assets/img/couple-sunstar-800.avif 800w, assets/img/couple-sunstar-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/couple-sunstar-480.webp 480w, assets/img/couple-sunstar-800.webp 800w, assets/img/couple-sunstar-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/couple-sunstar-1600.jpg" alt="Couple forehead to forehead with a sun star between them at golden hour, Phoenix, Arizona" width="4672" height="5055" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Last Light Between Us</span>
+      <span class="sc-meta">Phoenix · STILL 06</span>
+    </span>
+  </button>
+</li>
+<li class="cell cell-wide" data-cat="families">
+  <button class="frame" type="button" data-cursor="view" data-idx="6"
+    data-title="Center of Gravity" data-loc="Phoenix" data-cat-label="Families"
+    data-lb-avif="assets/img/family-baby-overhead-1200.avif 1200w, assets/img/family-baby-overhead-1600.avif 1600w, assets/img/family-baby-overhead-2200.avif 2200w" data-lb-webp="assets/img/family-baby-overhead-1200.webp 1200w, assets/img/family-baby-overhead-1600.webp 1600w, assets/img/family-baby-overhead-2200.webp 2200w" data-lb-jpg="assets/img/family-baby-overhead-1600.jpg"
+    data-w="5096" data-h="3113" data-alt="Baby lifted overhead by parents, close-up at golden hour, family photographer Phoenix"
+    aria-label="Open image: Center of Gravity, Phoenix">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACQBACdASocABEAPwl0q0+rpyOiMBgMAXAhCUAVJPHYL55LQ7xTS3V5nyI8WuAA/tA5UiY04KIRGONo2iXnkFlzreYi5IRg0Tz+aD278IDCchJ518gtqoVZlJWiZ7sAedjyM0BvTJPDYTtAAAA=')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/family-baby-overhead-480.avif 480w, assets/img/family-baby-overhead-800.avif 800w, assets/img/family-baby-overhead-1200.avif 1200w" sizes="(max-width: 1024px) 100vw, 66vw"/>
+        <source type="image/webp" srcset="assets/img/family-baby-overhead-480.webp 480w, assets/img/family-baby-overhead-800.webp 800w, assets/img/family-baby-overhead-1200.webp 1200w" sizes="(max-width: 1024px) 100vw, 66vw"/>
+        <img src="assets/img/family-baby-overhead-1600.jpg" alt="Baby lifted overhead by parents, close-up at golden hour, family photographer Phoenix" width="5096" height="3113" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Center of Gravity</span>
+      <span class="sc-meta">Phoenix · STILL 07</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="grads">
+  <button class="frame" type="button" data-cursor="view" data-idx="7"
+    data-title="The Walk Home" data-loc="Phoenix" data-cat-label="Graduation"
+    data-lb-avif="assets/img/grad-caps-held-1200.avif 1200w, assets/img/grad-caps-held-1600.avif 1600w, assets/img/grad-caps-held-2200.avif 2200w" data-lb-webp="assets/img/grad-caps-held-1200.webp 1200w, assets/img/grad-caps-held-1600.webp 1600w, assets/img/grad-caps-held-2200.webp 2200w" data-lb-jpg="assets/img/grad-caps-held-1600.jpg"
+    data-w="3356" data-h="4550" data-alt="Graduate holding a red cap with tassel behind their back on a backlit street, Phoenix, Arizona"
+    aria-label="Open image: The Walk Home, Phoenix">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAADQBgCdASocACYAPwlsslGrpSSisBVaqXAhCWgAqSdnO9wVaRVXd/2MbkvO/yuAHovn6fTRUlCCuwCr7U76ggAA/u9ImEHYjqBgUXhanZBEfHbNNyYl06gwOrFilkqgfUn0XU02UrEQepfdp3AJpsGx3jDv4AiwcE0Ixw4n4IiQ9XYcsw1caD8qJKvuiyPrgSOgmIkLXZe3TyS3JJHXyt8SjYaK4tVR3bqXxSJLwAQayg9AAAA=')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/grad-caps-held-480.avif 480w, assets/img/grad-caps-held-800.avif 800w, assets/img/grad-caps-held-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/grad-caps-held-480.webp 480w, assets/img/grad-caps-held-800.webp 800w, assets/img/grad-caps-held-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/grad-caps-held-1600.jpg" alt="Graduate holding a red cap with tassel behind their back on a backlit street, Phoenix, Arizona" width="3356" height="4550" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">The Walk Home</span>
+      <span class="sc-meta">Phoenix · STILL 08</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="couples">
+  <button class="frame" type="button" data-cursor="view" data-idx="8"
+    data-title="Blue Hour" data-loc="Tempe Town Lake" data-cat-label="Couples"
+    data-lb-avif="assets/img/couple-lakeside-1200.avif 1200w, assets/img/couple-lakeside-1478.avif 1478w" data-lb-webp="assets/img/couple-lakeside-1200.webp 1200w, assets/img/couple-lakeside-1478.webp 1478w" data-lb-jpg="assets/img/couple-lakeside-800.jpg"
+    data-w="1478" data-h="2048" data-alt="Couple portrait at a lakeside railing at dusk, Tempe Town Lake, Arizona"
+    aria-label="Open image: Blue Hour, Tempe Town Lake">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAQBgCdASocACcAPwFwq0+rJqOiNVgIAWAgCWcAvzgUIjcuFW8HR6kavftCjbHy85oMbV3g5fHJnsAA/pCafE5ZJltWuVjAE0d9vgGToHnEDtiQ+gLCEt27G82jDyK3c2HN7T46xWwN6Ty73UyRLmcKeDePUWTqEVm5YSRBI5GBqr0OA6jK1iY7gAA=')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/couple-lakeside-480.avif 480w, assets/img/couple-lakeside-800.avif 800w, assets/img/couple-lakeside-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/couple-lakeside-480.webp 480w, assets/img/couple-lakeside-800.webp 800w, assets/img/couple-lakeside-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/couple-lakeside-800.jpg" alt="Couple portrait at a lakeside railing at dusk, Tempe Town Lake, Arizona" width="1478" height="2048" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Blue Hour</span>
+      <span class="sc-meta">Tempe Town Lake · STILL 09</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="families">
+  <button class="frame" type="button" data-cursor="view" data-idx="9"
+    data-title="Up You Go" data-loc="Phoenix" data-cat-label="Families"
+    data-lb-avif="assets/img/family-lift-flare-1200.avif 1200w, assets/img/family-lift-flare-1600.avif 1600w, assets/img/family-lift-flare-2200.avif 2200w" data-lb-webp="assets/img/family-lift-flare-1200.webp 1200w, assets/img/family-lift-flare-1600.webp 1600w, assets/img/family-lift-flare-2200.webp 2200w" data-lb-jpg="assets/img/family-lift-flare-1600.jpg"
+    data-w="2758" data-h="3423" data-alt="Parent lifting a toddler into golden sunlight in a field, family photographer Phoenix, Arizona"
+    aria-label="Open image: Up You Go, Phoenix">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAACwBQCdASocACMAPvVoqE+qpiQiNVv8AVAeiUAXz2FPsYHQ2/0XzLRYS0uB70IcqGmzxDJzXAAA/gPWbLNAXN95qUvGvpabByjB2KwYnet0HkA8/zwqaAvD2qNMvAmQEa9C4u2DdhEgnTyfPsTYVorYd6/ZI6KUZS7xBCQ7rw89vY8SJNkQvgQ/9SN0XulKqRAonzZHmZifiE/LIAAesEgZBBKAAA==')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/family-lift-flare-480.avif 480w, assets/img/family-lift-flare-800.avif 800w, assets/img/family-lift-flare-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/family-lift-flare-480.webp 480w, assets/img/family-lift-flare-800.webp 800w, assets/img/family-lift-flare-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/family-lift-flare-1600.jpg" alt="Parent lifting a toddler into golden sunlight in a field, family photographer Phoenix, Arizona" width="2758" height="3423" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Up You Go</span>
+      <span class="sc-meta">Phoenix · STILL 10</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="grads">
+  <button class="frame" type="button" data-cursor="view" data-idx="10"
+    data-title="Class of ’26" data-loc="Downtown Phoenix" data-cat-label="Graduation"
+    data-lb-avif="assets/img/grad-26-tassel-1200.avif 1200w, assets/img/grad-26-tassel-1600.avif 1600w, assets/img/grad-26-tassel-2200.avif 2200w" data-lb-webp="assets/img/grad-26-tassel-1200.webp 1200w, assets/img/grad-26-tassel-1600.webp 1600w, assets/img/grad-26-tassel-2200.webp 2200w" data-lb-jpg="assets/img/grad-26-tassel-1600.jpg"
+    data-w="4051" data-h="6076" data-alt="Senior holding a 2026 tassel charm toward the camera in downtown Phoenix, Arizona"
+    aria-label="Open image: Class of ’26, Downtown Phoenix">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAQBQCdASocACoAPvVmqU+qpaQiOrZoAVAeiUAXugGedZ/6hsDZPyY+u0+LTbLoB5QAAP7MKRLgquTtPjtd/URqXG6j2cytlpD7ytRRSNLizM5Ak4kpfCZeCRXUu9DEQUIKuDDalJhoQPqiNgQP9OWo5OkYV/QPZyA9sKNKGLvta9RC4W2kp7CksVkNo431fZswrp2D9AAAAA==')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/grad-26-tassel-480.avif 480w, assets/img/grad-26-tassel-800.avif 800w, assets/img/grad-26-tassel-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/grad-26-tassel-480.webp 480w, assets/img/grad-26-tassel-800.webp 800w, assets/img/grad-26-tassel-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/grad-26-tassel-1600.jpg" alt="Senior holding a 2026 tassel charm toward the camera in downtown Phoenix, Arizona" width="4051" height="6076" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Class of ’26</span>
+      <span class="sc-meta">Downtown Phoenix · STILL 11</span>
+    </span>
+  </button>
+</li>
+<li class="cell cell-wide" data-cat="grads">
+  <button class="frame" type="button" data-cursor="view" data-idx="11"
+    data-title="Chapter Closed" data-loc="ASU Tempe" data-cat-label="Graduation"
+    data-lb-avif="assets/img/grad-books-laughing-1200.avif 1200w, assets/img/grad-books-laughing-1600.avif 1600w, assets/img/grad-books-laughing-2048.avif 2048w" data-lb-webp="assets/img/grad-books-laughing-1200.webp 1200w, assets/img/grad-books-laughing-1600.webp 1600w, assets/img/grad-books-laughing-2048.webp 2048w" data-lb-jpg="assets/img/grad-books-laughing-1600.jpg"
+    data-w="2048" data-h="1408" data-alt="ASU graduate laughing behind a stack of books in the library, gold stole, Tempe, Arizona"
+    aria-label="Open image: Chapter Closed, ASU Tempe">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADwBACdASocABMAPu1kp0+ppaOiN+gBMB2JYgAAXHmbPGQeST+UV2+QijahrjWYXAAA/uwkhZItZK4i20kyZs4GXxPu5bBuEiHmVBISkRkWhD51U4wprRkHwbe3CwxDyEuKIJgIP1AggagAAAA=')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/grad-books-laughing-480.avif 480w, assets/img/grad-books-laughing-800.avif 800w, assets/img/grad-books-laughing-1200.avif 1200w" sizes="(max-width: 1024px) 100vw, 66vw"/>
+        <source type="image/webp" srcset="assets/img/grad-books-laughing-480.webp 480w, assets/img/grad-books-laughing-800.webp 800w, assets/img/grad-books-laughing-1200.webp 1200w" sizes="(max-width: 1024px) 100vw, 66vw"/>
+        <img src="assets/img/grad-books-laughing-1600.jpg" alt="ASU graduate laughing behind a stack of books in the library, gold stole, Tempe, Arizona" width="2048" height="1408" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Chapter Closed</span>
+      <span class="sc-meta">ASU Tempe · STILL 12</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="couples">
+  <button class="frame" type="button" data-cursor="view" data-idx="12"
+    data-title="Follow the Light" data-loc="Phoenix" data-cat-label="Couples"
+    data-lb-avif="assets/img/couple-followme-1200.avif 1200w, assets/img/couple-followme-1498.avif 1498w" data-lb-webp="assets/img/couple-followme-1200.webp 1200w, assets/img/couple-followme-1498.webp 1498w" data-lb-jpg="assets/img/couple-followme-800.jpg"
+    data-w="1498" data-h="2048" data-alt="Couple holding hands walking through a golden field at sunset, Phoenix, Arizona"
+    aria-label="Open image: Follow the Light, Phoenix">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADwBQCdASocACYAPv1mqk+rJaOiNVv4AWAfiWMAxQuOwvMcvEnOtXGh8pFPbqpEzFZ0YwoopuS9QADN1aDrKxHm84dCXjwPLeoMSj7rH9rq8dsqoyd7Z6ehVH0c7WY0267IzD+KI6KnTnTsx0tzt6I4gHwN4NnFqGcfMSFAAAA=')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/couple-followme-480.avif 480w, assets/img/couple-followme-800.avif 800w, assets/img/couple-followme-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/couple-followme-480.webp 480w, assets/img/couple-followme-800.webp 800w, assets/img/couple-followme-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/couple-followme-800.jpg" alt="Couple holding hands walking through a golden field at sunset, Phoenix, Arizona" width="1498" height="2048" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Follow the Light</span>
+      <span class="sc-meta">Phoenix · STILL 13</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="families">
+  <button class="frame" type="button" data-cursor="view" data-idx="13"
+    data-title="Side by Side" data-loc="Phoenix" data-cat-label="Families"
+    data-lb-avif="assets/img/family-boys-walk-1200.avif 1200w, assets/img/family-boys-walk-1600.avif 1600w, assets/img/family-boys-walk-1903.avif 1903w" data-lb-webp="assets/img/family-boys-walk-1200.webp 1200w, assets/img/family-boys-walk-1600.webp 1600w, assets/img/family-boys-walk-1903.webp 1903w" data-lb-jpg="assets/img/family-boys-walk-1600.jpg"
+    data-w="1903" data-h="2112" data-alt="Two boys in plaid walking through a field together, family photography Phoenix, Arizona"
+    aria-label="Open image: Side by Side, Phoenix">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBQCdASocAB8APv1orE+rJiQiMAwBYB+JYgCdMswDY1yx7N2NgFM9FHVv0A12usteT1wA/rrIVt3aYcdYxAKjKfQWQ7JOLBKoWLShUGWCwsZJLBk2xqKHz3NIYZRGuAAv9ycbCyjhVeDEjqr5eVEqJ2lI4D2D4a7GaAAA')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/family-boys-walk-480.avif 480w, assets/img/family-boys-walk-800.avif 800w, assets/img/family-boys-walk-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/family-boys-walk-480.webp 480w, assets/img/family-boys-walk-800.webp 800w, assets/img/family-boys-walk-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/family-boys-walk-1600.jpg" alt="Two boys in plaid walking through a field together, family photography Phoenix, Arizona" width="1903" height="2112" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Side by Side</span>
+      <span class="sc-meta">Phoenix · STILL 14</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="grads">
+  <button class="frame" type="button" data-cursor="view" data-idx="14"
+    data-title="Details, Laced" data-loc="Downtown Phoenix" data-cat-label="Graduation"
+    data-lb-avif="assets/img/grad-jordans-1200.avif 1200w, assets/img/grad-jordans-1600.avif 1600w, assets/img/grad-jordans-2200.avif 2200w" data-lb-webp="assets/img/grad-jordans-1200.webp 1200w, assets/img/grad-jordans-1600.webp 1600w, assets/img/grad-jordans-2200.webp 2200w" data-lb-jpg="assets/img/grad-jordans-1600.jpg"
+    data-w="4018" data-h="5023" data-alt="Senior graduation detail photo of Jordan sneakers in blue and purple evening light, Phoenix"
+    aria-label="Open image: Details, Laced, Downtown Phoenix">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAwBQCdASocACMAPv1urE+rJqSiNVv4AWAfiWIAwoAeEP9TVdOI6l6BfqKs1gReqgmVTAD+8N9yHCugG+HPRnmvlhXlA6Zs16Y7kVPBd+/5pyNg+r9LoruE9tCxHoN+CmnLL7vKLEtzqOYqtOOpHQyOAAA=')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/grad-jordans-480.avif 480w, assets/img/grad-jordans-800.avif 800w, assets/img/grad-jordans-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/grad-jordans-480.webp 480w, assets/img/grad-jordans-800.webp 800w, assets/img/grad-jordans-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/grad-jordans-1600.jpg" alt="Senior graduation detail photo of Jordan sneakers in blue and purple evening light, Phoenix" width="4018" height="5023" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Details, Laced</span>
+      <span class="sc-meta">Downtown Phoenix · STILL 15</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="couples">
+  <button class="frame" type="button" data-cursor="view" data-idx="15"
+    data-title="Three, Soon" data-loc="Phoenix" data-cat-label="Couples"
+    data-lb-avif="assets/img/couple-bump-1200.avif 1200w, assets/img/couple-bump-1600.avif 1600w, assets/img/couple-bump-1963.avif 1963w" data-lb-webp="assets/img/couple-bump-1200.webp 1200w, assets/img/couple-bump-1600.webp 1600w, assets/img/couple-bump-1963.webp 1963w" data-lb-jpg="assets/img/couple-bump-1600.jpg"
+    data-w="1963" data-h="2048" data-alt="Maternity photo of hands over a baby bump in a golden sunset field, Phoenix, Arizona"
+    aria-label="Open image: Three, Soon, Phoenix">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABQBQCdASocAB0APwl4r1Crp6QisAgBcCEJQBOmaL/qCC4JgeUSpDx+SAlqr/ooE/Ta0AAA/uNE9MgbqeOSzfltqBirNjeVtUCuuyMAemr6R8PeGfmWGmY5UfWbqaxwzFxfH2RtuAAAAA==')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/couple-bump-480.avif 480w, assets/img/couple-bump-800.avif 800w, assets/img/couple-bump-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/couple-bump-480.webp 480w, assets/img/couple-bump-800.webp 800w, assets/img/couple-bump-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/couple-bump-1600.jpg" alt="Maternity photo of hands over a baby bump in a golden sunset field, Phoenix, Arizona" width="1963" height="2048" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Three, Soon</span>
+      <span class="sc-meta">Phoenix · STILL 16</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="families">
+  <button class="frame" type="button" data-cursor="view" data-idx="16"
+    data-title="Golden Hour Stroll" data-loc="Phoenix" data-cat-label="Families"
+    data-lb-avif="assets/img/family-flowers-walk-1200.avif 1200w, assets/img/family-flowers-walk-1600.avif 1600w, assets/img/family-flowers-walk-2200.avif 2200w" data-lb-webp="assets/img/family-flowers-walk-1200.webp 1200w, assets/img/family-flowers-walk-1600.webp 1600w, assets/img/family-flowers-walk-2200.webp 2200w" data-lb-jpg="assets/img/family-flowers-walk-1600.jpg"
+    data-w="3596" data-h="4019" data-alt="Mother carrying flowers walking with her children through a sunset field, Phoenix, Arizona"
+    aria-label="Open image: Golden Hour Stroll, Phoenix">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAQBQCdASocAB8APwl0sVGrpqSisBgIAXAhCUAVHoG4mwxY6++adEQ/1Uy9x4g36QEgAP5L3b5lPbDrmDjxP3malPtjtrzD0n/XKAatfanAweTzS3U+a4QqHEBFSxyrNvYei2UPy5iWv+xiZ83LZql0AU2cvwAA')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/family-flowers-walk-480.avif 480w, assets/img/family-flowers-walk-800.avif 800w, assets/img/family-flowers-walk-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/family-flowers-walk-480.webp 480w, assets/img/family-flowers-walk-800.webp 800w, assets/img/family-flowers-walk-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/family-flowers-walk-1600.jpg" alt="Mother carrying flowers walking with her children through a sunset field, Phoenix, Arizona" width="3596" height="4019" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Golden Hour Stroll</span>
+      <span class="sc-meta">Phoenix · STILL 17</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="grads">
+  <button class="frame" type="button" data-cursor="view" data-idx="17"
+    data-title="City Lines" data-loc="Tempe" data-cat-label="Graduation"
+    data-lb-avif="assets/img/grad-city-tempe-1200.avif 1200w, assets/img/grad-city-tempe-1600.avif 1600w, assets/img/grad-city-tempe-2200.avif 2200w" data-lb-webp="assets/img/grad-city-tempe-1200.webp 1200w, assets/img/grad-city-tempe-1600.webp 1600w, assets/img/grad-city-tempe-2200.webp 2200w" data-lb-jpg="assets/img/grad-city-tempe-1600.jpg"
+    data-w="4522" data-h="5652" data-alt="Senior graduate in white shirt and red tie against modern architecture in Tempe, Arizona"
+    aria-label="Open image: City Lines, Tempe">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAACQBQCdASocACMAPwVsq0+rpaOiNVgIAXAgiUAXvhIP/wDT56GdhL/a3RN/Gl+NwhE3KQUegAD+wUafNW1fjlmV7pYWYq9hKr9doFdwvnglAD4wDfu/1A6B5Ky6X1Qv5Fivp2izgnVI7aH9/5JkVNFDsVrdwE6DN8MdIHP5g5+WHr1iMrD/YVI1nn1dhvvLibOYTCwET4UnsAAA')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/grad-city-tempe-480.avif 480w, assets/img/grad-city-tempe-800.avif 800w, assets/img/grad-city-tempe-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/grad-city-tempe-480.webp 480w, assets/img/grad-city-tempe-800.webp 800w, assets/img/grad-city-tempe-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/grad-city-tempe-1600.jpg" alt="Senior graduate in white shirt and red tie against modern architecture in Tempe, Arizona" width="4522" height="5652" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">City Lines</span>
+      <span class="sc-meta">Tempe · STILL 18</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="couples">
+  <button class="frame" type="button" data-cursor="view" data-idx="18"
+    data-title="Desert Dusk" data-loc="Scottsdale" data-cat-label="Couples"
+    data-lb-avif="assets/img/couple-dusk-formal-1200.avif 1200w" data-lb-webp="assets/img/couple-dusk-formal-1200.webp 1200w" data-lb-jpg="assets/img/couple-dusk-formal-800.jpg"
+    data-w="1200" data-h="1662" data-alt="Elegant couple portrait at desert dusk near Scottsdale, Arizona"
+    aria-label="Open image: Desert Dusk, Scottsdale">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAACwBgCdASocACcAPwFwq0+rJqOiNVgIAWAgCWcAv7AUKL7pjpXhTzOeNEORiPRlZ3wWMz7tih9UVQewigecoAD+kJp8TldCrxDq2Tx/VqRgQRkzzNL89IFt+cxijUFj9h9clkX+SkUBmUV1DJbaAtLMRIc4qYaCWmBEV4o0gyw71AInR+leHvbeEAAAAA==')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/couple-dusk-formal-480.avif 480w, assets/img/couple-dusk-formal-800.avif 800w, assets/img/couple-dusk-formal-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/couple-dusk-formal-480.webp 480w, assets/img/couple-dusk-formal-800.webp 800w, assets/img/couple-dusk-formal-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/couple-dusk-formal-800.jpg" alt="Elegant couple portrait at desert dusk near Scottsdale, Arizona" width="1200" height="1662" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Desert Dusk</span>
+      <span class="sc-meta">Scottsdale · STILL 19</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="families">
+  <button class="frame" type="button" data-cursor="view" data-idx="19"
+    data-title="Inside Joke" data-loc="In Home" data-cat-label="Families"
+    data-lb-avif="assets/img/family-laugh-indoor-1200.avif 1200w, assets/img/family-laugh-indoor-1600.avif 1600w, assets/img/family-laugh-indoor-2200.avif 2200w" data-lb-webp="assets/img/family-laugh-indoor-1200.webp 1200w, assets/img/family-laugh-indoor-1600.webp 1600w, assets/img/family-laugh-indoor-2200.webp 2200w" data-lb-jpg="assets/img/family-laugh-indoor-1600.jpg"
+    data-w="2493" data-h="3262" data-alt="Father and child laughing together in warm window light, in-home family session, Arizona"
+    aria-label="Open image: Inside Joke, In Home">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAABwBgCdASocACUAPvFmqE+ppaQiOrZoATAeCWMAuKhQ37TmjqLqBjvZK30lNtm+BE2BQ2fNU3BRfLm0UQAA/unLEpF00JPb+ckx6ewysfficiUXKqmzT1tSeIH0ecMgd5TDVkFyAjS9v0ON/iSEL1vWyJFRsG79OkRCaL1KoJtU4ZeJm3QSBMJWDEk82sePh0AAAA==')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/family-laugh-indoor-480.avif 480w, assets/img/family-laugh-indoor-800.avif 800w, assets/img/family-laugh-indoor-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/family-laugh-indoor-480.webp 480w, assets/img/family-laugh-indoor-800.webp 800w, assets/img/family-laugh-indoor-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/family-laugh-indoor-1600.jpg" alt="Father and child laughing together in warm window light, in-home family session, Arizona" width="2493" height="3262" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Inside Joke</span>
+      <span class="sc-meta">In Home · STILL 20</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="grads">
+  <button class="frame" type="button" data-cursor="view" data-idx="20"
+    data-title="The Twirl" data-loc="ASU Tempe" data-cat-label="Graduation"
+    data-lb-avif="assets/img/grad-dance-1200.avif 1200w, assets/img/grad-dance-1600.avif 1600w, assets/img/grad-dance-2200.avif 2200w" data-lb-webp="assets/img/grad-dance-1200.webp 1200w, assets/img/grad-dance-1600.webp 1600w, assets/img/grad-dance-2200.webp 2200w" data-lb-jpg="assets/img/grad-dance-1600.jpg"
+    data-w="3022" data-h="3938" data-alt="ASU graduate in yellow dress dancing on Palm Walk at golden hour, Tempe, Arizona"
+    aria-label="Open image: The Twirl, ASU Tempe">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABwBQCdASocACQAPwFwq0+rJqOiNVgIAWAgCWUAxcgMbXWuu3kFJRdbe7tvmQISFG8inTAAAP6bmxcH+ASnDS52yKZFXpTXhR2t4Nepk7JBf0RuiOo13J4LIxIkAwdahjMoohHB/PSAiL8E9JZTORtTRWKJBRbMbskVYQk3MmnBWVcwwQEawaL8/DSSfZLBJylS4O5AAAA=')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/grad-dance-480.avif 480w, assets/img/grad-dance-800.avif 800w, assets/img/grad-dance-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/grad-dance-480.webp 480w, assets/img/grad-dance-800.webp 800w, assets/img/grad-dance-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/grad-dance-1600.jpg" alt="ASU graduate in yellow dress dancing on Palm Walk at golden hour, Tempe, Arizona" width="3022" height="3938" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">The Twirl</span>
+      <span class="sc-meta">ASU Tempe · STILL 21</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="families">
+  <button class="frame" type="button" data-cursor="view" data-idx="21"
+    data-title="Cleared for Takeoff" data-loc="Tempe" data-cat-label="Families"
+    data-lb-avif="assets/img/family-airplane-1013.avif 1013w" data-lb-webp="assets/img/family-airplane-1013.webp 1013w" data-lb-jpg="assets/img/family-airplane-800.jpg"
+    data-w="1013" data-h="1143" data-alt="Dad flying his child airplane-style in a golden field, family photography in Tempe, Arizona"
+    aria-label="Open image: Cleared for Takeoff, Tempe">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABwBQCdASocACAAPwlsr0+rpaQiMBgMAXAhCUAZQAZY4gskcW2dk+J+EmhL057Uxzh2v0gwAP6Qmn1Hd1w61JFeennVzKMosJyAD7v8MlY/dBNSNhspxHtyKqsNWvvFs1Ch8F5IgZx2Qzqn4Mb863AA')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/family-airplane-480.avif 480w, assets/img/family-airplane-800.avif 800w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/family-airplane-480.webp 480w, assets/img/family-airplane-800.webp 800w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/family-airplane-800.jpg" alt="Dad flying his child airplane-style in a golden field, family photography in Tempe, Arizona" width="1013" height="1143" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Cleared for Takeoff</span>
+      <span class="sc-meta">Tempe · STILL 22</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="families">
+  <button class="frame" type="button" data-cursor="view" data-idx="22"
+    data-title="Everyone In Frame" data-loc="In Home" data-cat-label="Families"
+    data-lb-avif="assets/img/family-door-peek-1200.avif 1200w, assets/img/family-door-peek-1600.avif 1600w, assets/img/family-door-peek-2200.avif 2200w" data-lb-webp="assets/img/family-door-peek-1200.webp 1200w, assets/img/family-door-peek-1600.webp 1600w, assets/img/family-door-peek-2200.webp 2200w" data-lb-jpg="assets/img/family-door-peek-1600.jpg"
+    data-w="3262" data-h="4095" data-alt="Family laughing while peeking through a doorway, candid in-home session, Phoenix, Arizona"
+    aria-label="Open image: Everyone In Frame, In Home">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBgCdASocACMAPwl6rlArqKQisBqoAXAhCWMAvkgQThDybFU5aMCPMQNxiFTq7y9VukpcKCPiGCrAAPzIQ4csHNSZrKKb+NS/240upCu/UYK85nIZ4UVKRRiUOO9JKfaXnDNnMKiElP7b5wRyNYzXbg7Ey4m+84yJSSg2pYTJNwN17oyC3cNDqgA=')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/family-door-peek-480.avif 480w, assets/img/family-door-peek-800.avif 800w, assets/img/family-door-peek-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/family-door-peek-480.webp 480w, assets/img/family-door-peek-800.webp 800w, assets/img/family-door-peek-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/family-door-peek-1600.jpg" alt="Family laughing while peeking through a doorway, candid in-home session, Phoenix, Arizona" width="3262" height="4095" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Everyone In Frame</span>
+      <span class="sc-meta">In Home · STILL 23</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="couples">
+  <button class="frame" type="button" data-cursor="view" data-idx="23"
+    data-title="Sunday, 7 AM" data-loc="In Home" data-cat-label="Couples"
+    data-lb-avif="assets/img/couple-mirror-1200.avif 1200w, assets/img/couple-mirror-1549.avif 1549w" data-lb-webp="assets/img/couple-mirror-1200.webp 1200w, assets/img/couple-mirror-1549.webp 1549w" data-lb-jpg="assets/img/couple-mirror-800.jpg"
+    data-w="1549" data-h="2048" data-alt="In-home lifestyle photo of parents feeding their baby reflected in a mirror, Phoenix, Arizona"
+    aria-label="Open image: Sunday, 7 AM, In Home">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAADwBgCdASocACUAPwlwslKrpiSiqrgMAXAhCWMAs7PHwRlKfEf3mZhnM3dErwyTBvrdqfjiYF8+WqVQpt9MlZ4AAP6DDNtECl1HwNhvXuOEIIH1XLCb1ee/bW9/Q+QYFTZxYYwJYI8Rp4c7lDbEOeUJEaGXrzKiUOEDm8GuEtmE4JAxNWdRQuGbxLYiyA3uvLe/M6FSmEAAAA==')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/couple-mirror-480.avif 480w, assets/img/couple-mirror-800.avif 800w, assets/img/couple-mirror-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/couple-mirror-480.webp 480w, assets/img/couple-mirror-800.webp 800w, assets/img/couple-mirror-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/couple-mirror-800.jpg" alt="In-home lifestyle photo of parents feeding their baby reflected in a mirror, Phoenix, Arizona" width="1549" height="2048" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Sunday, 7 AM</span>
+      <span class="sc-meta">In Home · STILL 24</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="grads">
+  <button class="frame" type="button" data-cursor="view" data-idx="24"
+    data-title="First Generation" data-loc="ASU Tempe" data-cat-label="Graduation"
+    data-lb-avif="assets/img/grad-steps-capraise-1200.avif 1200w, assets/img/grad-steps-capraise-1600.avif 1600w, assets/img/grad-steps-capraise-1670.avif 1670w" data-lb-webp="assets/img/grad-steps-capraise-1200.webp 1200w, assets/img/grad-steps-capraise-1600.webp 1600w, assets/img/grad-steps-capraise-1670.webp 1670w" data-lb-jpg="assets/img/grad-steps-capraise-1600.jpg"
+    data-w="1670" data-h="2048" data-alt="First generation ASU graduate raising cap on campus steps in maroon and gold, Tempe, Arizona"
+    aria-label="Open image: First Generation, ASU Tempe">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwBQCdASocACIAPvVqpU+qpqOiNVv8AVAeiWMAzNAhX1D2IULKAoTd7T9uTJruplHW1otS3DmgAAD+y47nBDrMWEJdst4jON6D1GR2yc3pdFQ1KG5Sx4XLCJYRCFKSJYXgvl4emiSML9ElYhpeuftyxKH72jeT2wa9UgAA')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/grad-steps-capraise-480.avif 480w, assets/img/grad-steps-capraise-800.avif 800w, assets/img/grad-steps-capraise-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/grad-steps-capraise-480.webp 480w, assets/img/grad-steps-capraise-800.webp 800w, assets/img/grad-steps-capraise-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/grad-steps-capraise-1600.jpg" alt="First generation ASU graduate raising cap on campus steps in maroon and gold, Tempe, Arizona" width="1670" height="2048" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">First Generation</span>
+      <span class="sc-meta">ASU Tempe · STILL 25</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="families">
+  <button class="frame" type="button" data-cursor="view" data-idx="25"
+    data-title="The Whole Cast" data-loc="Phoenix" data-cat-label="Families"
+    data-lb-avif="assets/img/family-dusk-group-1200.avif 1200w, assets/img/family-dusk-group-1600.avif 1600w, assets/img/family-dusk-group-2200.avif 2200w" data-lb-webp="assets/img/family-dusk-group-1200.webp 1200w, assets/img/family-dusk-group-1600.webp 1600w, assets/img/family-dusk-group-2200.webp 2200w" data-lb-jpg="assets/img/family-dusk-group-1600.jpg"
+    data-w="4380" data-h="5135" data-alt="Family group portrait in a field at dusk, family photography in Phoenix, Arizona"
+    aria-label="Open image: The Whole Cast, Phoenix">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABwBQCdASocACEAPvVmqU+qpaQiNUgBUB6JYwDGQBSDb5y1Oy5uW9LA8p/aOVXlf6dsMu2AAPcnEpc5q61+VHfeE3k5+En7wvgWbf4QuVp/jkFFS8QHkulAIwojEdbLI4EGyoJiX7U1bj8cmM6tV9uzNdxdDgAA')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/family-dusk-group-480.avif 480w, assets/img/family-dusk-group-800.avif 800w, assets/img/family-dusk-group-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/family-dusk-group-480.webp 480w, assets/img/family-dusk-group-800.webp 800w, assets/img/family-dusk-group-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/family-dusk-group-1600.jpg" alt="Family group portrait in a field at dusk, family photography in Phoenix, Arizona" width="4380" height="5135" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">The Whole Cast</span>
+      <span class="sc-meta">Phoenix · STILL 26</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="grads">
+  <button class="frame" type="button" data-cursor="view" data-idx="26"
+    data-title="Made It" data-loc="ASU Tempe" data-cat-label="Graduation"
+    data-lb-avif="assets/img/grad-arms-out-1200.avif 1200w, assets/img/grad-arms-out-1535.avif 1535w" data-lb-webp="assets/img/grad-arms-out-1200.webp 1200w, assets/img/grad-arms-out-1535.webp 1535w" data-lb-jpg="assets/img/grad-arms-out-800.jpg"
+    data-w="1535" data-h="2048" data-alt="ASU graduate with arms out celebrating on Palm Walk, maroon gown, Tempe, Arizona"
+    aria-label="Open image: Made It, ASU Tempe">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAwBQCdASocACYAPwlwr1ArpiQitVQIAXAhCUAZmgRajYQy4i1KZe3k1F02nhtQAz4CwAD7EAa+goBlLHYybvAe9PImZldd30NHA2tjWpFgUOXc2zFboUSRy1jER8AzERJFu6SrvJRcnYQXdEWvOo+JQIQq4lyKUaOGkYN48RvOhuDBhFcONIbmdp5D0jlDnRqF5oyiaugAAA==')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/grad-arms-out-480.avif 480w, assets/img/grad-arms-out-800.avif 800w, assets/img/grad-arms-out-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/grad-arms-out-480.webp 480w, assets/img/grad-arms-out-800.webp 800w, assets/img/grad-arms-out-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/grad-arms-out-800.jpg" alt="ASU graduate with arms out celebrating on Palm Walk, maroon gown, Tempe, Arizona" width="1535" height="2048" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Made It</span>
+      <span class="sc-meta">ASU Tempe · STILL 27</span>
+    </span>
+  </button>
+</li>
+  </ul>
 </section>
-<!-- ── COMFORT ──────────────────────────────────────────────── -->
-<section id="comfort">
-<div class="comfort-content reveal">
-<p class="section-eyebrow">Real Talk</p>
-<div class="section-rule"></div>
-<h2 class="section-title">Think you'll feel awkward?<br/><em>Good. That's exactly who I work best with.</em></h2>
-<div class="section-rule"></div>
-<p>Most people I photograph are not models. They show up a little nervous, not sure what to do with their hands, and worried the session is going to feel stiff. That's normal.</p>
-<p>I guide you through the entire shoot so the photos feel natural instead of forced. You don't need a shot list. You don't need to know how to pose. <strong>You just need to show up.</strong></p>
-<a class="btn-dark" href="#contact">Book Your Session</a>
-</div>
+
+<!-- ── SCENE 02 · THE EXPERIENCE ───────────────────────────── -->
+<section class="scene scene-alt" id="experience" aria-labelledby="exp-title">
+  <span class="ghost-num" data-plx="-0.06" aria-hidden="true">02</span>
+  <div class="scene-head">
+    <p class="slate rv"><span class="slate-scene">Scene 02</span><span class="slate-loc">INT. Your comfort zone</span></p>
+    <h2 class="scene-title rv" id="exp-title">Think you'll feel awkward on camera? <em>Good. That's exactly who I work best with.</em></h2>
+    <p class="scene-lede rv">Most people I photograph are not models. They show up a little nervous, unsure what to do with their hands. That's normal, and it's my favorite starting point. I direct the whole session, you just show up as yourself.</p>
+  </div>
+
+  <ol class="acts">
+    <li class="act rv">
+      <span class="act-num">Act I</span>
+      <h3 class="act-title">The plan</h3>
+      <p>Send the inquiry and hear back within 48 hours. We lock your date, pick a location, and talk outfits and vibe. I bring location ideas from all over Arizona.</p>
+    </li>
+    <li class="act rv">
+      <span class="act-num">Act II</span>
+      <h3 class="act-title">The shoot</h3>
+      <p>I direct every frame: where to stand, what to do with your hands, when to move, when to laugh. Most people loosen up inside the first fifteen minutes.</p>
+    </li>
+    <li class="act rv">
+      <span class="act-num">Act III</span>
+      <h3 class="act-title">The premiere</h3>
+      <p>Your edited gallery premieres as a private link within 7 to 10 days. Download everything, print anything, post whatever you love.</p>
+    </li>
+  </ol>
 </section>
-<!-- ── TESTIMONIALS ─────────────────────────────────────────── -->
-<section id="testimonials">
-<div class="testimonials-intro reveal">
-<p class="section-eyebrow">What Clients Say</p>
-<h2 class="section-title">Don't just take <em>my word for it.</em></h2>
-</div>
-<div class="testimonials-grid">
-<div class="testimonial-card reveal">
-<p class="testimonial-quote">"Honestly I was nervous going in but it ended up being way more chill than I expected. Alan knows what he's doing and the final images looked way better than I thought they would. Definitely worth it."</p>
-<div class="testimonial-author">
-<span class="testimonial-name">Marcus T.</span>
-<span class="testimonial-detail">ASU Grad Session</span>
-</div>
-</div>
-<div class="testimonial-card reveal">
-<p class="testimonial-quote">"My friends keep saying my grad photos look like they're from a movie. Alan just knows how to work with light and angles. Super happy with the whole experience."</p>
-<div class="testimonial-author">
-<span class="testimonial-name">Brianna L.</span>
-<span class="testimonial-detail">GCU Grad Session</span>
-</div>
-</div>
-<div class="testimonial-card reveal">
-<p class="testimonial-quote">"I almost just went with one of those mini session photographers but I'm glad I didn't. Alan's work doesn't look like anyone else's and the whole experience felt more personal."</p>
-<div class="testimonial-author">
-<span class="testimonial-name">Jasmine R.</span>
-<span class="testimonial-detail">ASU Grad Session</span>
-</div>
-</div>
-</div>
+
+<!-- ── SCENE 03 · SESSIONS ─────────────────────────────────── -->
+<section class="scene" id="sessions" aria-labelledby="sessions-title">
+  <span class="ghost-num" data-plx="-0.06" aria-hidden="true">03</span>
+  <div class="scene-head">
+    <p class="slate rv"><span class="slate-scene">Scene 03</span><span class="slate-loc">Now booking · All of Arizona</span></p>
+    <h2 class="scene-title rv" id="sessions-title">Pick your <em>feature.</em></h2>
+    <p class="scene-lede rv">Straightforward pricing with no fine print surprises. Every session includes direction, cinematic color, and a private online gallery.</p>
+  </div>
+
+  <div class="tickets">
+    <article class="ticket rv" aria-label="Portraits and graduation sessions">
+      <p class="ticket-badge">Most booked</p>
+      <header class="ticket-head">
+        <h3 class="ticket-name">Portraits <em>&amp; Grads</em></h3>
+        <p class="ticket-price"><small>from</small> $250</p>
+      </header>
+      <p class="ticket-desc">The main character session. Grad gowns on Palm Walk, senior portraits downtown, or just you at golden hour.</p>
+      <dl class="ticket-meta">
+        <div><dt>Runtime</dt><dd>Up to 60 min</dd></div>
+        <div><dt>Location</dt><dd>One, anywhere in AZ</dd></div>
+        <div><dt>Final frames</dt><dd>15+ edited images</dd></div>
+        <div><dt>Premiere</dt><dd>7 to 10 days</dd></div>
+      </dl>
+      <a class="btn btn-ghost ticket-btn" href="#book" data-session="portraits">Book portraits</a>
+    </article>
+
+    <article class="ticket rv" aria-label="Couples sessions">
+      <header class="ticket-head">
+        <h3 class="ticket-name">Couples</h3>
+        <p class="ticket-price"><small>from</small> $300</p>
+      </header>
+      <p class="ticket-desc">For the two of you. Proposals, anniversaries, engagements, or a random Tuesday that deserves a movie poster.</p>
+      <dl class="ticket-meta">
+        <div><dt>Runtime</dt><dd>60 to 90 min</dd></div>
+        <div><dt>Location</dt><dd>One, anywhere in AZ</dd></div>
+        <div><dt>Final frames</dt><dd>20+ edited images</dd></div>
+        <div><dt>Premiere</dt><dd>7 to 10 days</dd></div>
+      </dl>
+      <a class="btn btn-ghost ticket-btn" href="#book" data-session="couples">Book couples</a>
+    </article>
+
+    <article class="ticket rv" aria-label="Family sessions">
+      <header class="ticket-head">
+        <h3 class="ticket-name">Families</h3>
+        <p class="ticket-price"><small>from</small> $375</p>
+      </header>
+      <p class="ticket-desc">Guided enough to get everyone in frame, loose enough to feel like a good Saturday. Candids included by design.</p>
+      <dl class="ticket-meta">
+        <div><dt>Runtime</dt><dd>60 to 75 min</dd></div>
+        <div><dt>Location</dt><dd>One, anywhere in AZ</dd></div>
+        <div><dt>Final frames</dt><dd>25+ edited images</dd></div>
+        <div><dt>Premiere</dt><dd>7 to 10 days</dd></div>
+      </dl>
+      <a class="btn btn-ghost ticket-btn" href="#book" data-session="families">Book families</a>
+      <p class="ticket-note">Larger group? <a href="#book">Reach out</a>, I'll put together something that works.</p>
+    </article>
+  </div>
+  <p class="sessions-fineprint rv">A booking fee reserves your date and counts toward your total. Full details in the <a href="terms.html">booking policy</a>.</p>
 </section>
-<!-- ── SERVICES ──────────────────────────────────────────────── -->
-<section id="services">
-<div class="services-intro reveal">
-<div>
-<p class="section-eyebrow">What I Offer</p>
-<h2 class="section-title">Straightforward <em>sessions,</em><br/>intentional results.</h2>
-</div>
-<p>Every session includes direction, editing, and a private gallery. You're not paying for random photos — you're paying for a session that feels easy and a final gallery that actually looks like the moment mattered.</p>
-</div>
-<div class="services-grid">
-<!-- Portraits / Grads -->
-<div class="svc-card reveal">
-<div class="svc-img-wrap">
-<img alt="Portrait and graduation photography in Phoenix" id="svc-img-1" src="images/opt/portfolio-golden-hour-800w.jpg" srcset="images/opt/portfolio-golden-hour-400w.jpg 400w, images/opt/portfolio-golden-hour-800w.jpg 800w, images/opt/portfolio-golden-hour-913w.jpg 913w" sizes="(max-width: 1024px) 100vw, 50vw" width="913" height="1278" loading="lazy" decoding="async"/>
-</div>
-<div class="svc-body">
-<div class="svc-name">Portraits</div>
-<div class="svc-price">Starting at $250</div>
-<p class="svc-desc">A polished, no-pressure portrait session in Phoenix. I set the pace, help with posing, and focus on authentic moments that look like you — just sharper.</p>
-<div class="svc-includes">
-<div class="svc-includes-label">What's included</div>
-<ul>
-<li>Up to 60 minutes</li>
-<li>One Arizona location</li>
-<li>Minimum 15 edited images</li>
-<li>Private online gallery</li>
-<li>7–10 day turnaround</li>
-</ul>
-</div>
-<a class="svc-btn" href="#contact">Book this session</a>
-</div>
-</div>
-<!-- Couples -->
-<div class="svc-card reveal">
-<div class="svc-img-wrap">
-<img alt="Couples photographer session in Arizona" id="svc-img-2" src="images/opt/tyler-couple-photo-800w.jpg" srcset="images/opt/tyler-couple-photo-400w.jpg 400w, images/opt/tyler-couple-photo-800w.jpg 800w, images/opt/tyler-couple-photo-1200w.jpg 1200w, images/opt/tyler-couple-photo-1920w.jpg 1920w" sizes="(max-width: 1024px) 100vw, 50vw" width="1920" height="2077" loading="lazy" decoding="async"/>
-</div>
-<div class="svc-body">
-<div class="svc-name">Couples</div>
-<div class="svc-price">Starting at $300</div>
-<p class="svc-desc">A couples session centered on real connection, natural movement, and the in-between moments across Arizona's best locations. Nothing stiff — just polished, intentional imagery that feels like you.</p>
-<div class="svc-includes">
-<div class="svc-includes-label">What's included</div>
-<ul>
-<li>Up to 60–90 minutes</li>
-<li>One Arizona location</li>
-<li>Minimum 20 edited images</li>
-<li>Private online gallery</li>
-<li>7–10 day turnaround</li>
-</ul>
-</div>
-<a class="svc-btn" href="#contact">Book this session</a>
-</div>
-</div>
-<!-- Families -->
-<div class="svc-card svc-card-full reveal">
-<div class="svc-img-wrap">
-<img alt="Family photographer session in Phoenix, Arizona" id="svc-img-3" src="images/opt/family-blanket-overhead-800w.jpg" srcset="images/opt/family-blanket-overhead-400w.jpg 400w, images/opt/family-blanket-overhead-800w.jpg 800w, images/opt/family-blanket-overhead-1200w.jpg 1200w, images/opt/family-blanket-overhead-1920w.jpg 1920w" sizes="(max-width: 1024px) 100vw, min(640px, 50vw)" width="1920" height="1173" loading="lazy" decoding="async"/>
-</div>
-<div class="svc-body">
-<div class="svc-name">Families</div>
-<div class="svc-price">Starting at $375</div>
-<p class="svc-desc">A relaxed family photography session with a balance of guided portraits and candid moments. Whether you're in Phoenix or anywhere in Arizona, the result is a gallery that feels clean, connected, and true to your family.</p>
-<div class="svc-includes">
-<div class="svc-includes-label">What's included</div>
-<ul>
-<li>Up to 60–75 minutes</li>
-<li>One Arizona location</li>
-<li>Minimum 25 edited images</li>
-<li>Private online gallery</li>
-<li>7–10 day turnaround</li>
-</ul>
-</div>
-<a class="svc-btn" href="#contact">Book this session</a>
-<p class="svc-note">Larger family groups? Reach out directly — I'll put together something that works.</p>
-</div>
-</div>
-</div>
+
+<!-- ── SCENE 04 · REVIEWS ──────────────────────────────────── -->
+<section class="scene scene-alt" id="reviews" aria-labelledby="reviews-title">
+  <span class="ghost-num" data-plx="-0.06" aria-hidden="true">04</span>
+  <div class="scene-head">
+    <p class="slate rv"><span class="slate-scene">Scene 04</span><span class="slate-loc">The reviews are in</span></p>
+    <h2 class="scene-title rv" id="reviews-title">Don't take <em>my word for it.</em></h2>
+  </div>
+
+  <div class="quotes">
+    <figure class="quote rv">
+      <p class="quote-stars" aria-label="Five stars">★★★★★</p>
+      <blockquote>"My friends keep saying my grad photos look like they're from a movie. Alan just knows how to work with light and angles."</blockquote>
+      <figcaption><strong>Brianna L.</strong><span>GCU grad session</span></figcaption>
+    </figure>
+    <figure class="quote rv">
+      <p class="quote-stars" aria-label="Five stars">★★★★★</p>
+      <blockquote>"Honestly I was nervous going in but it ended up being way more chill than I expected. The final images looked way better than I thought they would."</blockquote>
+      <figcaption><strong>Marcus T.</strong><span>ASU grad session</span></figcaption>
+    </figure>
+    <figure class="quote rv">
+      <p class="quote-stars" aria-label="Five stars">★★★★★</p>
+      <blockquote>"I almost went with one of those mini session photographers. I'm glad I didn't. Alan's work doesn't look like anyone else's."</blockquote>
+      <figcaption><strong>Jasmine R.</strong><span>ASU grad session</span></figcaption>
+    </figure>
+  </div>
 </section>
-<!-- ── PROCESS ───────────────────────────────────────────────── -->
-<section id="process">
-<div class="process-intro reveal">
-<p class="section-eyebrow">How It Works</p>
-<h2 class="section-title">Simple from <em>start to finish.</em></h2>
-<p>Booking a session shouldn't feel like a project. Here's what working together actually looks like.</p>
-</div>
-<div class="process-flow">
-<div class="flow-line"></div>
-<button type="button" class="process-step reveal" aria-expanded="false" data-step="0">
-<div class="step-circle">01</div>
-<div class="step-label">Inquiry</div>
-<div class="step-expand">
-<div class="step-title">Inquiry</div>
-<p class="step-desc">Fill out the contact form with your session type, date, and a little about what you're going for. I'll respond within 48 hours.</p>
-</div>
-</button>
-<button type="button" class="process-step reveal" aria-expanded="false" data-step="1">
-<div class="step-circle">02</div>
-<div class="step-label">Planning</div>
-<div class="step-expand">
-<div class="step-title">Planning</div>
-<p class="step-desc">We'll lock in your date, location, and any details — outfits, vibe, timing. I'll help if you need location ideas in Arizona.</p>
-</div>
-</button>
-<button type="button" class="process-step reveal" aria-expanded="false" data-step="2">
-<div class="step-circle">03</div>
-<div class="step-label">The Session</div>
-<div class="step-expand">
-<div class="step-title">The Session</div>
-<p class="step-desc">Show up as yourself. I handle the rest — direction, movement, light. If you feel awkward in front of cameras, I've got you.</p>
-</div>
-</button>
-<button type="button" class="process-step reveal" aria-expanded="false" data-step="3">
-<div class="step-circle">04</div>
-<div class="step-label">Gallery Delivery</div>
-<div class="step-expand">
-<div class="step-title">Gallery Delivery</div>
-<p class="step-desc">Your edited gallery is delivered via private online link within 7–10 days. Download, share, and use them however you'd like.</p>
-</div>
-</button>
-</div>
+
+<!-- ── SCENE 05 · THE DIRECTOR ─────────────────────────────── -->
+<section class="scene" id="director" aria-labelledby="director-title">
+  <span class="ghost-num" data-plx="-0.06" aria-hidden="true">05</span>
+  <div class="director-grid">
+    <figure class="director-photo rv" data-cursor="view">
+      <picture>
+        <source type="image/avif" srcset="assets/img/alan-800.avif 800w, assets/img/alan-1200.avif 1200w, assets/img/alan-1600.avif 1600w" sizes="(max-width: 1024px) 100vw, 48vw"/>
+        <source type="image/webp" srcset="assets/img/alan-800.webp 800w, assets/img/alan-1200.webp 1200w, assets/img/alan-1600.webp 1600w" sizes="(max-width: 1024px) 100vw, 48vw"/>
+        <img src="assets/img/alan-1600.jpg" alt="Alan, cinematic photographer based in Phoenix, Arizona, black and white portrait" width="6999" height="3918" loading="lazy" decoding="async"/>
+      </picture>
+      <figcaption class="director-still">STILL · THE DIRECTOR · PHX</figcaption>
+    </figure>
+    <div class="director-copy">
+      <p class="slate rv"><span class="slate-scene">Scene 05</span><span class="slate-loc">Meet the director</span></p>
+      <h2 class="scene-title rv" id="director-title">Behind the <em>camera.</em></h2>
+      <p class="director-pull rv">"I started AlansCinematics because I wanted images that feel like something, not just proof that a moment happened."</p>
+      <p class="rv">I'm Alan, a self-taught cinematic photographer based in <strong>Phoenix, Arizona</strong>, raised in Queens, New York. My style is cinematic, candid, and intentional. I'll direct you when you need it and disappear when you don't.</p>
+      <p class="rv">Grad session, couples shoot, or family portraits, the approach never changes: <strong>you look like yourself, just elevated.</strong></p>
+      <p class="director-sig rv">Directed &amp; shot by <em>Alan</em></p>
+      <a class="btn btn-amber rv" href="#book">Let's work together</a>
+    </div>
+  </div>
 </section>
-<!-- ── WHY ───────────────────────────────────────────────────── -->
-<section id="why">
-<div class="why-left reveal">
-<p class="section-eyebrow">Why AlansCinematics</p>
-<div class="section-rule"></div>
-<h2 class="section-title">Cinematic, <em>candid,</em><br/>and always intentional.</h2>
-<div class="section-rule"></div>
-<p>I'm not a one-size-fits-all photographer. I pay attention to light, to movement, to the moment just before someone looks at the camera. <strong>That's where the real images live.</strong></p>
-<p>You'll never get stiff, over-directed photos from me. The goal is always to make you feel like yourself, just elevated. If the images feel like stills from a film you'd actually watch, I've done my job.</p>
-</div>
-<div class="why-pillars reveal">
-<div class="pillar">
-<div class="pillar-num"><em>one</em></div>
-<div class="pillar-title">Cinematic editing</div>
-<div class="pillar-desc">Moody, intentional color work. Not over-filtered — just elevated.</div>
-</div>
-<div class="pillar">
-<div class="pillar-num"><em>two</em></div>
-<div class="pillar-title">Candid-first approach</div>
-<div class="pillar-desc">I guide, not direct. Real moments over manufactured poses.</div>
-</div>
-<div class="pillar">
-<div class="pillar-num"><em>three</em></div>
-<div class="pillar-title">Quality over quantity</div>
-<div class="pillar-desc">Every delivered image is one you'll actually use.</div>
-</div>
-<div class="pillar">
-<div class="pillar-num"><em>four</em></div>
-<div class="pillar-title">Arizona, everywhere</div>
-<div class="pillar-desc">Based in Phoenix. Available across the state.</div>
-</div>
-</div>
+
+<!-- ── DOORS BAND ──────────────────────────────────────────── -->
+<section class="band" aria-hidden="false">
+  <div class="band-media" data-plx="0.18">
+    <picture>
+      <source media="(max-width: 767px)" type="image/avif" srcset="assets/img/cta-doors-tall-640.avif 640w, assets/img/cta-doors-tall-960.avif 960w, assets/img/cta-doors-tall-1280.avif 1280w" sizes="100vw"/>
+      <source media="(max-width: 767px)" type="image/webp" srcset="assets/img/cta-doors-tall-640.webp 640w, assets/img/cta-doors-tall-960.webp 960w, assets/img/cta-doors-tall-1280.webp 1280w" sizes="100vw"/>
+      <source type="image/avif" srcset="assets/img/cta-doors-wide-1280.avif 1280w, assets/img/cta-doors-wide-1920.avif 1920w, assets/img/cta-doors-wide-2560.avif 2560w" sizes="100vw"/>
+      <source type="image/webp" srcset="assets/img/cta-doors-wide-1280.webp 1280w, assets/img/cta-doors-wide-1920.webp 1920w, assets/img/cta-doors-wide-2560.webp 2560w" sizes="100vw"/>
+      <img src="assets/img/cta-doors-wide-1920.jpg" alt="Graduate ascending stone steps toward grand golden doors in downtown Phoenix, Arizona" width="3361" height="1440" loading="lazy" decoding="async"/>
+    </picture>
+  </div>
+  <div class="band-scrim"></div>
+  <p class="band-line rv">Every session is a short film <em>about you.</em></p>
+  <p class="band-sub rv">Now showing across Arizona</p>
 </section>
-<!-- ── ABOUT ─────────────────────────────────────────────────── -->
-<section id="about">
-<div class="about-img-wrap reveal">
-<img alt="Alan — cinematic photographer based in Phoenix, Arizona" class="about-photo" src="images/opt/alan-800w.jpg" srcset="images/opt/alan-400w.jpg 400w, images/opt/alan-800w.jpg 800w, images/opt/alan-1200w.jpg 1200w, images/opt/alan-1920w.jpg 1920w" sizes="(max-width: 1024px) 100vw, 50vw" width="1920" height="1075" loading="lazy" decoding="async"/>
-</div>
-<div class="about-content reveal">
-<p class="section-eyebrow">About Alan</p>
-<div class="section-rule"></div>
-<h2 class="section-title">Honest images.<br/><em>Real moments.</em></h2>
-<div class="about-pull">
-        "I started AlansCinematics because I wanted to create images that feel like something, not just document that a moment happened."
+
+<!-- ── SCENE 06 · FAQ ──────────────────────────────────────── -->
+<section class="scene" id="faq" aria-labelledby="faq-title">
+  <span class="ghost-num" data-plx="-0.06" aria-hidden="true">06</span>
+  <div class="scene-head">
+    <p class="slate rv"><span class="slate-scene">Scene 06</span><span class="slate-loc">Q &amp; A</span></p>
+    <h2 class="scene-title rv" id="faq-title">Questions, <em>answered.</em></h2>
+  </div>
+
+  <div class="faqs">
+    <div class="faq-col">
+      <details class="faq rv"><summary><span class="faq-i">Q.01</span>Where are you based?<span class="faq-x" aria-hidden="true"></span></summary><div class="faq-a"><p>Phoenix, Arizona, and available for sessions across the state: Scottsdale, Tempe, Chandler, Mesa, Gilbert, Sedona, and beyond.</p></div></details>
+      <details class="faq rv"><summary><span class="faq-i">Q.02</span>Do you travel outside Phoenix?<span class="faq-x" aria-hidden="true"></span></summary><div class="faq-a"><p>Yes. I'm always up for traveling within Arizona for the right session. For destinations outside the state, reach out and we'll figure out what makes sense.</p></div></details>
+      <details class="faq rv"><summary><span class="faq-i">Q.03</span>How long until I receive my photos?<span class="faq-x" aria-hidden="true"></span></summary><div class="faq-a"><p>Most galleries premiere within 7 to 10 days of your session. During busy seasons it may run slightly longer, but I'll always keep you updated.</p></div></details>
+      <details class="faq rv"><summary><span class="faq-i">Q.04</span>How many photos will I receive?<span class="faq-x" aria-hidden="true"></span></summary><div class="faq-a"><p>Each session has a guaranteed minimum, and I usually deliver more when the session calls for it. Every image in your gallery will be worth downloading.</p></div></details>
+      <details class="faq rv"><summary><span class="faq-i">Q.05</span>What should we wear?<span class="faq-x" aria-hidden="true"></span></summary><div class="faq-a"><p>Something that feels like you, just a little elevated. Neutral tones, earthy colors, and simple textures photograph beautifully. Above all, wear what makes you feel confident.</p></div></details>
+      <details class="faq rv"><summary><span class="faq-i">Q.06</span>Do you help with location ideas?<span class="faq-x" aria-hidden="true"></span></summary><div class="faq-a"><p>Yes. I know Arizona well and keep go-to spots for different looks. Have a place in mind? Great. If not, I'll suggest a few based on your session type and the mood you want.</p></div></details>
+    </div>
+    <div class="faq-col">
+      <details class="faq rv"><summary><span class="faq-i">Q.07</span>What if I feel awkward in front of the camera?<span class="faq-x" aria-hidden="true"></span></summary><div class="faq-a"><p>That's my most common starting point. You don't need to know how to pose, that's my job. I direct movement and conversation until it feels natural. Most people loosen up in the first fifteen minutes.</p></div></details>
+      <details class="faq rv"><summary><span class="faq-i">Q.08</span>Can I bring someone with me?<span class="faq-x" aria-hidden="true"></span></summary><div class="faq-a"><p>Of course. A friend, partner, or family member is welcome. Familiar company helps you relax, and it often makes for great candid moments too.</p></div></details>
+      <details class="faq rv"><summary><span class="faq-i">Q.09</span>Do you shoot on campus?<span class="faq-x" aria-hidden="true"></span></summary><div class="faq-a"><p>Yes: ASU, GCU, U of A, and other Arizona campuses. I know the best spots at each. If you have a specific campus location in mind, we can work it in.</p></div></details>
+      <details class="faq rv"><summary><span class="faq-i">Q.10</span>What if I need to reschedule?<span class="faq-x" aria-hidden="true"></span></summary><div class="faq-a"><p>Life happens. Reach out as early as you can and we'll find a new date that works. The full policy is in the <a href="terms.html">booking terms</a>.</p></div></details>
+      <details class="faq rv"><summary><span class="faq-i">Q.11</span>How do I book?<span class="faq-x" aria-hidden="true"></span></summary><div class="faq-a"><p>Fill out the inquiry form below with your session type, preferred date, and a bit about what you have in mind. You can also DM me on <a href="https://instagram.com/alanscinematics" target="_blank" rel="noopener noreferrer">Instagram</a>. I reply within 48 hours.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ── SCENE 07 · BOOKING ──────────────────────────────────── -->
+<section class="scene scene-alt" id="book" aria-labelledby="book-title">
+  <span class="ghost-num" data-plx="-0.06" aria-hidden="true">07</span>
+  <div class="book-grid">
+    <div class="book-copy">
+      <p class="slate rv"><span class="slate-scene">Scene 07</span><span class="slate-loc">Final scene · Your move</span></p>
+      <h2 class="scene-title rv" id="book-title">Let's roll <em>camera.</em></h2>
+      <p class="rv">No pressure and no commitment. Tell me what you're picturing and I'll reply within 48 hours. Not sure about location or timing yet? Completely fine, we'll figure it out together.</p>
+      <dl class="book-meta rv">
+        <div><dt>Email</dt><dd><a href="mailto:alanscinematics@gmail.com">alanscinematics@gmail.com</a></dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:+16026007904">602 600 7904</a></dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://instagram.com/alanscinematics" target="_blank" rel="noopener noreferrer">@alanscinematics</a></dd></div>
+        <div><dt>Based in</dt><dd>Phoenix · serving all of Arizona</dd></div>
+        <div><dt>Response</dt><dd>Within 48 hours</dd></div>
+      </dl>
+    </div>
+
+    <form class="book-form rv" id="bookForm" action="https://formsubmit.co/alanscinematics@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New session inquiry — alanscinematics.com"/>
+      <input type="hidden" name="_captcha" value="false"/>
+      <input type="hidden" name="_template" value="table"/>
+      <input type="hidden" name="_next" value="https://alanscinematics.com/?sent=1#book"/>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp"/>
+
+      <div class="f-row">
+        <div class="f-field">
+          <label for="f-name">First name</label>
+          <input id="f-name" name="name" type="text" placeholder="Jane" required autocomplete="given-name"/>
+        </div>
+        <div class="f-field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" placeholder="jane@example.com" required autocomplete="email"/>
+        </div>
       </div>
-<p>I'm Alan, a self-taught cinematic photographer in <strong>Phoenix, Arizona</strong>, originally from Queens, New York. I started AlansCinematics because I wanted to create images that feel like something, not just document that a moment happened.</p>
-<p>My style is cinematic, candid, and intentional. I'll guide you when needed and give direction for posed shots, but the experience never feels stiff or forced. The goal is to make the session feel effortless, so the photos still feel natural and true to you.</p>
-<p>Whether you're booking a grad session, a couples shoot, or family portraits, the approach is always the same: <strong>you look like yourself, just elevated.</strong></p>
-<a class="btn-dark about-cta" href="#contact">Let's work together</a>
-</div>
+      <div class="f-row">
+        <div class="f-field">
+          <label for="f-phone">Phone <small>optional, fastest reply</small></label>
+          <input id="f-phone" name="phone" type="tel" placeholder="(602) 555 1234" autocomplete="tel"/>
+        </div>
+        <div class="f-field">
+          <label for="f-session">Session type</label>
+          <select id="f-session" name="session" required>
+            <option value="" selected disabled>Select a session</option>
+            <option value="Portraits / Grads — from $250">Portraits &amp; Grads · from $250</option>
+            <option value="Couples — from $300">Couples · from $300</option>
+            <option value="Families — from $375">Families · from $375</option>
+            <option value="Not sure yet">Not sure yet, let's talk</option>
+          </select>
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="f-field">
+          <label for="f-date">Preferred date <small>optional</small></label>
+          <input id="f-date" name="date" type="date"/>
+        </div>
+        <div class="f-field">
+          <label for="f-loc">Location <small>if you have one</small></label>
+          <input id="f-loc" name="location" type="text" placeholder="Phoenix, Scottsdale, ASU…" autocomplete="off"/>
+        </div>
+      </div>
+      <div class="f-field">
+        <label for="f-msg">Tell me about your session</label>
+        <textarea id="f-msg" name="message" rows="4" placeholder="What are you going for? Any vibe, ideas, or details you want me to know?"></textarea>
+      </div>
+      <button class="btn btn-amber f-submit" type="submit"><span>Send inquiry</span></button>
+      <p class="f-note">By sending this form you agree that Alan may contact you about your inquiry. See the <a href="privacy.html">privacy policy</a>.</p>
+      <p class="f-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
 </section>
-<!-- ── CONTACT ────────────────────────────────────────────────── -->
-<section id="contact">
-<div class="contact-left reveal">
-<p class="section-eyebrow">Book a Session</p>
-<div class="section-rule"></div>
-<h2 class="section-title">Let's plan your<br/><em>next session.</em></h2>
-<div class="section-rule"></div>
-<p>No pressure. Tell me what you're looking for and I'll get back to you within 48 hours. If you're not fully sure on location or timing yet, that's completely fine — we'll figure it out together.</p>
-<div class="contact-meta">
-<div class="c-row">
-<span class="c-label">Email</span>
-<span class="c-val"><a href="mailto:alanscinematics@gmail.com">alanscinematics@gmail.com</a></span>
-</div>
-<div class="c-row">
-<span class="c-label">Location</span>
-<span class="c-val">Phoenix, Tempe, Scottsdale · Available across Arizona</span>
-</div>
-<div class="c-row">
-<span class="c-label">Instagram</span>
-<span class="c-val"><a href="https://instagram.com/alanscinematics" target="_blank" rel="noopener noreferrer">@alanscinematics</a></span>
-</div>
-<div class="c-row">
-<span class="c-label">Phone</span>
-<span class="c-val"><a href="tel:6026007904" class="link-warm">602-600-7904</a></span>
-</div>
-<div class="c-row">
-<span class="c-label">Response</span>
-<span class="c-val">Within 48 hours</span>
-</div>
-</div>
-</div>
-<form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/alanscinematics@gmail.com" method="POST" novalidate>
-<input type="hidden" name="_subject" value="New Session Inquiry — AlansCinematics"/>
-<input type="hidden" name="_captcha" value="false"/>
-<input type="hidden" name="_next" value=""/>
-<div>
-<label class="f-label" for="cf-name">First Name</label>
-<input class="f-input" id="cf-name" name="name" placeholder="Jane" type="text" required autocomplete="given-name"/>
-</div>
-<div>
-<label class="f-label" for="cf-email">Email Address</label>
-<input class="f-input" id="cf-email" name="email" placeholder="jane@example.com" type="email" required autocomplete="email"/>
-</div>
-<div>
-<label class="f-label" for="cf-phone">Phone Number <span class="f-optional">(optional — fastest way to hear back)</span></label>
-<input class="f-input" id="cf-phone" name="phone" placeholder="(602) 555-1234" type="tel" autocomplete="tel"/>
-</div>
-<div>
-<label class="f-label" for="cf-session">Session Type</label>
-<select class="f-select" id="cf-session" name="session" required>
-<option value="">Select a session...</option>
-<option value="portraits">Portraits — from $250</option>
-<option value="couples">Couples — from $300</option>
-<option value="families">Families — from $375</option>
-<option value="unsure">Not sure yet — let's talk</option>
-</select>
-</div>
-<div>
-<label class="f-label">Preferred Date</label>
-<div class="cal-wrap" id="calWrap">
-<div class="cal-header">
-<button type="button" class="cal-nav" id="calPrev">‹</button>
-<span class="cal-month" id="calMonth"></span>
-<button type="button" class="cal-nav" id="calNext">›</button>
-</div>
-<div class="cal-weekdays"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
-<div class="cal-days" id="calDays"></div>
-<div class="cal-legend">
-<span class="cal-legend-item"><span class="cal-dot cal-dot--limited"></span>Limited</span>
-<span class="cal-legend-item"><span class="cal-dot cal-dot--open"></span>Open</span>
-</div>
-</div>
-<input type="hidden" id="cf-date" name="date"/>
-</div>
-<div>
-<label class="f-label" for="cf-location">Location (if you have one)</label>
-<input class="f-input" id="cf-location" name="location" placeholder="Phoenix, Scottsdale, etc." type="text" autocomplete="off"/>
-</div>
-<div>
-<label class="f-label" for="cf-message">Tell me about your session</label>
-<textarea class="f-textarea" id="cf-message" name="message" placeholder="What are you going for? Any vibe, ideas, or details you want me to know?"></textarea>
-</div>
-<p class="f-reassurance">No commitment. I'll get back to you with next steps.</p>
-<p class="f-privacy">By submitting this form, you agree that Alan/AlansCinematics may contact you about your photography inquiry. See our <a href="privacy.html">Privacy Policy</a>.</p>
-<button class="f-submit" type="submit">Send Inquiry</button>
-<div class="f-status" id="formStatus" aria-live="polite"></div>
-</form>
-</section>
-<!-- ── FAQ ───────────────────────────────────────────────────── -->
-<section id="faq">
-<div class="reveal">
-<p class="section-eyebrow">FAQ</p>
-<h2 class="section-title">Questions, <em>answered.</em></h2>
-</div>
-<div class="faq-grid">
-<div>
-<div class="faq-item reveal">
-<button type="button" class="faq-q" aria-expanded="false">Where are you based?<span class="faq-icon">+</span></button>
-<div class="faq-a">I'm based in Phoenix, Arizona, and available for sessions across the state — including Scottsdale, Tempe, Chandler, Mesa, Gilbert, Sedona, and beyond.</div>
-</div>
-<div class="faq-item reveal">
-<button type="button" class="faq-q" aria-expanded="false">Do you travel outside Phoenix?<span class="faq-icon">+</span></button>
-<div class="faq-a">Yes. I'm always up for traveling within Arizona for the right session. For destinations outside the state, reach out and we'll figure out what makes sense.</div>
-</div>
-<div class="faq-item reveal">
-<button type="button" class="faq-q" aria-expanded="false">How long until I receive my photos?<span class="faq-icon">+</span></button>
-<div class="faq-a">Most galleries are delivered within 7–10 days of your session. During busy seasons it may be slightly longer, but I'll always keep you updated.</div>
-</div>
-<div class="faq-item reveal">
-<button type="button" class="faq-q" aria-expanded="false">How many photos will I receive?<span class="faq-icon">+</span></button>
-<div class="faq-a">Each package has a guaranteed minimum. I focus on delivering images that are actually worth keeping — and I often exceed the minimum when the session calls for it. Every image in your gallery will be worth downloading.</div>
-</div>
-</div>
-<div>
-<div class="faq-item reveal">
-<button type="button" class="faq-q" aria-expanded="false">What should we wear?<span class="faq-icon">+</span></button>
-<div class="faq-a">Wear something that feels like you, just a little more elevated. Neutral tones, earthy colors, and simple textures tend to photograph beautifully. Most importantly, wear something you feel confident and comfortable in so the session feels natural.</div>
-</div>
-<div class="faq-item reveal">
-<button type="button" class="faq-q" aria-expanded="false">Do you help with location ideas?<span class="faq-icon">+</span></button>
-<div class="faq-a">Yes — I know Arizona well and have go-to spots for different vibes. If you have a location in mind, great. If not, I'll suggest a few based on your session type and the look you're going for.</div>
-</div>
-<div class="faq-item reveal">
-<button type="button" class="faq-q" aria-expanded="false">What if I feel awkward in front of the camera?<span class="faq-icon">+</span></button>
-<div class="faq-a">That's my most common starting point. I don't expect you to know how to pose — that's my job. I'll guide you through movement, conversation, and direction until it feels natural. Most people loosen up within the first 15 minutes.</div>
-</div>
-<div class="faq-item reveal">
-<button type="button" class="faq-q" aria-expanded="false">Can I bring someone with me to the session?<span class="faq-icon">+</span></button>
-<div class="faq-a">Of course. A friend, partner, or family member is welcome. Sometimes having someone familiar around helps you relax, and it often makes for great candid moments too.</div>
-</div>
-<div class="faq-item reveal">
-<button type="button" class="faq-q" aria-expanded="false">Do you shoot on campus?<span class="faq-icon">+</span></button>
-<div class="faq-a">Yes — ASU, GCU, U of A, and other Arizona campuses. I know the best spots at each. If you have a specific location on campus in mind, we can work that in. If not, I'll suggest options based on the look you're going for.</div>
-</div>
-<div class="faq-item reveal">
-<button type="button" class="faq-q" aria-expanded="false">What happens if I need to reschedule?<span class="faq-icon">+</span></button>
-<div class="faq-a">Life happens. Just reach out as early as you can and we'll find a new date that works. I'm flexible and want to make sure you get the session you're looking for.</div>
-</div>
-<div class="faq-item reveal">
-<button type="button" class="faq-q" aria-expanded="false">How do I book?<span class="faq-icon">+</span></button>
-<div class="faq-a">Fill out the inquiry form below with your session type, preferred date, and a bit about what you have in mind. You can also DM me on <a href="https://instagram.com/alanscinematics" target="_blank" rel="noopener noreferrer" class="link-warm">Instagram @alanscinematics</a>. I'll follow up within 48 hours to confirm availability and get things locked in.</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ── STICKY MOBILE CTA ─────────────────────────────────────── -->
-<div class="sticky-cta" id="stickyCta">
-<a class="sticky-cta-btn" href="#contact">Book Your Session</a>
-</div>
-<!-- ── FOOTER ─────────────────────────────────────────────────── -->
-<footer>
-<div class="foot-top">
-<a class="foot-logo" href="#hero">Alans<span>Cinematics</span></a>
-<span class="foot-copy">© 2026 AlansCinematics · Phoenix, AZ</span>
-<div class="foot-links">
-<a href="https://instagram.com/alanscinematics" target="_blank" rel="noopener noreferrer">Instagram</a>
-<a href="mailto:alanscinematics@gmail.com">Email</a>
-<a href="#portfolio">Work</a>
-</div>
-</div>
-<div class="foot-legal">
-<a href="privacy.html">Privacy Policy</a>
-<span class="foot-sep">·</span>
-<a href="terms.html">Terms</a>
-<span class="foot-sep">·</span>
-<a href="#contact">Contact</a>
-</div>
+
+</main>
+
+<!-- ── FOOTER / END CREDITS ────────────────────────────────── -->
+<footer class="credits">
+  <p class="credits-fin" aria-hidden="true"><em>Fin.</em></p>
+  <p class="credits-thanks">Thanks for watching. Your story could be next.</p>
+  <div class="credits-roll">
+    <div><dt>Directed &amp; shot by</dt><dd>Alan</dd></div>
+    <div><dt>Based in</dt><dd>Phoenix, Arizona</dd></div>
+    <div><dt>Serving</dt><dd>All of Arizona</dd></div>
+    <div><dt>Contact</dt><dd><a href="mailto:alanscinematics@gmail.com">Email</a> · <a href="https://instagram.com/alanscinematics" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="tel:+16026007904">602 600 7904</a></dd></div>
+  </div>
+  <div class="credits-legal">
+    <span>© 2026 AlansCinematics</span>
+    <span class="credits-links"><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="#book">Contact</a></span>
+  </div>
 </footer>
-<script defer src="script.js"></script>
+
+<!-- ── STICKY MOBILE CTA ───────────────────────────────────── -->
+<div class="sticky-cta" id="stickyCta" hidden>
+  <a class="btn btn-amber" href="#book">Book your session</a>
+</div>
+
+<!-- ── LIGHTBOX ────────────────────────────────────────────── -->
+<dialog class="lb" id="lb" aria-label="Image viewer">
+  <button class="lb-close" id="lbClose" aria-label="Close viewer">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous image">‹</button>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next image">›</button>
+  <figure class="lb-fig">
+    <div class="lb-stage" id="lbStage"></div>
+    <figcaption class="lb-cap">
+      <span id="lbTitle"></span>
+      <span id="lbLoc"></span>
+      <span class="lb-count" id="lbCount"></span>
+    </figcaption>
+  </figure>
+</dialog>
+
+<script src="main.js" defer></script>
 </body>
 </html>
