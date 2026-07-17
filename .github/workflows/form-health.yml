@@ -1,0 +1,35 @@
+# Monthly booking-form health check.
+# Sends one clearly-labeled test submission through the same FormSubmit
+# pipeline the website uses. Expect an email titled "Monthly form health
+# check" on the 1st of each month. If it stops arriving, or GitHub emails
+# about a failed workflow run, the booking form is broken.
+#
+# Note: GitHub disables cron schedules after ~60 days without repo activity.
+# If you get a "scheduled workflow disabled" email, re-enable it in the
+# repo's Actions tab.
+name: Form health check
+
+on:
+  schedule:
+    - cron: '0 16 1 * *'   # 1st of every month, 9:00 AM Phoenix time
+  workflow_dispatch:
+
+jobs:
+  test-form:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send test submission through FormSubmit
+        run: |
+          resp=$(curl -sS -X POST "https://formsubmit.co/ajax/alanscinematics@gmail.com" \
+            -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" \
+            -H "Accept: application/json" \
+            -H "Origin: https://alanscinematics.com" \
+            -e "https://alanscinematics.com/" \
+            -d name="Form health check" \
+            -d email="alanscinematics@gmail.com" \
+            -d message="Automated monthly test of the alanscinematics.com booking form. Receiving this email means the form pipeline works. No action needed." \
+            -d _subject="Monthly form health check — alanscinematics.com" \
+            -d _template="table" \
+            -d _captcha="false")
+          echo "FormSubmit response: $resp"
+          echo "$resp" | grep -qiE '"success"\s*:\s*"?true' || { echo "::error::FormSubmit rejected the test submission — the booking form is likely broken"; exit 1; }

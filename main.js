@@ -117,17 +117,46 @@
     else img.addEventListener('load', () => img.classList.add('ld'), { once: true });
   });
 
-  /* ── gallery filter ─────────────────────────────────────────── */
+  /* ── gallery filter + expander ──────────────────────────────── */
+  const GALLERY_LIMIT = 12;
   const tabs = $$('.tab');
   const cells = $$('#gallery .cell');
+  const moreBtn = $('#galleryMore'), gmCount = $('#gmCount');
+  let galleryCat = 'all';
+  let galleryExpanded = false;
+
+  const applyGallery = () => {
+    let shown = 0, hiddenExtra = 0;
+    for (const c of cells) {
+      const match = galleryCat === 'all' || c.dataset.cat === galleryCat;
+      const vis = match && (galleryExpanded || shown < GALLERY_LIMIT);
+      if (vis) shown++;
+      else if (match) hiddenExtra++;
+      c.hidden = !vis;
+    }
+    if (moreBtn) {
+      moreBtn.hidden = galleryExpanded || hiddenExtra === 0;
+      moreBtn.setAttribute('aria-expanded', String(galleryExpanded));
+      if (!moreBtn.hidden) gmCount.textContent = `${hiddenExtra} more frame${hiddenExtra === 1 ? '' : 's'}`;
+    }
+  };
+  const transitionGallery = () => {
+    if (document.startViewTransition && !reduced) document.startViewTransition(applyGallery);
+    else applyGallery();
+  };
+  applyGallery();
+
   tabs.forEach(tab => tab.addEventListener('click', () => {
     if (tab.getAttribute('aria-pressed') === 'true') return;
     tabs.forEach(t => t.setAttribute('aria-pressed', String(t === tab)));
-    const cat = tab.dataset.cat;
-    const apply = () => cells.forEach(c => { c.hidden = cat !== 'all' && c.dataset.cat !== cat; });
-    if (document.startViewTransition && !reduced) document.startViewTransition(apply);
-    else apply();
+    galleryCat = tab.dataset.cat;
+    transitionGallery();
   }));
+
+  if (moreBtn) moreBtn.addEventListener('click', () => {
+    galleryExpanded = true;
+    transitionGallery();
+  });
 
   /* ── lightbox ───────────────────────────────────────────────── */
   const lb = $('#lb'), stage = $('#lbStage');
@@ -171,7 +200,9 @@
     preload(seq[(pos - 1 + seq.length) % seq.length]);
   };
   const openLb = f => {
-    seq = frames.filter(fr => !fr.closest('.cell').hidden);
+    // browse the whole active category in the lightbox, even frames still
+    // collapsed behind the expander
+    seq = frames.filter(fr => galleryCat === 'all' || fr.closest('.cell').dataset.cat === galleryCat);
     pos = seq.indexOf(f);
     if (pos < 0) return;
     render();
@@ -222,14 +253,24 @@
     status.classList.remove('err');
     status.textContent = '';
     try {
-      const res = await fetch(form.action, {
+      // FormSubmit's dedicated AJAX endpoint (CORS-enabled, JSON response).
+      const res = await fetch(form.dataset.ajax, {
         method: 'POST',
         body: new FormData(form),
         headers: { Accept: 'application/json' },
       });
-      if (!res.ok) throw new Error(`status ${res.status}`);
+      const data = await res.json().catch(() => null);
+      if (!res.ok || !data || String(data.success).toLowerCase() !== 'true') {
+        throw new Error(data && data.message ? data.message : `status ${res.status}`);
+      }
       showDone();
-    } catch {
+    } catch (err) {
+      if (err instanceof TypeError) {
+        // network/CORS failure — fall back to a native full-page POST;
+        // FormSubmit redirects back to ?sent=1#book which shows the slate
+        form.submit();
+        return;
+      }
       btn.disabled = false;
       btn.firstElementChild.textContent = 'Send inquiry';
       status.classList.add('err');
@@ -243,7 +284,7 @@
     const map = {
       portraits: 'Portraits / Grads — from $250',
       couples: 'Couples — from $300',
-      families: 'Families — from $375',
+      families: 'Families — from $400',
     };
     const v = map[a.dataset.session];
     if (v) sel.value = v;
