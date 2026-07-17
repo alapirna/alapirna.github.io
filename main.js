@@ -252,29 +252,33 @@
     btn.firstElementChild.textContent = 'Sending…';
     status.classList.remove('err');
     status.textContent = '';
+    // FormSubmit's dedicated AJAX endpoint (CORS-enabled, JSON response).
+    let res = null;
     try {
-      // FormSubmit's dedicated AJAX endpoint (CORS-enabled, JSON response).
-      const res = await fetch(form.dataset.ajax, {
+      res = await fetch(form.dataset.ajax, {
         method: 'POST',
         body: new FormData(form),
         headers: { Accept: 'application/json' },
       });
-      const data = await res.json().catch(() => null);
-      if (!res.ok || !data || String(data.success).toLowerCase() !== 'true') {
-        throw new Error(data && data.message ? data.message : `status ${res.status}`);
-      }
+    } catch {
+      // network/CORS failure — native full-page POST instead; FormSubmit
+      // redirects back to ?sent=1#book which shows the success slate
+      form.submit();
+      return;
+    }
+    const data = await res.json().catch(() => null);
+    if (data && String(data.success).toLowerCase() === 'true') {
       showDone();
-    } catch (err) {
-      if (err instanceof TypeError) {
-        // network/CORS failure — fall back to a native full-page POST;
-        // FormSubmit redirects back to ?sent=1#book which shows the slate
-        form.submit();
-        return;
-      }
+    } else if (data && data.message) {
+      // FormSubmit itself rejected the submission
       btn.disabled = false;
       btn.firstElementChild.textContent = 'Send inquiry';
       status.classList.add('err');
       status.textContent = 'That didn\'t go through. Try again, or email alanscinematics@gmail.com directly.';
+    } else {
+      // non-JSON reply (e.g. a bot-check challenge page) — a native POST
+      // lets the browser complete the challenge and still deliver
+      form.submit();
     }
   });
 
