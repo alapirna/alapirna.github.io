@@ -191,18 +191,32 @@
 </div>
 
 <main id="top">
-<section class="scene pf-scene" aria-labelledby="s-title">
-  <div class="scene-head">
-    <p class="slate rv"><span class="slate-scene"><a href="/portfolio.html" class="pf-back">← Portfolio</a></span><span class="slate-loc">Family · First birthday · July 2026</span></p>
-    <h1 class="scene-title rv" id="s-title">One Year, In Bloom</h1>
-    <p class="scene-lede rv">A first birthday on Long Island: roses in a picnic basket, two sisters in cream, and a cake that did not survive the afternoon. Shot on a trip home to New York.</p>
-    <dl class="pf-facts rv">
+
+<section class="title-card" aria-labelledby="s-title">
+  <div class="tc-media">
+    <picture>
+      <source type="image/avif" srcset="/assets/img/roslyn-cradled-above-480.avif 480w, /assets/img/roslyn-cradled-above-800.avif 800w, /assets/img/roslyn-cradled-above-1200.avif 1200w, /assets/img/roslyn-cradled-above-1600.avif 1600w, /assets/img/roslyn-cradled-above-2200.avif 2200w" sizes="100vw"/>
+      <source type="image/webp" srcset="/assets/img/roslyn-cradled-above-480.webp 480w, /assets/img/roslyn-cradled-above-800.webp 800w, /assets/img/roslyn-cradled-above-1200.webp 1200w, /assets/img/roslyn-cradled-above-1600.webp 1600w, /assets/img/roslyn-cradled-above-2200.webp 2200w" sizes="100vw"/>
+      <img src="/assets/img/roslyn-cradled-above-1600.jpg" alt="Overhead photo of a mother in a white dress cradling her baby on a picnic blanket, Roslyn, New York" width="5952" height="3481" fetchpriority="high" decoding="async"/>
+    </picture>
+  </div>
+  <div class="tc-scrim" aria-hidden="true"></div>
+  <span class="perf perf-bot tc-perf" aria-hidden="true"></span>
+
+  <div class="tc-card">
+    <p class="tc-eyebrow"><a href="/portfolio.html" class="pf-back">← All reels</a><span>Family · First birthday</span></p>
+    <h1 class="tc-title" id="s-title">One Year, In Bloom</h1>
+    <p class="tc-lede">A first birthday on Long Island: roses in a picnic basket, two sisters in cream, and a cake that did not survive the afternoon. Shot on a trip home to New York.</p>
+    <dl class="pf-facts">
       <div><dt>Location</dt><dd>Roslyn, New York</dd></div>
-      <div><dt>Session</dt><dd>Family · First birthday</dd></div>
-      <div><dt>Frames shown</dt><dd>16</dd></div>
+      <div><dt>Shot</dt><dd>July 2026</dd></div>
+      <div><dt>Stills</dt><dd>16</dd></div>
     </dl>
   </div>
+  <span class="tc-scroll" aria-hidden="true">Roll it ↓</span>
+</section>
 
+<section class="scene pf-feature">
   <ul class="gallery" id="gallery">
 <li class="cell" data-cat="families">
   <button class="frame" type="button" data-cursor="view" data-idx="0"
@@ -510,7 +524,9 @@
 </li>
   </ul>
 
-  <p class="gallery-portfolio rv">Want one of these? <a href="/#book">Book a session →</a> · <a href="/portfolio.html">See other sessions</a></p>
+  <span class="perf reel-rail" aria-hidden="true"></span>
+  <p class="credits-fin reel-fin" aria-hidden="true"><em>Fin.</em></p>
+  <p class="gallery-portfolio rv">Want one of these? <a href="/#book">Book a session →</a> · <a href="/portfolio.html">Back to the shelf</a></p>
 </section>
 </main>
 
