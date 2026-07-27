@@ -52,7 +52,7 @@
       const doc = document.documentElement;
       const max = doc.scrollHeight - innerHeight;
       if (playhead) playhead.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
-      nav.classList.toggle('scrolled', scrollY > 40);
+      if (nav) nav.classList.toggle('scrolled', scrollY > 40);
       for (const { el, sp } of plxEls) {
         const host = el.parentElement.getBoundingClientRect();
         if (host.bottom < -80 || host.top > innerHeight + 80) continue;
@@ -84,6 +84,7 @@
 
   /* ── mobile menu ────────────────────────────────────────────── */
   const burger = $('#burger'), mmenu = $('#mobileMenu');
+  if (burger && mmenu) {
   const closeMenu = () => {
     mmenu.classList.remove('open');
     burger.setAttribute('aria-expanded', 'false');
@@ -99,6 +100,7 @@
     document.documentElement.classList.add('lock');
   });
   $$('.mmenu a').forEach(a => a.addEventListener('click', closeMenu));
+  }
 
   /* ── reveals ────────────────────────────────────────────────── */
   const rvObs = new IntersectionObserver(entries => {
@@ -118,7 +120,10 @@
   });
 
   /* ── gallery filter + expander ──────────────────────────────── */
-  const GALLERY_LIMIT = 12;
+  // The homepage collapses to #gallery[data-limit] frames behind the expander.
+  // Portfolio session pages omit data-limit and show the full set.
+  const galleryEl = $('#gallery');
+  const GALLERY_LIMIT = Number(galleryEl?.dataset.limit) || Infinity;
   const tabs = $$('.tab');
   const cells = $$('#gallery .cell');
   const moreBtn = $('#galleryMore'), gmCount = $('#gmCount');
@@ -211,6 +216,7 @@
   };
   const step = d => { pos = (pos + d + seq.length) % seq.length; render(); };
 
+  if (lb) {
   frames.forEach(f => f.addEventListener('click', () => openLb(f)));
   $('#lbPrev').addEventListener('click', () => step(-1));
   $('#lbNext').addEventListener('click', () => step(1));
@@ -229,6 +235,7 @@
     swX = null;
     if (Math.abs(dx) > 48) step(dx < 0 ? 1 : -1);
   }, { passive: true });
+  }
 
   /* ── booking form ───────────────────────────────────────────── */
   const form = $('#bookForm'), status = $('#formStatus');
@@ -240,11 +247,11 @@
         <p>Thanks for reaching out. I'll reply within 48 hours to confirm availability and lock in details. Talk soon.</p>
       </div>`;
   };
-  if (new URLSearchParams(location.search).get('sent') === '1') {
+  if (form && new URLSearchParams(location.search).get('sent') === '1') {
     showDone();
     history.replaceState(null, '', location.pathname + '#book');
   }
-  form.addEventListener('submit', async e => {
+  if (form) form.addEventListener('submit', async e => {
     e.preventDefault();
     if (form.querySelector('[name="_honey"]')?.value) { showDone(); return; }
     const btn = form.querySelector('.f-submit');
@@ -309,7 +316,7 @@
   }
 
   /* ── custom cursor ──────────────────────────────────────────── */
-  if (finePointer && !reduced) {
+  if (finePointer && !reduced && $('#cur')) {
     document.documentElement.classList.add('fine');
     const cur = $('#cur'), label = $('#curLabel');
     let tx = innerWidth / 2, ty = innerHeight / 2, x = tx, y = ty, live = false;

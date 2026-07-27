@@ -1569,3 +1569,107 @@ html.fine .cur { display: grid; }
   .lb-stage img { animation: none; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
+
+/* ── PORTFOLIO ───────────────────────────────────────────────── */
+/* Portfolio pages have no hero, so the scene clears the fixed nav. */
+.pf-scene { padding-top: calc(var(--scene-gap) * 0.72 + 46px); }
+
+.pf-grid {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: clamp(18px, 2.4vw, 34px);
+}
+.pf-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.pf-cover {
+  aspect-ratio: 3 / 2;
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1.05s var(--eo);
+  transition-delay: var(--d, 0ms);
+  border: 1px solid var(--line-soft);
+}
+.pf-card.in .pf-cover { clip-path: inset(0 0 0 0); }
+.pf-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.7s var(--eo), transform 1.2s var(--eo), filter 1.2s var(--eo);
+}
+.pf-cover img.ld { opacity: 1; }
+.pf-link:hover .pf-cover img,
+.pf-link:focus-visible .pf-cover img { transform: scale(1.035); filter: saturate(1.06); }
+
+.pf-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 2px 0;
+}
+.pf-kind {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+.pf-title {
+  font-family: var(--serif);
+  font-size: clamp(1.3rem, 2.1vw, 1.7rem);
+  line-height: 1.15;
+}
+.pf-sub {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--bone-dim);
+}
+.pf-link:hover .pf-title, .pf-link:focus-visible .pf-title { color: var(--amber-hot); }
+
+.pf-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 40px;
+  margin-top: 30px;
+}
+.pf-facts dt {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--bone-faint);
+  margin-bottom: 3px;
+}
+.pf-facts dd { font-family: var(--mono); font-size: 13.5px; color: var(--bone); }
+
+.pf-back { color: var(--amber); text-decoration: none; }
+.pf-back:hover, .pf-back:focus-visible { color: var(--amber-hot); }
+
+.gallery-portfolio {
+  position: relative;
+  z-index: 1;
+  margin: clamp(30px, 4vw, 46px) auto 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 13.5px;
+  letter-spacing: 0.04em;
+  color: var(--bone-dim);
+}
+.gallery-portfolio a { color: var(--amber); text-decoration: none; }
+.gallery-portfolio a:hover, .gallery-portfolio a:focus-visible {
+  color: var(--amber-hot);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 560px) {
+  .pf-grid { grid-template-columns: 1fr; }
+}

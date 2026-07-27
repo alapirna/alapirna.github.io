@@ -222,6 +222,7 @@
   </a>
   <nav class="nav-links" aria-label="Primary">
     <a href="#work">Work</a>
+    <a href="portfolio.html">Portfolio</a>
     <a href="#experience">Experience</a>
     <a href="#sessions">Sessions</a>
     <a href="#director">About</a>
@@ -239,12 +240,13 @@
 <div class="mmenu" id="mobileMenu" hidden>
   <nav class="mmenu-links" aria-label="Mobile">
     <a href="#work"><small>01</small>Work</a>
-    <a href="#experience"><small>02</small>Experience</a>
-    <a href="#sessions"><small>03</small>Sessions</a>
-    <a href="#reviews"><small>04</small>Reviews</a>
-    <a href="#director"><small>05</small>About</a>
-    <a href="#faq"><small>06</small>FAQ</a>
-    <a href="#book" class="mmenu-book"><small>07</small>Book a session</a>
+    <a href="portfolio.html"><small>02</small>Portfolio</a>
+    <a href="#experience"><small>03</small>Experience</a>
+    <a href="#sessions"><small>04</small>Sessions</a>
+    <a href="#reviews"><small>05</small>Reviews</a>
+    <a href="#director"><small>06</small>About</a>
+    <a href="#faq"><small>07</small>FAQ</a>
+    <a href="#book" class="mmenu-book"><small>08</small>Book a session</a>
   </nav>
   <div class="mmenu-meta">
     <a href="https://instagram.com/alanscinematics" target="_blank" rel="noopener noreferrer">@alanscinematics</a>
@@ -315,7 +317,7 @@
     <button class="tab" aria-pressed="false" data-cat="families">Families</button>
   </div>
 
-  <ul class="gallery" id="gallery">
+  <ul class="gallery" id="gallery" data-limit="12">
     <li class="cell" data-cat="grads">
   <button class="frame" type="button" data-cursor="view" data-idx="0"
     data-title="Cap Raised, Palm Walk" data-loc="ASU Tempe" data-cat-label="Graduation"
@@ -375,20 +377,20 @@
 </li>
 <li class="cell" data-cat="families">
   <button class="frame" type="button" data-cursor="view" data-idx="3"
-    data-title="Brothers at Dusk" data-loc="Phoenix" data-cat-label="Families"
-    data-lb-avif="assets/img/family-boys-hill-1200.avif 1200w, assets/img/family-boys-hill-1600.avif 1600w, assets/img/family-boys-hill-2200.avif 2200w" data-lb-webp="assets/img/family-boys-hill-1200.webp 1200w, assets/img/family-boys-hill-1600.webp 1600w, assets/img/family-boys-hill-2200.webp 2200w" data-lb-jpg="assets/img/family-boys-hill-1600.jpg"
-    data-w="3250" data-h="3985" data-alt="Two young brothers holding hands on a hill at dusk, family session in Phoenix, Arizona"
-    aria-label="Open image: Brothers at Dusk, Phoenix">
-    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBQCdASocACIAPwFwq0+rJqOmtVgIAWAgCWMAyFwWZHNA2aJLl13MPclqir3GE/wAAP6LVWQFOxKohutc97neDKEtLDyN70Gt14uu+OfAQiT0prlVfcCjoG2/ry0X39hAaNAh80VV5AAA')">
+    data-title="The Long Green Walk" data-loc="Roslyn, NY" data-cat-label="Families"
+    data-lb-avif="assets/img/roslyn-walk-pond-1200.avif 1200w, assets/img/roslyn-walk-pond-1600.avif 1600w, assets/img/roslyn-walk-pond-2200.avif 2200w" data-lb-webp="assets/img/roslyn-walk-pond-1200.webp 1200w, assets/img/roslyn-walk-pond-1600.webp 1600w, assets/img/roslyn-walk-pond-2200.webp 2200w" data-lb-jpg="assets/img/roslyn-walk-pond-1600.jpg"
+    data-w="2957" data-h="3696" data-alt="Family of four walking away hand in hand toward a pond and stone house, Roslyn, New York"
+    aria-label="Open image: The Long Green Walk, Roslyn, NY">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAAAwBgCdASocACMAPwlws1IrpiSiqrgMAXAhCWQAs4AHpF/ybSCxrJRf+yW2+b9/Uobs0vLcjdXI/1SwAP5xtQ0RjOlmOhqdRyl2KG1bAlxDuUDJJYSBWxIL6jg7iefjlTA0UQaPA2VMOgBDTFQO5Itj8IzEB4+gOcrfQxm4ZfagQm/s+gIPEvdrGQoxsTJ38ml6EoK2XEW/4ypgJJzdANneHsI259A9YcyMQ8ibGDPMJGOO5aNuYIBPoe4zHvHn54arEHAAAAA=')">
       <picture>
-        <source type="image/avif" srcset="assets/img/family-boys-hill-480.avif 480w, assets/img/family-boys-hill-800.avif 800w, assets/img/family-boys-hill-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
-        <source type="image/webp" srcset="assets/img/family-boys-hill-480.webp 480w, assets/img/family-boys-hill-800.webp 800w, assets/img/family-boys-hill-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
-        <img src="assets/img/family-boys-hill-1600.jpg" alt="Two young brothers holding hands on a hill at dusk, family session in Phoenix, Arizona" width="3250" height="3985" loading="lazy" decoding="async"/>
+        <source type="image/avif" srcset="assets/img/roslyn-walk-pond-480.avif 480w, assets/img/roslyn-walk-pond-800.avif 800w, assets/img/roslyn-walk-pond-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/roslyn-walk-pond-480.webp 480w, assets/img/roslyn-walk-pond-800.webp 800w, assets/img/roslyn-walk-pond-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/roslyn-walk-pond-1600.jpg" alt="Family of four walking away hand in hand toward a pond and stone house, Roslyn, New York" width="2957" height="3696" loading="lazy" decoding="async"/>
       </picture>
     </span>
     <span class="slate-cap" aria-hidden="true">
-      <span class="sc-title">Brothers at Dusk</span>
-      <span class="sc-meta">Phoenix · STILL 04</span>
+      <span class="sc-title">The Long Green Walk</span>
+      <span class="sc-meta">Roslyn, NY · STILL 04</span>
     </span>
   </button>
 </li>
@@ -489,20 +491,20 @@
 </li>
 <li class="cell" data-cat="families">
   <button class="frame" type="button" data-cursor="view" data-idx="9"
-    data-title="Up You Go" data-loc="Phoenix" data-cat-label="Families"
-    data-lb-avif="assets/img/family-lift-flare-1200.avif 1200w, assets/img/family-lift-flare-1600.avif 1600w, assets/img/family-lift-flare-2200.avif 2200w" data-lb-webp="assets/img/family-lift-flare-1200.webp 1200w, assets/img/family-lift-flare-1600.webp 1600w, assets/img/family-lift-flare-2200.webp 2200w" data-lb-jpg="assets/img/family-lift-flare-1600.jpg"
-    data-w="2758" data-h="3423" data-alt="Parent lifting a toddler into golden sunlight in a field, family photographer Phoenix, Arizona"
-    aria-label="Open image: Up You Go, Phoenix">
-    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAACwBQCdASocACMAPvVoqE+qpiQiNVv8AVAeiUAXz2FPsYHQ2/0XzLRYS0uB70IcqGmzxDJzXAAA/gPWbLNAXN95qUvGvpabByjB2KwYnet0HkA8/zwqaAvD2qNMvAmQEa9C4u2DdhEgnTyfPsTYVorYd6/ZI6KUZS7xBCQ7rw89vY8SJNkQvgQ/9SN0XulKqRAonzZHmZifiE/LIAAesEgZBBKAAA==')">
+    data-title="Cake, Conquered" data-loc="Roslyn, NY" data-cat-label="Families"
+    data-lb-avif="assets/img/roslyn-cake-smash-1200.avif 1200w, assets/img/roslyn-cake-smash-1600.avif 1600w, assets/img/roslyn-cake-smash-2200.avif 2200w" data-lb-webp="assets/img/roslyn-cake-smash-1200.webp 1200w, assets/img/roslyn-cake-smash-1600.webp 1600w, assets/img/roslyn-cake-smash-2200.webp 2200w" data-lb-jpg="assets/img/roslyn-cake-smash-1600.jpg"
+    data-w="2606" data-h="3257" data-alt="One year old with frosting on her face behind a pink ruffled smash cake in a park, Roslyn, New York"
+    aria-label="Open image: Cake, Conquered, Roslyn, NY">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAAAwBgCdASocACMAPv1uq0+rJyQiNVv4AWAfiWQAxNghUM49l4tJeiehIQXuNqZDZT5zy+V1BMvFda0AAP7f9LfSymMs7Ds7icoCU/FCoxODXOePJ/w/eNoKAFCXXGyZuRHiuGGZ5HhZyiWHG5QWOIzEOsMRBIdapwDElY9Lhi6ck6GQZHJetHYCkC3C0FQak9tt/TZSmN2YgMrxt74AAA==')">
       <picture>
-        <source type="image/avif" srcset="assets/img/family-lift-flare-480.avif 480w, assets/img/family-lift-flare-800.avif 800w, assets/img/family-lift-flare-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
-        <source type="image/webp" srcset="assets/img/family-lift-flare-480.webp 480w, assets/img/family-lift-flare-800.webp 800w, assets/img/family-lift-flare-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
-        <img src="assets/img/family-lift-flare-1600.jpg" alt="Parent lifting a toddler into golden sunlight in a field, family photographer Phoenix, Arizona" width="2758" height="3423" loading="lazy" decoding="async"/>
+        <source type="image/avif" srcset="assets/img/roslyn-cake-smash-480.avif 480w, assets/img/roslyn-cake-smash-800.avif 800w, assets/img/roslyn-cake-smash-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/roslyn-cake-smash-480.webp 480w, assets/img/roslyn-cake-smash-800.webp 800w, assets/img/roslyn-cake-smash-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/roslyn-cake-smash-1600.jpg" alt="One year old with frosting on her face behind a pink ruffled smash cake in a park, Roslyn, New York" width="2606" height="3257" loading="lazy" decoding="async"/>
       </picture>
     </span>
     <span class="slate-cap" aria-hidden="true">
-      <span class="sc-title">Up You Go</span>
-      <span class="sc-meta">Phoenix · STILL 10</span>
+      <span class="sc-title">Cake, Conquered</span>
+      <span class="sc-meta">Roslyn, NY · STILL 10</span>
     </span>
   </button>
 </li>
@@ -1076,6 +1078,101 @@
     </span>
   </button>
 </li>
+<li class="cell" data-cat="families">
+  <button class="frame" type="button" data-cursor="view" data-idx="40"
+    data-title="Brothers at Dusk" data-loc="Phoenix" data-cat-label="Families"
+    data-lb-avif="assets/img/family-boys-hill-1200.avif 1200w, assets/img/family-boys-hill-1600.avif 1600w, assets/img/family-boys-hill-2200.avif 2200w" data-lb-webp="assets/img/family-boys-hill-1200.webp 1200w, assets/img/family-boys-hill-1600.webp 1600w, assets/img/family-boys-hill-2200.webp 2200w" data-lb-jpg="assets/img/family-boys-hill-1600.jpg"
+    data-w="3250" data-h="3985" data-alt="Two young brothers holding hands on a hill at dusk, family session in Phoenix, Arizona"
+    aria-label="Open image: Brothers at Dusk, Phoenix">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBQCdASocACIAPwFwq0+rJqOmtVgIAWAgCWMAyFwWZHNA2aJLl13MPclqir3GE/wAAP6LVWQFOxKohutc97neDKEtLDyN70Gt14uu+OfAQiT0prlVfcCjoG2/ry0X39hAaNAh80VV5AAA')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/family-boys-hill-480.avif 480w, assets/img/family-boys-hill-800.avif 800w, assets/img/family-boys-hill-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/family-boys-hill-480.webp 480w, assets/img/family-boys-hill-800.webp 800w, assets/img/family-boys-hill-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/family-boys-hill-1600.jpg" alt="Two young brothers holding hands on a hill at dusk, family session in Phoenix, Arizona" width="3250" height="3985" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Brothers at Dusk</span>
+      <span class="sc-meta">Phoenix · STILL 41</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="families">
+  <button class="frame" type="button" data-cursor="view" data-idx="41"
+    data-title="Up You Go" data-loc="Phoenix" data-cat-label="Families"
+    data-lb-avif="assets/img/family-lift-flare-1200.avif 1200w, assets/img/family-lift-flare-1600.avif 1600w, assets/img/family-lift-flare-2200.avif 2200w" data-lb-webp="assets/img/family-lift-flare-1200.webp 1200w, assets/img/family-lift-flare-1600.webp 1600w, assets/img/family-lift-flare-2200.webp 2200w" data-lb-jpg="assets/img/family-lift-flare-1600.jpg"
+    data-w="2758" data-h="3423" data-alt="Parent lifting a toddler into golden sunlight in a field, family photographer Phoenix, Arizona"
+    aria-label="Open image: Up You Go, Phoenix">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAACwBQCdASocACMAPvVoqE+qpiQiNVv8AVAeiUAXz2FPsYHQ2/0XzLRYS0uB70IcqGmzxDJzXAAA/gPWbLNAXN95qUvGvpabByjB2KwYnet0HkA8/zwqaAvD2qNMvAmQEa9C4u2DdhEgnTyfPsTYVorYd6/ZI6KUZS7xBCQ7rw89vY8SJNkQvgQ/9SN0XulKqRAonzZHmZifiE/LIAAesEgZBBKAAA==')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/family-lift-flare-480.avif 480w, assets/img/family-lift-flare-800.avif 800w, assets/img/family-lift-flare-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/family-lift-flare-480.webp 480w, assets/img/family-lift-flare-800.webp 800w, assets/img/family-lift-flare-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/family-lift-flare-1600.jpg" alt="Parent lifting a toddler into golden sunlight in a field, family photographer Phoenix, Arizona" width="2758" height="3423" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Up You Go</span>
+      <span class="sc-meta">Phoenix · STILL 42</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="families">
+  <button class="frame" type="button" data-cursor="view" data-idx="42"
+    data-title="Both Sides of Her" data-loc="Roslyn, NY" data-cat-label="Families"
+    data-lb-avif="assets/img/roslyn-parents-kiss-1200.avif 1200w, assets/img/roslyn-parents-kiss-1600.avif 1600w, assets/img/roslyn-parents-kiss-2200.avif 2200w" data-lb-webp="assets/img/roslyn-parents-kiss-1200.webp 1200w, assets/img/roslyn-parents-kiss-1600.webp 1600w, assets/img/roslyn-parents-kiss-2200.webp 2200w" data-lb-jpg="assets/img/roslyn-parents-kiss-1600.jpg"
+    data-w="3635" data-h="4544" data-alt="Parents in cream holding and kissing their one year old daughter in a sunlit park, Roslyn, New York"
+    aria-label="Open image: Both Sides of Her, Roslyn, NY">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAAAQBwCdASocACMAPwl0sVKrpqQiqrgMAXAhCUAVhm5IId78BdyFnZfBD7VqY1zS4rMvWWPurRz5cB3/TmnqGNZQwAD97LVOw3teQnjfP0u8PBpIp4Q+qFgmWAx2+1ae+o3EkP3CxDlavZrgKgPh3JlTJIdxOZqyHcEhEY0EXLClMNYhEqjomObShHzxo8D43xruDszI6zRM1g9beozAapsShgx1WNftgV3qgITQAAA=')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/roslyn-parents-kiss-480.avif 480w, assets/img/roslyn-parents-kiss-800.avif 800w, assets/img/roslyn-parents-kiss-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/roslyn-parents-kiss-480.webp 480w, assets/img/roslyn-parents-kiss-800.webp 800w, assets/img/roslyn-parents-kiss-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/roslyn-parents-kiss-1600.jpg" alt="Parents in cream holding and kissing their one year old daughter in a sunlit park, Roslyn, New York" width="3635" height="4544" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Both Sides of Her</span>
+      <span class="sc-meta">Roslyn, NY · STILL 43</span>
+    </span>
+  </button>
+</li>
+<li class="cell" data-cat="families">
+  <button class="frame" type="button" data-cursor="view" data-idx="43"
+    data-title="Hem of the Dress" data-loc="Roslyn, NY" data-cat-label="Families"
+    data-lb-avif="assets/img/roslyn-dress-clutch-1200.avif 1200w, assets/img/roslyn-dress-clutch-1600.avif 1600w, assets/img/roslyn-dress-clutch-2200.avif 2200w" data-lb-webp="assets/img/roslyn-dress-clutch-1200.webp 1200w, assets/img/roslyn-dress-clutch-1600.webp 1600w, assets/img/roslyn-dress-clutch-2200.webp 2200w" data-lb-jpg="assets/img/roslyn-dress-clutch-1600.jpg"
+    data-w="4022" data-h="5028" data-alt="Toddler in a lace dress holding her mother hand and hiding in the hem of her white gown, Roslyn, New York"
+    aria-label="Open image: Hem of the Dress, Roslyn, NY">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAQBgCdASocACMAPwlssE+rpiSiMBVdUXAhCUAVhnYAGpe0wXJ3T+n2OV/x2f5pZQDIi1XLkD5aXbwA/o9HjKNtqnr2TfT8KaFiMNnpxLdqSCOlX/yrGvbxUxAN8vFWKdIS0D4DXzk6ut+HmCA7nq9Fdq8iOdY2RipvoWe5zX/rRVDiJ8JsqdFaAqed4/zfL4yOLJJla3ocZNHVTJAG6bFCeAAAAA==')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/roslyn-dress-clutch-480.avif 480w, assets/img/roslyn-dress-clutch-800.avif 800w, assets/img/roslyn-dress-clutch-1200.avif 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <source type="image/webp" srcset="assets/img/roslyn-dress-clutch-480.webp 480w, assets/img/roslyn-dress-clutch-800.webp 800w, assets/img/roslyn-dress-clutch-1200.webp 1200w" sizes="(max-width: 1024px) 50vw, 33vw"/>
+        <img src="assets/img/roslyn-dress-clutch-1600.jpg" alt="Toddler in a lace dress holding her mother hand and hiding in the hem of her white gown, Roslyn, New York" width="4022" height="5028" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Hem of the Dress</span>
+      <span class="sc-meta">Roslyn, NY · STILL 44</span>
+    </span>
+  </button>
+</li>
+<li class="cell cell-wide" data-cat="families">
+  <button class="frame" type="button" data-cursor="view" data-idx="44"
+    data-title="Cradled, From Above" data-loc="Roslyn, NY" data-cat-label="Families"
+    data-lb-avif="assets/img/roslyn-cradled-above-1200.avif 1200w, assets/img/roslyn-cradled-above-1600.avif 1600w, assets/img/roslyn-cradled-above-2200.avif 2200w" data-lb-webp="assets/img/roslyn-cradled-above-1200.webp 1200w, assets/img/roslyn-cradled-above-1600.webp 1600w, assets/img/roslyn-cradled-above-2200.webp 2200w" data-lb-jpg="assets/img/roslyn-cradled-above-1600.jpg"
+    data-w="5952" data-h="3481" data-alt="Overhead photo of a mother in a white dress cradling her baby on a picnic blanket, Roslyn, New York"
+    aria-label="Open image: Cradled, From Above, Roslyn, NY">
+    <span class="ph" style="background-image:url('data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACwAwCdASocABAAPwl+s1GrqSSisAgBcCEJQBadCw2EqTbPYpDVAADhFxOCtU9e9LJbrvy4l3P7uiTGFIL4nF4jNCXP/JfJNizSqI/LzpfS610tzcZluvZeMj356KgA')">
+      <picture>
+        <source type="image/avif" srcset="assets/img/roslyn-cradled-above-480.avif 480w, assets/img/roslyn-cradled-above-800.avif 800w, assets/img/roslyn-cradled-above-1200.avif 1200w" sizes="(max-width: 1024px) 100vw, 66vw"/>
+        <source type="image/webp" srcset="assets/img/roslyn-cradled-above-480.webp 480w, assets/img/roslyn-cradled-above-800.webp 800w, assets/img/roslyn-cradled-above-1200.webp 1200w" sizes="(max-width: 1024px) 100vw, 66vw"/>
+        <img src="assets/img/roslyn-cradled-above-1600.jpg" alt="Overhead photo of a mother in a white dress cradling her baby on a picnic blanket, Roslyn, New York" width="5952" height="3481" loading="lazy" decoding="async"/>
+      </picture>
+    </span>
+    <span class="slate-cap" aria-hidden="true">
+      <span class="sc-title">Cradled, From Above</span>
+      <span class="sc-meta">Roslyn, NY · STILL 45</span>
+    </span>
+  </button>
+</li>
   </ul>
 
   <button class="gallery-more" id="galleryMore" type="button" aria-controls="gallery" aria-expanded="false" hidden>
@@ -1085,6 +1182,8 @@
     <span class="gm-label">View the full reel</span>
     <span class="gm-count" id="gmCount"></span>
   </button>
+
+  <p class="gallery-portfolio rv">Want to see a whole session start to finish? <a href="portfolio.html">Browse the portfolio →</a></p>
 </section>
 
 <!-- ── SCENE 02 · THE EXPERIENCE ───────────────────────────── -->
@@ -1354,7 +1453,7 @@
   </div>
   <div class="credits-legal">
     <span>© 2026 AlansCinematics</span>
-    <span class="credits-links"><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="#book">Contact</a></span>
+    <span class="credits-links"><a href="portfolio.html">Portfolio</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="#book">Contact</a></span>
   </div>
 </footer>
 
