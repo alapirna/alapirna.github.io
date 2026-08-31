@@ -667,8 +667,9 @@ html.fine .cur { display: grid; }
   display: block;
   width: 100%;
   aspect-ratio: 4 / 5;
-  background-size: cover;
-  background-position: center;
+  background-color: var(--ink-2);
+  /* Also suppress blurred previews in any cached older page markup. */
+  background-image: none !important;
   overflow: clip;
 }
 .cell-wide .ph { aspect-ratio: 2 / 1; }
@@ -678,11 +679,11 @@ html.fine .cur { display: grid; }
   object-fit: cover;
 }
 .ph img {
-  opacity: 0;
-  transition: opacity 0.18s ease, transform 1.3s var(--eo), filter 1.3s var(--eo);
+  opacity: 1;
+  transition: transform 1.3s var(--eo), filter 1.3s var(--eo);
   will-change: transform;
 }
-.ph img.ld { opacity: 1; }
+
 .frame:hover .ph img {
   transform: scale(1.055);
   filter: saturate(1.07) contrast(1.03);
@@ -802,13 +803,7 @@ html.fine .cur { display: grid; }
   color: var(--amber);
 }
 
-/* image reveal wipe */
-.cell .ph {
-  clip-path: inset(0 0 100% 0);
-  transition: clip-path 1.05s var(--eo);
-  transition-delay: var(--d, 0ms);
-}
-.cell.in .ph { clip-path: inset(0 0 0 0); }
+
 
 /* ── acts (experience) ─────────────────────────────────────────── */
 .acts {
@@ -1400,12 +1395,9 @@ html.fine .cur { display: grid; }
   height: auto;
   border-radius: 4px;
   box-shadow: 0 40px 120px -30px rgba(0, 0, 0, 0.9);
-  animation: lbIn 0.5s var(--eo);
+
 }
-@keyframes lbIn {
-  from { opacity: 0; transform: scale(0.965); }
-  to { opacity: 1; transform: none; }
-}
+
 .lb-cap {
   display: flex;
   align-items: baseline;
@@ -1445,13 +1437,13 @@ html.fine .cur { display: grid; }
 .lb-next { right: 22px; top: 50%; margin-top: -26px; }
 
 /* ── reveal system ─────────────────────────────────────────────── */
-.rv {
+.rv:not(.reel) {
   opacity: 0;
   transform: translateY(26px);
   transition: opacity 0.95s var(--eo), transform 0.95s var(--eo);
   transition-delay: var(--d, 0ms);
 }
-.rv.in { opacity: 1; transform: none; }
+.rv.in:not(.reel) { opacity: 1; transform: none; }
 
 /* ── responsive ────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
@@ -1560,10 +1552,10 @@ html.fine .cur { display: grid; }
   .hero-media img { animation: none; }
   .hs-line::after { animation: none; }
   .ticker-track { animation: none; }
-  .rv { opacity: 1; transform: none; transition: none; }
+  .rv:not(.reel) { opacity: 1; transform: none; transition: none; }
   .cell .ph { clip-path: none; transition: none; }
   .gm-arrow { animation: none; }
-  .ph img { transition: opacity 0.3s; }
+  .ph img { transition: none; }
   .frame:hover .ph img { transform: none; filter: none; }
   .cur { display: none !important; }
   .lb-stage img { animation: none; }
@@ -1616,19 +1608,16 @@ html.fine .cur { display: grid; }
 .reel-art {
   position: relative;
   aspect-ratio: 2 / 3;
-  clip-path: inset(0 0 100% 0);
-  transition: clip-path 1.05s var(--eo);
-  transition-delay: var(--d, 0ms);
 }
-.reel.in .reel-art { clip-path: inset(0 0 0 0); }
+
 .reel-art img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.7s var(--eo), transform 1.4s var(--eo), filter 0.6s var(--eo);
+  opacity: 1;
+  transition: transform 1.4s var(--eo), filter 0.6s var(--eo);
 }
-.reel-art img.ld { opacity: 1; }
+
 .reel-link:hover .reel-art img { transform: scale(1.045); }
 .reel-scrim {
   position: absolute;

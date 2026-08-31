@@ -111,13 +111,12 @@
       rvObs.unobserve(e.target);
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -4%' });
-  $$('.rv, .cell').forEach(el => rvObs.observe(el));
+  $$('.rv:not(.reel)').forEach(el => rvObs.observe(el));
 
-  /* ── image loading: prepare nearby frames before they appear ── */
+  /* ── image loading: prepare nearby frames without visual effects ── */
   const imageLoadAhead = Math.max(1600, Math.min(window.innerHeight * 2, 2400));
   const imageObserver = new IntersectionObserver(entries => {
     entries.forEach(({ target: img, isIntersecting }) => {
-      // Keep filtered and collapsed frames lazy until they are shown.
       if (!isIntersecting || img.closest('[hidden]')) return;
       img.loading = 'eager';
       imageObserver.unobserve(img);
@@ -125,16 +124,12 @@
   }, { rootMargin: `${imageLoadAhead}px 0px`, threshold: 0 });
 
   $$('.ph img').forEach(img => {
-    const reveal = () => {
-      img.classList.add('ld');
-      imageObserver.unobserve(img);
-    };
-    if (img.complete && img.naturalWidth) reveal();
-    else {
-      img.addEventListener('load', reveal, { once: true });
-      // Native lazy loading remains the default for distant photos.
-      if (img.loading === 'lazy') imageObserver.observe(img);
-    }
+    // Images are visible by default; JavaScript only controls loading priority.
+    if (img.complete && img.naturalWidth) return;
+    const stopObserving = () => imageObserver.unobserve(img);
+    img.addEventListener('load', stopObserving, { once: true });
+    img.addEventListener('error', stopObserving, { once: true });
+    if (img.loading === 'lazy') imageObserver.observe(img);
   });
 
   /* ── gallery filter + expander ──────────────────────────────── */
@@ -163,22 +158,19 @@
       if (!moreBtn.hidden) gmCount.textContent = `${hiddenExtra} more frame${hiddenExtra === 1 ? '' : 's'}`;
     }
   };
-  const transitionGallery = () => {
-    if (document.startViewTransition && !reduced) document.startViewTransition(applyGallery);
-    else applyGallery();
-  };
+
   applyGallery();
 
   tabs.forEach(tab => tab.addEventListener('click', () => {
     if (tab.getAttribute('aria-pressed') === 'true') return;
     tabs.forEach(t => t.setAttribute('aria-pressed', String(t === tab)));
     galleryCat = tab.dataset.cat;
-    transitionGallery();
+    applyGallery();
   }));
 
   if (moreBtn) moreBtn.addEventListener('click', () => {
     galleryExpanded = true;
-    transitionGallery();
+    applyGallery();
   });
 
   /* ── lightbox ───────────────────────────────────────────────── */
