@@ -9,10 +9,17 @@
   /* ── intro slate (once per session) ─────────────────────────── */
   const intro = $('#intro');
   if (intro) {
-    if (reduced || sessionStorage.getItem('ac_intro')) {
+    let seenIntro = reduced;
+    try {
+      seenIntro = seenIntro || Boolean(sessionStorage.getItem('ac_intro'));
+      if (!seenIntro) sessionStorage.setItem('ac_intro', '1');
+    } catch {
+      // Privacy settings must not leave the intro overlay blocking the form.
+      seenIntro = true;
+    }
+    if (seenIntro) {
       intro.classList.add('done');
     } else {
-      sessionStorage.setItem('ac_intro', '1');
       document.documentElement.classList.add('lock');
       setTimeout(() => {
         intro.classList.add('done');
@@ -247,73 +254,7 @@
   }, { passive: true });
   }
 
-  /* ── booking form ───────────────────────────────────────────── */
-  const form = $('#bookForm'), status = $('#formStatus');
-  const showDone = () => {
-    form.innerHTML = `
-      <div class="form-done">
-        <p class="fd-mark">Inquiry received</p>
-        <h3>Scene scheduled.</h3>
-        <p>Thanks for reaching out. I'll reply within 48 hours to confirm availability and lock in details. Talk soon.</p>
-      </div>`;
-  };
-  if (form && new URLSearchParams(location.search).get('sent') === '1') {
-    showDone();
-    history.replaceState(null, '', location.pathname + '#book');
-  }
-  if (form) form.addEventListener('submit', async e => {
-    e.preventDefault();
-    if (form.querySelector('[name="_honey"]')?.value) { showDone(); return; }
-    const btn = form.querySelector('.f-submit');
-    btn.disabled = true;
-    btn.firstElementChild.textContent = 'Sending…';
-    status.classList.remove('err');
-    status.textContent = '';
-    // FormSubmit's dedicated AJAX endpoint (CORS-enabled, JSON response).
-    let res = null;
-    try {
-      res = await fetch(form.dataset.ajax, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' },
-      });
-    } catch {
-      // network/CORS failure — native full-page POST instead; FormSubmit
-      // redirects back to ?sent=1#book which shows the success slate
-      form.submit();
-      return;
-    }
-    const data = await res.json().catch(() => null);
-    if (data && String(data.success).toLowerCase() === 'true') {
-      showDone();
-    } else if (data && data.message) {
-      // FormSubmit itself rejected the submission
-      btn.disabled = false;
-      btn.firstElementChild.textContent = 'Send inquiry';
-      status.classList.add('err');
-      status.textContent = 'That didn\'t go through. Try again, or email alanscinematics@gmail.com directly.';
-    } else {
-      // non-JSON reply (e.g. a bot-check challenge page) — a native POST
-      // lets the browser complete the challenge and still deliver
-      form.submit();
-    }
-  });
-
-  /* preselect session type from ticket buttons */
-  $$('[data-session]').forEach(a => a.addEventListener('click', () => {
-    const sel = $('#f-session');
-    const map = {
-      portraits: 'Portraits / Grads — from $350',
-      couples: 'Couples — from $400',
-      families: 'Families — from $500',
-    };
-    const v = map[a.dataset.session];
-    if (v) sel.value = v;
-  }));
-
-  /* min date = today */
-  const dateInput = $('#f-date');
-  if (dateInput) dateInput.min = new Date().toISOString().slice(0, 10);
+  /* Booking delivery lives in booking.js, independent of visual effects. */
 
   /* ── sticky mobile cta ──────────────────────────────────────── */
   const sticky = $('#stickyCta'), heroEl = $('#hero'), bookEl = $('#book');

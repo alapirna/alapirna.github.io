@@ -32,7 +32,7 @@
 <link rel="preload" href="assets/fonts/fraunces-italic.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="preload" as="image" type="image/avif" imagesrcset="assets/img/hero-sunset-tall-640.avif 640w, assets/img/hero-sunset-tall-960.avif 960w, assets/img/hero-sunset-tall-1280.avif 1280w" imagesizes="100vw" media="(max-width: 767px)"/>
 <link rel="preload" as="image" type="image/avif" imagesrcset="assets/img/hero-sunset-wide-1280.avif 1280w, assets/img/hero-sunset-wide-1920.avif 1920w, assets/img/hero-sunset-wide-2560.avif 2560w" imagesizes="100vw" media="(min-width: 768px)"/>
-<link rel="stylesheet" href="style.css?v=direct-photos-1"/>
+<link rel="stylesheet" href="style.css?v=inquiry-reliability-1"/>
 
 <script type="application/ld+json">
 {
@@ -1385,12 +1385,12 @@
       </dl>
     </div>
 
-    <form class="book-form rv" id="bookForm" action="https://formsubmit.co/alanscinematics@gmail.com" data-ajax="https://formsubmit.co/ajax/alanscinematics@gmail.com" method="POST">
+    <form class="book-form" id="bookForm" action="https://formsubmit.co/alanscinematics@gmail.com" data-ajax="https://formsubmit.co/ajax/alanscinematics@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="New session inquiry — alanscinematics.com"/>
-      <input type="hidden" name="_captcha" value="false"/>
+      <input type="hidden" name="_captcha" value="true"/>
       <input type="hidden" name="_template" value="table"/>
-      <input type="hidden" name="_next" value="https://alanscinematics.com/?sent=1#book"/>
-      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp"/>
+      <input type="hidden" name="_next" value="https://alanscinematics.com/?inquiry_return=verified#book"/>
+      <input type="text" name="contact_website_check" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp" hidden/>
 
       <div class="f-row">
         <div class="f-field">
@@ -1434,7 +1434,13 @@
       </div>
       <button class="btn btn-amber f-submit" type="submit"><span>Send inquiry</span></button>
       <p class="f-note">By sending this form you agree that Alan may contact you about your inquiry. See the <a href="privacy.html">privacy policy</a>.</p>
-      <p class="f-status" id="formStatus" role="status" aria-live="polite"></p>
+      <p class="f-status" id="formStatus" role="status" aria-live="polite" tabindex="-1"></p>
+      <p class="form-reference" id="formReference" hidden></p>
+      <div class="form-recovery">
+        <button class="btn btn-ghost" id="formVerify" type="button" hidden>Continue with verification</button>
+        <p class="f-note">Having trouble? <a id="formEmail" href="mailto:alanscinematics@gmail.com">Email your inquiry directly</a> or <a href="tel:+16026007904">call 602-600-7904</a>.</p>
+      </div>
+      <noscript><p class="f-note">Sending opens FormSubmit. Complete its verification step to finish your inquiry.</p></noscript>
     </form>
   </div>
 </section>
@@ -1477,6 +1483,7 @@
   </figure>
 </dialog>
 
-<script src="main.js?v=direct-photos-1" defer></script>
+<script src="booking.js?v=inquiry-reliability-1" defer></script>
+<script src="main.js?v=inquiry-reliability-1" defer></script>
 </body>
 </html>

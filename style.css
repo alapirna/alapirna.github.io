@@ -1255,12 +1255,17 @@ html.fine .cur { display: grid; }
   padding-right: 40px;
 }
 .f-field select:invalid { color: var(--bone-faint); }
-.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.hp { display: none !important; }
 .f-submit { margin-top: 6px; padding: 17px 30px; }
 .f-submit[disabled] { opacity: 0.55; cursor: wait; transform: none; }
 .f-note { font-size: 11.5px; color: var(--bone-faint); }
 .f-status { font-size: 13px; color: var(--amber); min-height: 1em; }
 .f-status.err { color: #e07856; }
+
+#formVerify[hidden], #formReference[hidden] { display: none; }
+.form-recovery { margin-top: 12px; }
+.form-recovery .btn { margin-bottom: 12px; }
+.form-reference { font-size: 12px; overflow-wrap: anywhere; }
 
 /* success slate */
 .form-done {
