@@ -8,10 +8,10 @@
   const verify = document.querySelector('#formVerify');
   const emailLink = document.querySelector('#formEmail');
   const receipt = document.querySelector('#formReference');
-  const trap = form.querySelector('[name="contact_website_check"]');
   const pendingKey = 'ac_pending_inquiry';
   const inbox = 'alanscinematics@gmail.com';
   let busy = false;
+  let verificationTimer;
   let reference = '';
 
   // No inquiry contents are stored in the browser: only a return reference.
@@ -36,7 +36,7 @@
     submit.disabled = value;
     verify.disabled = value;
     form.setAttribute('aria-busy', String(value));
-    submit.firstElementChild.textContent = value ? 'Sending…' : 'Send inquiry';
+    submit.firstElementChild.textContent = value ? 'Opening verification…' : 'Send inquiry';
   };
   const focusStatus = () => status.focus({ preventScroll: true });
   const failure = (code, message) => {
@@ -56,27 +56,6 @@
     const lines = labels.map(([key, label]) => label + ': ' + (data.get(key) || ''));
     if (reference) lines.unshift('Inquiry reference: ' + reference, '');
     emailLink.href = 'mailto:' + inbox + '?subject=' + encodeURIComponent('Session inquiry' + (reference ? ' — ' + reference : '')) + '&body=' + encodeURIComponent(lines.join('\n'));
-  };
-  const showAccepted = () => {
-    setBusy(false);
-    clearPending();
-    const done = document.createElement('div');
-    done.className = 'form-done';
-    const heading = document.createElement('h3');
-    heading.textContent = 'Inquiry submitted.';
-    const copy = document.createElement('p');
-    copy.textContent = 'Our form service accepted your inquiry. Alan will reply within 48 hours to discuss availability. This is not a booking confirmation.';
-    const ref = document.createElement('p');
-    ref.textContent = 'Reference: ' + reference;
-    const followUp = document.createElement('p');
-    followUp.textContent = 'No reply within 48 hours? Email alanscinematics@gmail.com or call 602-600-7904 and include your reference.';
-    const contact = document.createElement('a');
-    contact.href = emailLink.href;
-    contact.textContent = 'Email Alan directly';
-    done.append(heading, copy, ref, followUp, contact);
-    form.replaceChildren(done);
-    done.setAttribute('tabindex', '-1');
-    done.focus({ preventScroll: true });
   };
 
   // A redirect/query string alone is not evidence of acceptance or delivery.
@@ -100,53 +79,8 @@
 
   form.addEventListener('input', updateEmailLink);
   form.addEventListener('change', updateEmailLink);
-  form.addEventListener('submit', async event => {
-    event.preventDefault();
-    if (busy || !form.reportValidity()) return;
-    getReference();
-    updateEmailLink();
-    if (trap?.value) {
-      failure('VERIFICATION_REQUIRED', 'An extra verification step is needed before we can send this inquiry.');
-      return;
-    }
-    setBusy(true);
-    status.classList.remove('err');
-    status.textContent = 'Sending your inquiry…';
-    verify.hidden = true;
-    const data = new FormData(form);
-    // Never forward a reserved honeypot from stale/cached markup.
-    data.delete('_honey');
-    data.delete('contact_website_check');
-    data.set('_captcha', 'false'); // AJAX path; verified fallback retains reCAPTCHA.
-    data.set('_subject', 'New session inquiry — ' + reference);
-    data.set('_url', 'https://alanscinematics.com/');
-    data.set('inquiry_reference', reference);
-    data.set('submitted_at', new Date().toISOString());
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 20000);
-    try {
-      const response = await fetch(form.dataset.ajax, {
-        method: 'POST', body: data, headers: { Accept: 'application/json' },
-        signal: controller.signal,
-      });
-      const result = await response.json().catch(() => null);
-      const accepted = response.ok && String(result?.success).toLowerCase() === 'true'
-        && result?.message?.trim() === 'The form was submitted successfully.';
-      if (accepted) {
-        showAccepted();
-      } else {
-        failure(response.ok ? 'UNCONFIRMED_RESPONSE' : 'HTTP_' + response.status,
-          'We could not confirm that the form service accepted your inquiry.');
-      }
-    } catch (error) {
-      failure(error.name === 'AbortError' ? 'TIMEOUT' : 'NETWORK',
-        'We could not confirm submission because the connection was interrupted or timed out.');
-    } finally {
-      clearTimeout(timeout);
-    }
-  });
 
-  verify.addEventListener('click', () => {
+  const sendWithVerification = () => {
     if (busy || !form.reportValidity()) return;
     getReference();
     updateEmailLink();
@@ -160,7 +94,7 @@
       }
       input.value = value;
     };
-    // Explicit user action only: never automatically replay an uncertain POST.
+    // One user action, one native POST. No background AJAX request or auto-replay.
     form.querySelectorAll('[name="_honey"], [name="contact_website_check"]').forEach(input => { input.disabled = true; });
     setHidden('_captcha', 'true');
     setHidden('_subject', 'New session inquiry — ' + reference);
@@ -172,12 +106,25 @@
     setBusy(true);
     status.classList.remove('err');
     status.textContent = 'Opening verification. Complete the steps on FormSubmit to finish sending.';
+    clearTimeout(verificationTimer);
+    verificationTimer = setTimeout(() => {
+      if (busy) failure('VERIFICATION_NOT_OPENED', 'Verification has not opened yet. We cannot confirm this inquiry was sent.');
+    }, 20000);
     try { HTMLFormElement.prototype.submit.call(form); }
-    catch { failure('VERIFICATION_UNAVAILABLE', 'We could not open the verification service.'); }
+    catch {
+      clearTimeout(verificationTimer);
+      failure('VERIFICATION_UNAVAILABLE', 'We could not open the verification service.');
+    }
+  };
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    sendWithVerification();
   });
+  verify.addEventListener('click', sendWithVerification);
 
   // Back navigation must not leave the form permanently disabled.
   window.addEventListener('pageshow', () => {
+    clearTimeout(verificationTimer);
     if (!form.querySelector('.f-submit')) return;
     setBusy(false);
     form.querySelectorAll('[name="contact_website_check"]').forEach(input => { input.disabled = false; });
