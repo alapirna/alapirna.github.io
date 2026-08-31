@@ -113,10 +113,28 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -4%' });
   $$('.rv, .cell').forEach(el => rvObs.observe(el));
 
-  /* ── image fade-in when decoded ─────────────────────────────── */
+  /* ── image loading: prepare nearby frames before they appear ── */
+  const imageLoadAhead = Math.max(1600, Math.min(window.innerHeight * 2, 2400));
+  const imageObserver = new IntersectionObserver(entries => {
+    entries.forEach(({ target: img, isIntersecting }) => {
+      // Keep filtered and collapsed frames lazy until they are shown.
+      if (!isIntersecting || img.closest('[hidden]')) return;
+      img.loading = 'eager';
+      imageObserver.unobserve(img);
+    });
+  }, { rootMargin: `${imageLoadAhead}px 0px`, threshold: 0 });
+
   $$('.ph img').forEach(img => {
-    if (img.complete && img.naturalWidth) img.classList.add('ld');
-    else img.addEventListener('load', () => img.classList.add('ld'), { once: true });
+    const reveal = () => {
+      img.classList.add('ld');
+      imageObserver.unobserve(img);
+    };
+    if (img.complete && img.naturalWidth) reveal();
+    else {
+      img.addEventListener('load', reveal, { once: true });
+      // Native lazy loading remains the default for distant photos.
+      if (img.loading === 'lazy') imageObserver.observe(img);
+    }
   });
 
   /* ── gallery filter + expander ──────────────────────────────── */

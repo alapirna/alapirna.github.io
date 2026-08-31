@@ -679,7 +679,7 @@ html.fine .cur { display: grid; }
 }
 .ph img {
   opacity: 0;
-  transition: opacity 0.7s ease, transform 1.3s var(--eo), filter 1.3s var(--eo);
+  transition: opacity 0.18s ease, transform 1.3s var(--eo), filter 1.3s var(--eo);
   will-change: transform;
 }
 .ph img.ld { opacity: 1; }
