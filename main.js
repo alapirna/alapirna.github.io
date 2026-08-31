@@ -293,9 +293,9 @@
   $$('[data-session]').forEach(a => a.addEventListener('click', () => {
     const sel = $('#f-session');
     const map = {
-      portraits: 'Portraits / Grads — from $400',
-      couples: 'Couples — from $600',
-      families: 'Families — from $800',
+      portraits: 'Portraits / Grads — from $350',
+      couples: 'Couples — from $400',
+      families: 'Families — from $500',
     };
     const v = map[a.dataset.session];
     if (v) sel.value = v;
