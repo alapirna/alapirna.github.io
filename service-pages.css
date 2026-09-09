@@ -1,0 +1,33 @@
+/* Service information within the existing cinematic portfolio. */
+.ticket-portfolio a { display: block; min-height: 44px; padding: 10px 0; font-size: 14px; line-height: 1.6; }
+.service-intro, .session-details {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(48px, 7vw, 96px) var(--pad);
+}
+.service-intro { max-width: 1000px; }
+.service-intro h2, .session-details h2 {
+  font: 500 clamp(29px, 4vw, 48px)/1.12 var(--serif);
+  color: var(--bone);
+  margin: 0 0 24px;
+  text-wrap: balance;
+}
+.service-intro p, .session-details p { font-size: 16px; line-height: 1.8; margin: 0 0 20px; color: var(--bone-dim); }
+.service-intro .service-kicker, .session-details .service-kicker { color: var(--amber); font-size: 12px; letter-spacing: .13em; text-transform: uppercase; }
+.service-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
+.service-actions a { color: var(--amber); }
+.service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); border-top: 1px solid var(--line); padding-top: 48px; }
+.session-details .service-price { font-size: 22px; color: var(--bone); }
+.service-package { margin: 24px 0; }
+.service-package div { display: flex; justify-content: space-between; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.service-package dt { color: var(--bone-dim); }
+.service-package dd { margin: 0; text-align: right; color: var(--bone); }
+.service-planning h3 { font: 500 24px/1.3 var(--serif); color: var(--bone); margin: 0 0 14px; }
+.service-planning h3:not(:first-child) { margin-top: 32px; }
+.service-intro a:focus-visible, .session-details a:focus-visible { outline: 2px solid var(--amber); outline-offset: 5px; }
+.session-details .btn { white-space: normal; line-height: 1.5; }
+@media (max-width: 700px) {
+  .service-grid { grid-template-columns: 1fr; }
+  .service-actions { align-items: flex-start; flex-direction: column; }
+  .service-package div { font-size: 13px; }
+}

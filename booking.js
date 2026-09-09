@@ -58,8 +58,18 @@
     emailLink.href = 'mailto:' + inbox + '?subject=' + encodeURIComponent('Session inquiry' + (reference ? ' — ' + reference : '')) + '&body=' + encodeURIComponent(lines.join('\n'));
   };
 
+  // Carry a collection's service choice into the form without replacing restored input.
+  const sessionValues = { portraits: 'Portraits / Grads — from $350', couples: 'Couples — from $400', families: 'Families — from $500' };
+  const selectSession = (key, overwrite = false) => {
+    const select = form.querySelector('#f-session');
+    if (select && Object.hasOwn(sessionValues, key) && (overwrite || !select.value)) {
+      select.value = sessionValues[key];
+    }
+  };
+
   // A redirect/query string alone is not evidence of acceptance or delivery.
   const params = new URLSearchParams(location.search);
+  if (!params.has('sent') && !params.has('inquiry_return')) selectSession(params.get('session'));
   if (params.has('sent') || params.has('inquiry_return')) {
     const pending = readPending();
     const returned = params.get('inquiry_return');
@@ -130,9 +140,7 @@
     form.querySelectorAll('[name="contact_website_check"]').forEach(input => { input.disabled = false; });
   });
   document.querySelectorAll('[data-session]').forEach(link => link.addEventListener('click', () => {
-    const values = { portraits: 'Portraits / Grads — from $350', couples: 'Couples — from $400', families: 'Families — from $500' };
-    const select = form.querySelector('#f-session');
-    if (select && values[link.dataset.session]) select.value = values[link.dataset.session];
+    selectSession(link.dataset.session, true);
     updateEmailLink();
   }));
   const date = form.querySelector('#f-date');
