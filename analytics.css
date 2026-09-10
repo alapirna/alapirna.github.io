@@ -1,0 +1,11 @@
+.ac-analytics[hidden]{display:none!important}
+.ac-analytics{position:fixed;z-index:9999;bottom:16px;left:16px;width:min(480px,calc(100vw - 32px));padding:18px;background:#17130f;color:#fff5e7;border:1px solid #b49468;border-radius:8px;box-shadow:0 4px 24px #0008;font:14px/1.5 system-ui,sans-serif;box-sizing:border-box}
+.ac-analytics p{margin:0 0 12px;color:inherit;font:inherit}
+.ac-analytics div{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.ac-analytics button,.ac-analytics-settings{cursor:pointer;background:#17130f;color:#fff5e7;border:1px solid #b49468;border-radius:4px;padding:10px 12px;min-height:44px;font:14px/1.3 system-ui,sans-serif}
+.ac-analytics button:hover,.ac-analytics-settings:hover{background:#342a20}
+.ac-analytics button:focus-visible,.ac-analytics a:focus-visible,.ac-analytics-settings:focus-visible{outline:3px solid #eabe70;outline-offset:3px}
+.ac-analytics a{color:#ffdb9e;text-decoration:underline;padding:8px 0}
+.ac-analytics button:disabled{opacity:.55;cursor:default}
+.ac-analytics-settings{margin:16px}
+@media print{.ac-analytics,.ac-analytics-settings{display:none!important}}
