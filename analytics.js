@@ -77,7 +77,7 @@
   const settings = document.createElement('button');
   settings.type = 'button'; settings.className = 'ac-analytics-settings'; settings.textContent = 'Analytics choices';
   settings.setAttribute('aria-expanded', 'false');
-  settings.addEventListener('click', () => { panel.hidden = !panel.hidden; settings.setAttribute('aria-expanded', String(!panel.hidden)); if (!panel.hidden) decline.focus(); });
+  settings.addEventListener('click', () => { panel.hidden = !panel.hidden; settings.setAttribute('aria-expanded', String(!panel.hidden)); if (!panel.hidden) decline.focus({preventScroll: true}); });
   function choose(value) {
     choice = value;
     try { localStorage.setItem(KEY, JSON.stringify({value, expires: Date.now() + MAX_AGE})); } catch (_) { /* Session-only choice. */ }
@@ -86,7 +86,7 @@
       if (loaded) { active = true; window['ga-disable-' + ID] = false; }
       else start();
     } else stop();
-    settings.focus();
+    settings.focus({preventScroll: true});
   }
   allow.addEventListener('click', () => choose('allow'));
   decline.addEventListener('click', () => choose('decline'));
