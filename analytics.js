@@ -8,6 +8,7 @@
     '/': 'Home', '/portfolio.html': 'Portfolio', '/privacy.html': 'Privacy',
     '/terms.html': 'Terms', '/portfolio/asu-graduation.html': 'ASU graduation',
     '/portfolio/senior-year.html': 'Senior portraits',
+    '/guides/phoenix-senior-photo-planning.html': 'Phoenix senior photo planning',
     '/portfolio/two-of-you.html': 'Couples',
     '/portfolio/the-family-reel.html': 'Families',
     '/portfolio/roslyn-first-birthday.html': 'First birthday'

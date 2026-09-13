@@ -1,0 +1,53 @@
+/* Senior planning guide, extending the existing Screening Room typography. */
+.guide { max-width: 1380px; margin: 0 auto; padding: 140px var(--pad) 80px; }
+.guide a { color: var(--amber); text-underline-offset: .22em; }
+.guide a:hover { color: var(--amber-hot); }
+.guide a:focus-visible, .guide-table:focus-visible, .guide-skip:focus-visible { outline: 2px solid var(--amber); outline-offset: 5px; }
+.guide-skip { position: fixed; top: -100px; left: 20px; z-index: 200; background: var(--ink); color: var(--bone); padding: 12px 20px; }
+.guide-skip:focus { top: 12px; }
+.guide-opening { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: clamp(32px, 5vw, 76px); padding-bottom: 72px; border-bottom: 1px solid var(--line); }
+.guide-eyebrow { font-size: .875rem; color: var(--bone-dim); margin-bottom: 26px; }
+.guide h1 { font: 450 clamp(2.5rem, 4.7vw, 4.6rem)/1.05 var(--serif); letter-spacing: -.035em; text-wrap: balance; }
+.guide h1 em { color: var(--amber); font-weight: inherit; }
+.guide-lead { font-size: 1.125rem; line-height: 1.85; margin-top: 28px; max-width: 38em; color: var(--bone); }
+.guide-byline { font-size: .875rem; color: var(--bone-dim); margin: 22px 0; }
+.guide-start { display: inline-block; padding: 12px 0; }
+.guide-photo { min-width: 0; }
+.guide-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+.guide-photo figcaption { font-size: .875rem; color: var(--bone-dim); padding-top: 14px; line-height: 1.6; }
+.guide-layout { display: grid; grid-template-columns: 220px minmax(0,1fr); gap: clamp(32px, 5vw, 80px); padding-top: 58px; }
+.guide-contents { align-self: start; position: sticky; top: 115px; }
+.guide-contents p { font-size: .875rem; color: var(--bone-dim); margin-bottom: 14px; }
+.guide-contents a { display: block; padding: 11px 0; font-size: .9375rem; line-height: 1.5; border-bottom: 1px solid var(--line); text-decoration: none; }
+.guide-content { min-width: 0; max-width: 820px; font-size: 1rem; line-height: 1.9; }
+.guide-content p { margin-bottom: 24px; }
+.guide-content section { padding-top: 12px; margin-bottom: 46px; scroll-margin-top: 105px; }
+.guide-content h2 { font: 500 clamp(1.75rem, 2.7vw, 2.4rem)/1.2 var(--serif); margin: 14px 0 24px; text-wrap: balance; }
+.guide-table { overflow-x: auto; margin: 26px 0; border-top: 1px solid var(--line); }
+.guide-table table { width: 100%; min-width: 570px; border-collapse: collapse; font-size: .9375rem; line-height: 1.7; }
+.guide-table caption { text-align: left; padding: 15px 0; color: var(--amber); }
+.guide-table th, .guide-table td { vertical-align: top; text-align: left; padding: 18px 16px 18px 0; border-bottom: 1px solid var(--line); }
+.guide-table thead th { color: var(--bone-dim); font-weight: 400; font-size: .875rem; }
+.guide-table tbody th { width: 23%; font-weight: 500; }
+.guide-checklist { padding-left: 24px; margin: 24px 0; }
+.guide-checklist li { padding: 6px 0 6px 7px; }
+.guide-checklist li::marker { color: var(--amber); }
+.guide-content #your-session { border-top: 1px solid var(--line); padding-top: 32px; }
+@media (max-width: 1024px) { .guide-layout { grid-template-columns: 180px minmax(0,1fr); gap: 32px; } }
+@media (max-width: 780px) {
+  .guide { padding-top: 115px; }
+  .guide-opening { grid-template-columns: 1fr; gap: 32px; padding-bottom: 40px; }
+  .guide-photo { max-width: 520px; }
+  .guide-layout { grid-template-columns: 1fr; gap: 28px; padding-top: 28px; }
+  .guide-contents { position: static; }
+  .guide-content section { margin-bottom: 34px; }
+}
+
+@media (max-width: 640px) {
+  .guide-table table, .guide-table tbody, .guide-table tr, .guide-table th, .guide-table td { display: block; width: 100%; min-width: 0; }
+  .guide-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .guide-table tr { border-bottom: 1px solid var(--line); padding: 18px 0; }
+  .guide-table tbody th { width: 100%; font-size: 1.125rem; padding: 0 0 12px; border: 0; }
+  .guide-table td { border: 0; padding: 8px 0; }
+  .guide-table td::before { content: attr(data-label); display: block; color: var(--bone-dim); font-size: .875rem; margin-bottom: 3px; }
+}
