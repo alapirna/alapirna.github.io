@@ -461,6 +461,10 @@ html.fine .cur { display: grid; }
 }
 .hero-bar-top { top: 0; }
 .hero-bar-bot { bottom: 0; }
+/* Phones: no top letterbox bar, so the photo runs to the top edge. */
+@media (max-width: 767px) {
+  .hero-bar-top { display: none; }
+}
 
 .hero-card {
   position: relative;
