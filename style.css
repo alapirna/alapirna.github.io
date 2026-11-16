@@ -432,6 +432,18 @@ html.fine .cur { display: grid; }
   from { transform: scale(1.12); }
   to { transform: scale(1.02); }
 }
+/* Per-hero focal points. A hero opts in with data-hero on .hero-media;
+   without rules here it keeps the default 50% 38% above. */
+.hero-media[data-hero="library"] img {
+  object-position: 50% 6%;
+  transform-origin: 52% 0;
+}
+@media (min-width: 768px) and (max-aspect-ratio: 5/4) {
+  .hero-media[data-hero="library"] img { object-position: 72% 6%; }
+}
+@media (max-width: 767px) {
+  .hero-media[data-hero="library"] img { object-position: 86% 12%; }
+}
 .hero-scrim {
   position: absolute;
   inset: 0;
