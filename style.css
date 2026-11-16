@@ -442,7 +442,7 @@ html.fine .cur { display: grid; }
   .hero-media[data-hero="library"] img { object-position: 72% 6%; }
 }
 @media (max-width: 767px) {
-  .hero-media[data-hero="library"] img { object-position: 86% 12%; }
+  .hero-media[data-hero="library"] img { object-position: 60% 12%; }
 }
 .hero-scrim {
   position: absolute;
